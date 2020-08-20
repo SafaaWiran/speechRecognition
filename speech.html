@@ -1,0 +1,49 @@
+<!doctype html>
+	<head>
+		<style>
+			/* CSS comes here */
+			body {
+			    font-family: Andale Mono, monospace;
+				background-color:#112426 ;
+				color:azure ;
+			}
+			button {
+			    padding:10px;
+			    background-color:#0B4359;
+			    color: #FFFFFF;
+			    border: 0px;
+			    cursor:pointer;
+			    border-radius: 5px;
+			}
+			#output, #answer {
+			    background-color:#1C1A17;
+				color:#7C7C7C;
+			    padding:10px;
+			    width: 100%;
+			    margin-top:20px;
+			    line-height:30px;
+			}
+
+			.hide {
+			    display:none;
+			}
+			.show {
+			    display:block;
+			}
+        </style>
+		<script src="speech.js"></script>
+		<title>JavaScript Speech to Text</title>
+	</head>
+	<body>
+		<!--button type="button" name="pop">Your text</button-->
+
+		<h2>Test 1</h2>
+		<h3 class="hide">Pilote : AIAC control, RAM 209 libérons attitude 2500 pieds</h3> 
+		<button onclick="syntesis()">start</button>
+        <p>Cliquez sur le bouton pour répondre</p>
+        <p><button id="button" type="button" onclick="runSpeechRecognition()">Lancer</button> &nbsp; <span id="action"></span></p>
+		<div id="output" class="hide"></div>
+		<button onclick="submit()">submit</button>
+		<div id="answer" class="hide"></div>
+	</body>
+</html>
