@@ -7,6 +7,11 @@
 				background-color:#112426 ;
 				color:azure ;
 			}
+
+			#title {
+				text-align : center ;
+			}
+
 			button {
 			    padding:10px;
 			    background-color:#0B4359;
@@ -31,37 +36,23 @@
 			    display:block;
 			}
         </style>
-		<script src="json.js"></script>
+		<script src="speech.js"></script>
 		<title>JavaScript Speech to Text</title>
 	</head>
 	<body>
 		<!--button type="button" name="pop">Your text</button-->
 
-		<h2>Test 1</h2>
-		<h3 id="pilote"></h3> 
-		<button onclick="syntesis()">start</button>
+		<h2 id="title" ></h2>
+		<div>
+			Pilote : <h3 id="pilote" class="hide"></h3>
+			<button onclick="syntesis()">start</button>
+		</div> 
+		
         <p>Cliquez sur le bouton pour répondre</p>
         <p><button id="button" type="button" onclick="runSpeechRecognition()">Lancer</button> &nbsp; <span id="action"></span></p>
 		<div id="output" class="hide"></div>
 		<button onclick="submit()">submit</button>
-		<div id="answer" class="hide"></div>
-		<script>
-			let pilote = document.querySelector("#pilote");
-
-            let requestURL = 'https://safaawiran.github.io/speechRecognition/myJson.json';
-            
-            let request = new XMLHttpRequest();
-            request.open('GET', requestURL);
-            
-            request.responseType = 'json';
-            request.send();
-            
-            request.onload = function () {
-                let myJson = request.response;
-                pilote.innerHTML = "<b>Pilote : </b>" + myJson["pilote"];
-            }
-            
-		</script>
-				
+		<div id="atc" class="hide"></div>
+		<script src="json.js"></script>
 	</body>
 </html>

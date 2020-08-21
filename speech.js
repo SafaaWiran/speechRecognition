@@ -1,7 +1,8 @@
-
+            //jsonReader();
             /* JS comes here */
             function syntesis(){
-                let utterance = new SpeechSynthesisUtterance("Aiac contrôle, Royal Air Maroc 209 libérons attitude 2500 pieds");
+                alert(document.getElementById("pilote").textContent);
+                let utterance = new SpeechSynthesisUtterance(document.getElementById("pilote").textContent);
                 speechSynthesis.speak(utterance);
             }
 
@@ -17,11 +18,8 @@
                 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList ;
                 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent ;
                 
-                window.expectation="Royal Air Maroc 209 académie contrôle autoriser atterrissage piste 04 vent 50 degrés 10 noeuds";
-
-                //var script=document.createElement("script");
-                //script.src="test21.js" ;
-                //document.head.appendChild(script);
+                
+                //window.expectation="Royal Air Maroc 209 académie contrôle autoriser atterrissage piste 04 vent 50 degrés 10 noeuds";
 
                 var recognition = new SpeechRecognition();
                 
@@ -107,33 +105,18 @@
             }
 
             function submit(){
-                let answer=document.getElementById("answer");
+                let answer=document.getElementById("atc");
                 if(!window.final_transcript) {
                     alert('say something');}
                 else {
-                    alert(check(window.final_transcript,window.expectation));
-                    answer.innerHTML="<b>Expectation :</b> "+window.expectation ;
+                    alert(check(window.final_transcript,answer));
+                    //answer.innerHTML="<b>Expectation :</b> "+window.expectation ;
                     answer.classList.remove("hide");}
             }
-            
-            let pilote = document.querySelector["pilote"];
 
-            function jsonReader() {
-                
+
+
             
-                let requestURL = 'https://safaawiran.github.io/speechRecognition/myJson.json';
-            
-                let request = new XMLHttpRequest();
-                request.open('GET', requestURL);
-            
-                request.responseType = 'json';
-                request.send();
-            
-                request.onload = function () {
-                    let myJson = request.response;
-                    pilote.innerHTML = "<b>Pilote : </b>" + myJson["pilote"];
-                }
-            }
             
                 
 
