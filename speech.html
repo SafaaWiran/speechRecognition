@@ -31,7 +31,7 @@
 			    display:block;
 			}
         </style>
-		<script src="speech.js"></script>
+		<script src="json.js"></script>
 		<title>JavaScript Speech to Text</title>
 	</head>
 	<body>
@@ -45,5 +45,23 @@
 		<div id="output" class="hide"></div>
 		<button onclick="submit()">submit</button>
 		<div id="answer" class="hide"></div>
+		<script>
+			let pilote = document.querySelector("#pilote");
+
+            let requestURL = 'https://safaawiran.github.io/speechRecognition/myJson.json';
+            
+            let request = new XMLHttpRequest();
+            request.open('GET', requestURL);
+            
+            request.responseType = 'json';
+            request.send();
+            
+            request.onload = function () {
+                let myJson = request.response;
+                pilote.innerHTML = "<b>Pilote : </b>" + myJson["pilote"];
+            }
+            
+		</script>
+				
 	</body>
 </html>

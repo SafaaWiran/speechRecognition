@@ -115,26 +115,30 @@
                     answer.innerHTML="<b>Expectation :</b> "+window.expectation ;
                     answer.classList.remove("hide");}
             }
+            
+            let pilote = document.querySelector["pilote"];
 
-            function readJson(){
-                let pilote=document.querySelector("#pilote");
-                let atc=document.querySelector("#atc");
-
-                var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-
-                var request = new XMLHttpRequest();
+            function jsonReader() {
+                
+            
+                let requestURL = 'https://safaawiran.github.io/speechRecognition/myJson.json';
+            
+                let request = new XMLHttpRequest();
                 request.open('GET', requestURL);
-
+            
                 request.responseType = 'json';
                 request.send();
-
-                request.onload = function() {
-                let myJson = request.response;
-                pilote.innerHTML=myJson["pilote"];
+            
+                request.onload = function () {
+                    let myJson = request.response;
+                    pilote.innerHTML = "<b>Pilote : </b>" + myJson["pilote"];
                 }
-
-
             }
+            
+                
+
+
+            
             
          
 
