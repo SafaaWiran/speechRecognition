@@ -1,3 +1,4 @@
+//Extraire les variables de ma page speech.html
 let pilote=document.querySelector('#pilote');
 //let atc=document.querySelector("#atc");
 let title=document.querySelector('#title');
@@ -6,7 +7,7 @@ let atc=document.querySelector('#atc');
 jsonReader();                
                         
 
-
+//Cette fonction va lire le contenu du fichier Json
 function jsonReader() {
     let requestURL = 'https://safaawiran.github.io/speechRecognition/myJson.json';
 
@@ -18,9 +19,10 @@ function jsonReader() {
 
     request.onload = function () {
         let myJson = request.response;
+        //ajouter du contenu à la page HTML à partir de json
         pilote.innerHTML = myJson["pilote"];
         title.innerHTML = myJson["titre"].toUpperCase();
-        atc.innerHTML=myJson["atc"];
+        atc.innerHTML = myJson["atc"];
     }
 
     

@@ -1,7 +1,8 @@
             //jsonReader();
             /* JS comes here */
+
+            //Voice synthesis set up
             function syntesis(){
-                alert(document.getElementById("pilote").textContent);
                 let utterance = new SpeechSynthesisUtterance(document.getElementById("pilote").textContent);
                 speechSynthesis.speak(utterance);
             }
@@ -14,6 +15,7 @@
                 // new speech recognition object
                 var button=document.getElementById("button");
 
+                //initialisation de SpeechRecognition interface
                 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
                 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList ;
                 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent ;
@@ -47,7 +49,7 @@
                 
                 
                 
-
+                //Affichage du résultat
                 recognition.onresult = function(event) {  
                     //let interim_transcript = '';
                     for (var i = event.resultIndex; i < event.results.length; ++i) {
@@ -57,7 +59,7 @@
                         //interim_transcript += event.results[i][0].transcript;
                       //}
                     }
-                    output.innerHTML = "<b>Text:</b> "+window.final_transcript ; 
+                    output.innerHTML = "<b>Vous avez dit :</b> "+window.final_transcript ; 
                     output.classList.remove("hide");
                 }
                 
@@ -72,6 +74,7 @@
                     window.final_transcript = '';
                     //alert(text);
                  }
+                 //stop recognition
                  else {
                     action.innerHTML = "<small>stopped listening</small>";
                      recognition.stop();
@@ -82,8 +85,9 @@
                  
             }
 
-            
+            //La fonction qui fait la comparaison entre le speech obtenu et la bonne réponse
             function check(str,expect){
+                //On va incrémenter le n avec chaque bonne réponse
                 let n=0;
                 //str=str.toUpperCase();
                 //expect=expect.toUpperCase();
@@ -104,12 +108,13 @@
                 return (n+" corrects") ;
             }
 
+            //cette fonction va être appelée en cliquant sur le bouton check et va appeler la fct "check" si un speech est detécté 
             function submit(){
                 let answer=document.getElementById("atc");
                 if(!window.final_transcript) {
                     alert('say something');}
                 else {
-                    alert(check(window.final_transcript,answer));
+                    alert(check(window.final_transcript,answer.textContent));
                     //answer.innerHTML="<b>Expectation :</b> "+window.expectation ;
                     answer.classList.remove("hide");}
             }
