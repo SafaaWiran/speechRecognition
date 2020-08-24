@@ -1,5 +1,6 @@
 <!doctype html>
 	<head>
+		<script src="https://kit.fontawesome.com/4cc9603e69.js" crossorigin="anonymous"></script>
 		<style>
 			/* CSS comes here */
 			body {
@@ -45,11 +46,11 @@
 		<h2 id="title" ></h2>
 		<div>
 			Pilote : <h3 id="pilote" class="hide"></h3>
-			<button onclick="syntesis()">start</button>
+			<button onclick="syntesis()"><i class="fa fa-play-circle-o" aria-hidden="true"></i></button><button onclick="syntesis()"><i class="fa fa-eye" aria-hidden="true"></i></button>
 		</div> 
 		
         <p>Cliquez sur le bouton pour répondre</p>
-        <p><button id="button" type="button" onclick="runSpeechRecognition()">Lancer</button> &nbsp; <span id="action"></span></p>
+        <p><button id="button" type="button" onclick="runSpeechRecognition()"><i class="fa fa-microphone" aria-hidden="true"></i></button> &nbsp;  <span id="action"></span></p>
 		<div id="output" class="hide"></div>
 		<button onclick="submit()">check</button>
 		<div id="atc" class="hide"></div>

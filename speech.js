@@ -17,7 +17,6 @@
 
                 //initialisation de SpeechRecognition interface
                 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-                var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList ;
                 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent ;
                 
                 
@@ -67,9 +66,9 @@
             
               
                  // start recognition
-                 if(button.innerHTML=="Lancer"){
+                 if(button.innerHTML=='<i class="fa fa-microphone" aria-hidden="true"></i>'){
                     action.innerHTML = "<small>listening, please speak...</small>";
-                    button.innerHTML="Arr&ecircter" ;
+                    button.innerHTML="Stop" ;
                     recognition.start();
                     window.final_transcript = '';
                     //alert(text);
@@ -78,7 +77,7 @@
                  else {
                     action.innerHTML = "<small>stopped listening</small>";
                      recognition.stop();
-                     button.innerHTML="Lancer" ;
+                     button.innerHTML='<i class="fa fa-microphone" aria-hidden="true"></i>' ;
                      
                      
                  }
@@ -100,9 +99,9 @@
                         n++;
                     }
                     else {
-                        p=str[i].split("");
-                        q=expect[i].split("");
-                        if(p[0]===q[0])n++ ;
+                        p=str[i].split(""); //p=[l,o,y,a,l]
+                        q=expect[i].split(""); //q=[r,o,y,a,l]
+                        if(p[0]===q[0]) n+=1/2 ;
                     }
                 }
                 return (n+" corrects") ;
@@ -110,13 +109,18 @@
 
             //cette fonction va être appelée en cliquant sur le bouton check et va appeler la fct "check" si un speech est detécté 
             function submit(){
-                let answer=document.getElementById("atc");
+                let atc=document.getElementById("atc");
                 if(!window.final_transcript) {
                     alert('say something');}
                 else {
                     alert(check(window.final_transcript,answer.textContent));
                     //answer.innerHTML="<b>Expectation :</b> "+window.expectation ;
-                    answer.classList.remove("hide");}
+                    atc.classList.remove("hide");}
+            }
+
+            function showpilote(){
+                let pilote=document.getElementById("pilote");
+                pilote.classList.remove("hide");
             }
 
 
