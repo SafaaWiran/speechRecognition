@@ -1,0 +1,274 @@
+{
+  "0":{            //VRF
+    "0":{          //Avion au sol 0
+      "0":{        //Mise en route                          
+        "0":{       //Option 0
+          "pilote":["Colmar Housen Prévol, bonjour, Air Europe 03."],
+          "atc":["Air Europe 03, bonjour, j'écoute."]   
+          },      
+        "1":{       //Demande de paramétres
+          "pilote":["Air Europe 03, Demandons paramètres pour le départ.","Piste 26, Q_N_H 1013, Air Europe 03."],
+          "atc":["Air Europe 03, piste 26, vent (240) degrés (10) noeuds, visibilité (5) kilomètres, température 20, Q_N_H 1013, niveau de transition (6_0), il est 15 heures 37."]
+        },       
+        "2":{       //Sortie de zone
+          "pilote":[" Air Europe 03, Cessna 152, parking aviation générale, demandons consignes roulage pour vol à destination de Strasbourg Polygone avec information Lima.",
+            "Transpondeur 70_00, roulons point d'attente piste 26 via Alpha et rappelons prêt, Air Europe 03."],
+          "atc":["Air Europe 03, transpondeur 70_00, roulez point d'attente piste 26 via Alpha et rappelez prêt."]
+        },
+        "3":{        //tour de piste
+          "pilote":["Air Europe 03, Cessna 152, parking aviation générale, demandons consignes roulage pour des tours de piste avec information Lima.",
+            "Air Europe 03, Cessna 152, parking aviation générale, demandons consignes roulage pour des tours de piste avec information Lima."],
+          "atc":["Air Europe 03, transpondeur 70_00, roulez point d'attente piste 26 via Alpha et rappelez prêt."]
+        },
+        "4":{        //Autres points d'attente, **DEBUT ATC**
+          "pilote":["","Affirm, Air Europe 03.","Transpondeur 70_00, roulons point d'attente piste 26 intersection Alpha et rappelons prêt, Air Europe 03."],     
+          "atc":["Air Europe 03, pouvez-vous partir de la piste 26 depuis intersection Alpha ? TORA (1800) mètres.",
+            "Air Europe 03, transpondeur 70_00, roulez point d'attente piste 26 intersection Alpha et rappelez prêt."]
+        }
+    } ,
+      "1":{           //Circulation
+        "0":{         //Acélérer roulage
+          "pilote":[""],
+          "atc":["Air Europe 03, Expédiez le roulage."]
+        },
+        "1":{       //Ralentir roulage
+          "pilote":[""],
+          "atc":["Air Europe 03, Expédiez le roulage."]
+        },
+        "2":{       //Priorité traffic
+          "pilote":["","Maintenons position avant la prochaine intersection pour laisser passer un Cessna 172 droite vers la gauche, Air Europe 03."],
+          "atc":[" Air Europe 03, maintenez position avant la prochaine intersection pour laisser passer un Cessna 172 droite vers la gauche."]
+        } ,
+        "3":{       //Traversé de la piste
+          "pilote":["","Traversons piste 04 gauche, Air Europe 03."],
+          "atc":["Air Europe 03, traversez piste 04 gauche."]
+        }   
+      },
+      "2":{         //Prêt au départ
+        "0":{       //Option 0
+          "pilote":["Point d'attente piste 26, prêt au départ, Air Europe 03."],
+          "atc":[""]
+        },
+        "1":{       //Transfert tour
+          "pilote":["","Contactons Colmar Housen Tour, 118 décimale 7, merci pour le contrôle, Air Europe 03."],
+          "atc":["Contactez Colmar Housen Tour, 118 décimale 7."]
+        },
+        "2":{       //Décollage sortie de zone
+          "pilote":["","Nous alignons piste 26, autorisé décollage, rappellerons Novembre, Air Europe 03."],
+          "atc":["Air Europe 03, alignez-vous piste 26, autorisé décollage, vent 0_60 degrés 10 nœuds, rappelez Novembre."]
+        },
+        "3":{       //Décollages Tours de piste
+          "pilote":["Nous alignons piste 26, autorisé décollage, rappellerons vent arrière main gauche piste 26, Air Europe 03."],
+          "atc":["Nous alignons piste 26, autorisé décollage, rappellerons vent arrière main gauche piste 26, Air Europe 03."]
+        },
+        "4":{       //Décollage exercice
+          "pilote":["","Nous alignons piste 26, autorisé décollage, rappellerons verticale terrain 1500 pieds, Air Europe 03."],
+          "atc":["Air Europe 03, alignez-vous piste 26, autorisé décollage, vent 0_60 degrés 10 nœuds, rappelez verticale terrain 1500 pieds."]
+        },
+      "3":{         //Avion au décôlage
+        "0":{       //Contact tour
+          "0":{     //Option 0
+            "pilote":["Colmar Housen Tour, Air Europe 03, nous sommes au point d'attente piste 26, prêt au départ."],
+            "atc":[""]
+          },
+          "1":{     //Décollage sortie de zone
+            "pilote":["","Nous alignons piste 26, autorisé décollage, rappellerons Novembre, Air Europe 03."],
+            "atc":["Air Europe 03, alignez-vous piste 26, autorisé décollage, vent 0_60 degrés 10 nœuds, rappelez Novembre."]
+          },
+          "2":{     //Décollage Tours de piste
+            "pilote":["","Nous alignons piste 26, autorisé décollage, rappellerons vent arrière main gauche piste 26, Air Europe 03."],
+            "atc":["Air Europe 03, alignez-vous piste 26, autorisé décollage, vent 0_60 degrés 10 nœuds, rappelez vent arrière main gauche piste 26."]
+          },
+          "3":{     //Décollage exercice
+            "pilote":[""," Nous alignons piste 26, autorisé décollage, rappellerons verticale terrain 1500 pieds, Air Europe 03."],
+            "atc":[" Air Europe 03, alignez-vous piste 26, autorisé décollage, vent 0_60 degrés 10 nœuds, rappelez verticale terrain 1500 pieds."]
+          }   
+        }
+      },
+      "4":{       //Avion en l'air
+        "0":{     //Vent arrière
+          "0":{   //Option 0
+            "pilote":["Air Europe 03, En vent arrière, main gauche, piste 26."],
+            "atc":[""]
+          },
+          "1":{    //Reçu
+            "pilote":["","Rappellerons fin de vent arrière, Air Europe 03."],
+            "atc":["Air Europe 03, rappelez fin de vent arrière piste 26."]
+          } ,
+          "2":{     //Traffic
+            "pilote":["","Numéro 2, Cessna 172 en vue, rappellerons fin de vent arrière, Air Europe 03."],
+            "atc":[" Air Europe 03, numéro 2 derrière un Cessna 172 en base main gauche, rappelez fin de vent arrière piste 26."]
+            }      
+          },
+        "1":{       //Sortie de zône
+          "0":{     //Option 0
+            "pilote":["Colmar Housen Tour, Air Europe 03, approchons de Novembre."],
+            "atc":[""]
+          },
+          "1":{     //Fin service
+            "pilote":["","Auto-information, 122 décimal 8, merci pour le contrôle, Air Europe 03."],
+            "atc":["Air Europe 03, service du contrôle terminé, auto-information, 122 décimal 8."] 
+          }
+        }, 
+        "2":{       //Traffic
+          "0":{     //Option 0
+            "pilote":["","Bien compris, Air Europe 03 (et dès acquisition visuelle).","TB-9 en vue, 1000 pieds plus haut, Air Europe 03."],
+            "atc":["Air Europe 03, trafic à 11 heures, 4 nautiques, gauche vers droite, TB-9, 1000 pieds plus haut."] 
+          }
+        },
+        "3":{       //Entrée de zone
+          "0":{     //Option 0
+            "pilote":["Strasbourg Polygone Tour, Air Europe 03, bonjour."],
+            "atc":["Air Europe 03, Strasbourg Polygone Tour, bonjour."] 
+          },
+          "1":{     //Intégration complet
+            "pilote":["Air Europe 03, Cessna 172 en provenance de Colmar Housen, à destination de vos installations, verticale Novembre, 1500 pieds, avec information Lima, demandons intégration pour un complet.","Rappellerons verticale (point intermédiaire), Air Europe 03."],
+            "atc":["Air Europe 03, rappelez verticale (point intermédiaire)."] 
+          },
+          "2":{       //Intégration toucher
+            "pilote":["Air Europe 03, Cessna 172 en provenance de Colmar Housen, à destination de vos installations, verticale Novembre, 1500 pieds, avec information Lima, demandons intégration pour un toucher.","Rappellerons verticale (point intermédiaire), Air Europe 03."],
+            "atc":[" Air Europe 03, rappelez verticale (point intermédiaire)."] 
+          }
+        },
+        "4":{       //Entrée transit
+          "0":{     //Option 0
+            "pilote":["(lieu transit) Tour de Air Europe 03, bonjour."],
+            "atc":[" (lieu transit) Tour, bonjour, j'écoute."] 
+          },
+          "1":{      //Transit
+            "pilote":["Air Europe 03, Cessna 172 en provenance de Colmar Housen, à destination de Strasbourg Polygone, verticale Novembre, 1500 pieds, avec information Lima, demandons transit.","Rappellerons verticale terrain, Air Europe 03."],
+            "atc":["Air Europe 03, rappelez verticale terrain."] 
+          },
+          "2":{       //Verticale terrain
+            "pilote":["Air Europe 03, verticale terrain.","Rappellerons verticale Novembre."],
+            "atc":["Air Europe 03, rappelez verticale Novembre."] 
+          }
+        },
+        "5":{       //Sortie de transit
+          "0":{     //Option 0
+            "pilote":["(lieu transit) Tour, Air Europe 03, approchons de Novembre."],
+            "atc":[""] 
+          },
+          "1":{     //Fin service
+            "pilote":["","Auto-information, 122 décimal 8, merci pour le contrôle, Air Europe 03."],
+            "atc":["Air Europe 03, service du contrôle terminé, auto-information, 122 décimal 8."] 
+          }
+        }
+      },
+      "2":{         //Avion en décollage
+        "0":{       //Fin de vent arrière
+          "0":{     //Complte
+            "pilote":["Air Europe 03, fin de vent arrière piste pour un complet, piste 26.","Rappellerons finale piste 26, Air Europe 03."],
+            "atc":["Air Europe 03, rappellez finale piste 26."] 
+          },
+          "1":{     //Touchet
+            "pilote":[" Air Europe 03, fin de vent arrière pour un toucher, piste 26.","Rappellerons finale piste 26, Air Europe 03."],
+            "atc":["Air Europe 03, rappellez finale piste 26."] 
+          }
+        },
+        "1":{       //Atterissage
+          "0":{     //Option 0
+            "pilote":["Strasbourg Polygone Tour, Air Europe 03, finale piste 26."],
+            "atc":[""] 
+          },
+          "1":{     //Autorisé complet
+            "pilote":["","(numéro X), Autorisé atterrissage piste 26, Air Europe 03."],
+            "atc":["Air Europe 03, (numéro X), autorisé atterrissage piste 26 vent 0_60 degrés 10 nœuds."] 
+          },
+          "2":{     //Autorisé option
+            "pilote":[""," (numéro X), autorisé option piste 26, Air Europe 03."],
+            "atc":[" Air Europe 03, (numéro X), autorisé option piste 26, vent 0_60 degrés 10 nœuds."] 
+          },
+          "3":{     //Autorisé toucher
+            "pilote":["","Autorisé toucher piste 26, (numéro 2) Air Europe 03.","Autorisé toucher piste 26, (numéro X) Air Europe 03."],
+            "atc":["Air Europe 03, autorisé toucher piste 26, (numéro 2) vent 0_50 degrés 10 nœuds.","Air Europe 03, autorisé toucher piste 26, (numéro X) vent 0_60 degrés 10 nœuds."] 
+          },
+          "4":{     //Remise des gaz
+            "pilote":["","Remettons les gaz, Air Europe 03."],
+            "atc":["Air Europe 03, remettez les gaz."] 
+          },
+          "5":{     //Remise des gaz
+            "pilote":["Air Europe 03, remettons les gaz."],
+            "atc":["Air Europe 03, Rappelez à 1500 pieds."] 
+          }
+        }
+      },
+      "4":{         //
+        "0":{       //
+          "0":{     //
+            "pilote":[],
+            "atc":[]
+          },     
+          "1":{     //
+            "pilote":[],
+            "atc":[]
+          }, 
+          "2":{     //
+            "pilote":[],
+            "atc":[]
+          } 
+        },
+        "1":{       //
+          "0":{     //
+            "pilote":[],
+            "atc":[]
+          },     
+          "1":{     //
+            "pilote":[],
+            "atc":[]
+          }, 
+          "2":{     //
+            "pilote":[],
+            "atc":[]
+          } 
+        },
+        "2":{       //
+          "0":{     //
+            "pilote":[],
+            "atc":[]
+          },     
+          "1":{     //
+            "pilote":[],
+            "atc":[]
+          }, 
+          "2":{     //
+            "pilote":[],
+            "atc":[]
+          } 
+        },
+        "3":{       //
+          "0":{     //
+            "pilote":[],
+            "atc":[]
+          },     
+          "1":{     //
+            "pilote":[],
+            "atc":[]
+          }, 
+          "2":{     //
+            "pilote":[],
+            "atc":[]
+          } 
+        },
+        "4":{       //
+          "0":{     //
+            "pilote":[],
+            "atc":[]
+          },     
+          "1":{     //
+            "pilote":[],
+            "atc":[]
+          }, 
+          "2":{     //
+            "pilote":[],
+            "atc":[]
+          } 
+        }
+      }  
+    } 
+  },
+"1":{}
+}
+}
+
+
