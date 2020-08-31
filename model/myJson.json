@@ -25,7 +25,7 @@
           "atc":["Air Europe 03, pouvez-vous partir de la piste 26 depuis intersection Alpha ? TORA (1800) mètres.",
             "Air Europe 03, transpondeur 70_00, roulez point d'attente piste 26 intersection Alpha et rappelez prêt."]
         }
-    } ,
+      } ,
       "1":{           //Circulation
         "0":{         //Acélérer roulage
           "pilote":[""],
@@ -84,8 +84,8 @@
             "atc":[" Air Europe 03, alignez-vous piste 26, autorisé décollage, vent 0_60 degrés 10 nœuds, rappelez verticale terrain 1500 pieds."]
           }   
         }
-      }
-      /*"4":{       //Avion en l'air
+      },
+      "4":{       //Avion en l'air
         "0":{     //Vent arrière
           "0":{   //Option 0
             "pilote":["Air Europe 03, En vent arrière, main gauche, piste 26."],
@@ -155,7 +155,7 @@
           }
         }
       },
-      "2":{         //Avion en décollage
+      "5":{         //Avion en décollage
         "0":{       //Fin de vent arrière
           "0":{     //Complte
             "pilote":["Air Europe 03, fin de vent arrière piste pour un complet, piste 26.","Rappellerons finale piste 26, Air Europe 03."],
@@ -192,8 +192,8 @@
             "atc":["Air Europe 03, Rappelez à 1500 pieds."] 
           }
         }
-      },
-      "4":{         //
+      }/*,
+      "6":{         //
         "0":{       //
           "0":{     //
             "pilote":[],
@@ -264,7 +264,8 @@
             "atc":[]
           } 
         }
-      */}  
+      */
+      }  
     } 
   }
 }
