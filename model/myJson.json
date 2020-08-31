@@ -84,8 +84,8 @@
             "atc":[" Air Europe 03, alignez-vous piste 26, autorisé décollage, vent 0_60 degrés 10 nœuds, rappelez verticale terrain 1500 pieds."]
           }   
         }
-      },
-      "4":{       //Avion en l'air
+      }
+      /*"4":{       //Avion en l'air
         "0":{     //Vent arrière
           "0":{   //Option 0
             "pilote":["Air Europe 03, En vent arrière, main gauche, piste 26."],
@@ -264,11 +264,9 @@
             "atc":[]
           } 
         }
-      }  
+      */}  
     } 
-  },
-"1":{}
-}
+  }
 }
 
 
