@@ -64,10 +64,12 @@
         "4":{       //Décollage exercice
           "pilote":["","Nous alignons piste 26, autorisé décollage, rappellerons verticale terrain 1500 pieds, Air Europe 03."],
           "atc":["Air Europe 03, alignez-vous piste 26, autorisé décollage, vent 0_60 degrés 10 nœuds, rappelez verticale terrain 1500 pieds."]
-        },
-      "3":{         //Avion au décôlage
-        "0":{       //Contact tour
-          "0":{     //Option 0
+        }
+      }
+    },
+    "2":{         //Avion au décôlage
+      "0":{       //Contact tour
+        "0":{     //Option 0
             "pilote":["Colmar Housen Tour, Air Europe 03, nous sommes au point d'attente piste 26, prêt au départ."],
             "atc":[""]
           },
@@ -84,8 +86,8 @@
             "atc":[" Air Europe 03, alignez-vous piste 26, autorisé décollage, vent 0_60 degrés 10 nœuds, rappelez verticale terrain 1500 pieds."]
           }   
         }
-      },
-      "4":{       //Avion en l'air
+    },
+    "3":{       //Avion en l'air
         "0":{     //Vent arrière
           "0":{   //Option 0
             "pilote":["Air Europe 03, En vent arrière, main gauche, piste 26."],
@@ -154,8 +156,8 @@
             "atc":["Air Europe 03, service du contrôle terminé, auto-information, 122 décimal 8."] 
           }
         }
-      },
-      "5":{         //Avion en décollage
+      }, 
+      "4":{         //Avion en décollage
         "0":{       //Fin de vent arrière
           "0":{     //Complte
             "pilote":["Air Europe 03, fin de vent arrière piste pour un complet, piste 26.","Rappellerons finale piste 26, Air Europe 03."],
@@ -192,7 +194,8 @@
             "atc":["Air Europe 03, Rappelez à 1500 pieds."] 
           }
         }
-      }/*,
+      }  
+    }/*,
       "6":{         //
         "0":{       //
           "0":{     //
@@ -263,11 +266,10 @@
             "pilote":[],
             "atc":[]
           } 
-        }
-      */
-      }  
-    } 
-  }
+        }*/
 }
+     
+  
+
 
 
