@@ -17,8 +17,6 @@ function jsonReader() {
         let myJson = request.response;
         //ajouter du contenu à la page HTML à partir de json
         pilote.innerHTML = myJson["0"]["0"]["0"]["0"]["pilote"][0] ;
-        
-        title.innerHTML = myJson["safaa"] ;
 
         atc.innerHTML = myJson["0"]["0"]["0"]["0"]["atc"][0];
     } 
