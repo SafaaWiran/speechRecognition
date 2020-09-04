@@ -73,8 +73,8 @@ function runSpeechRecognition() {
 function check(str,expect){
     //On va incrémenter le n avec chaque bonne réponse
     let n=0;
-    str=str.split(" ");
-    expect=expect.split(" ");
+    str=str.toUpperCase().split(" ");
+    expect=expect.toUpperCase().split(" ");
     let p,q ;
     let i;
     for(i=0;i<str.length;i++){
@@ -96,7 +96,7 @@ function submit(){
     if(!window.final_transcript) {
         alert('say something');}
     else {
-        alert(check(window.final_transcript,atc.textContent));
+        alert(check(window.final_transcript,atc.textContent.replaceAll(',','').replaceAll('.','')));
         atc.classList.remove("hide");}
 }
             
