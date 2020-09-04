@@ -1,8 +1,8 @@
 { 
-  "0":{            //VRF
-    "0":{          //Avion au sol 0
-      "0":{        //Mise en route                          
-        "0":{       //Option 0
+  "0":{            
+    "0":{          
+      "0":{                                 
+        "0":{       
           "pilote":["Colmar Housen Prévol, bonjour, Air Europe 03."],
           "atc":["Air Europe 03, bonjour, j'écoute."]   
         },      
@@ -99,8 +99,8 @@
           "2":{     //Traffic
             "pilote":["","Numéro 2, Cessna 172 en vue, rappellerons fin de vent arrière, Air Europe 03."],
             "atc":[" Air Europe 03, numéro 2 derrière un Cessna 172 en base main gauche, rappelez fin de vent arrière piste 26."]
-            }      
-          },
+          }      
+        },
         "1":{       //Sortie de zône
           "0":{     //Option 0
             "pilote":["Colmar Housen Tour, Air Europe 03, approchons de Novembre."],
@@ -194,8 +194,8 @@
           }
         }
       }  
-    }
-  }  /*,
+  }
+}  /*,
       "6":{         //
         "0":{       //
           "0":{     //
