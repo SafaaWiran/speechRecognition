@@ -31,3 +31,14 @@ button {
 .show {
     display:block;
 }
+
+#field {
+    width:75%;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #0B4359;
+    border-block-color: gray;
+    color: gray;
+}

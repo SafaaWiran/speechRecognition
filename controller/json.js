@@ -15,7 +15,7 @@ function jsonReader() {
 
     request.onload = function () {
         let myJson = request.response;
-        function getRandom(speaker){
+        function getRandom(){
             let a,b,c,d ;
             a=0;
             //récupérer le n: nbr d'option de b
@@ -26,11 +26,15 @@ function jsonReader() {
             c=Math.floor(Math.random()*c);
             d=myJson[a.toString()][b.toString()][c.toString()]["n"];
             d=Math.floor(Math.random()*d);
-            return myJson[a.toString()][b.toString()][c.toString()][d.toString()][speaker][0];
+            let e=myJson[a.toString()][b.toString()][c.toString()][d.toString()]["pilote"][0];
+            let f=myJson[a.toString()][b.toString()][c.toString()][d.toString()]["pilote"][1];
+            let g=myJson[a.toString()][b.toString()][c.toString()][d.toString()]["atc"][0];
+            let h=myJson[a.toString()][b.toString()][c.toString()][d.toString()]["atc"][1];
+            return [e,f,g,h] ;
         }
         //ajouter du contenu à la page HTML à partir de json
-        pilote.innerHTML = getRandom('pilote');
-        atc.innerHTML = "La Bonne Réponse : "+myJson["0"]["0"]["0"]["0"]["atc"][0];
+        pilote.innerHTML = getRandom()[0];
+        atc.innerHTML = "La Bonne Réponse : "+getRandom()[2];
     } 
 }
 

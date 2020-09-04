@@ -1,5 +1,8 @@
 <!doctype html>
 	<head>
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet"  href="node_modules/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
 		<link rel="stylesheet" href="style.css">
 		<script src="https://kit.fontawesome.com/4cc9603e69.js" crossorigin="anonymous"></script>
 		<script src="../model/app.js"></script>
@@ -12,6 +15,11 @@
 			<b>Pilote : </b><p id="pilote" class="hide"></p>
 			<button id="syn" onclick="synthesis()"><i class="fa fa-play-circle-o" aria-hidden="true"></i></button>&ThinSpace;<button onclick="showpilote()"><i class="fa fa-eye" aria-hidden="true"></i></button>
 		</div> 
+		<fieldset id="field">
+			<div style="text-align: center;">
+				<h1>Instructions</h1>
+			</div>
+		</fieldset>
 		<div>
 			<p>Cliquez sur le bouton pour répondre</p>
         	<p><button id="button" type="button" onclick="runSpeechRecognition()"><i class="fa fa-microphone" aria-hidden="true"></i></button> &nbsp;  <span id="action"></span></p>
