@@ -1,9 +1,8 @@
 
 
-
 //Voice synthesis set up
 function synthesis(){
-    let utterance = new SpeechSynthesisUtterance(pilote.textContent);
+    let utterance = new SpeechSynthesisUtterance(pilote1.textContent);
     let start=document.querySelector("#syn");
     
     if(start.innerHTML==='<i class="fa fa-play-circle-o" aria-hidden="true"></i>'){  
@@ -18,7 +17,7 @@ function synthesis(){
 
 //Show pilote speech
 function showpilote(){
-    //let pilote=document.getElementById("pilote");
+    let pilote=document.getElementById("pilote");
     pilote.classList.remove("hide"); 
 }
 
@@ -93,11 +92,24 @@ function check(str,expect){
 //cette fonction va être appelée en cliquant sur le bouton check et va appeler la fct "check" si un speech est detécté 
 function submit(){
     let atc=document.querySelector('#atc');
+    let atc2=document.querySelector('#atc2');
+
     if(!window.final_transcript) {
         alert('say something');}
     else {
         alert(check(window.final_transcript,atc.textContent.replaceAll(',','').replaceAll('.','')));
-        atc.classList.remove("hide");}
+        if(atc.classList.length===0) {
+            atc.classList.add("hide");
+            atc2.classList.remove("hide");
+        }
+        else atc.classList.remove("hide");
+        pilote1.classList.add("hide");
+        if(pilote2.innerHTML){
+            pilote2.classList.remove("hide");
+        }
+        
+    }
+    
 }
             
 

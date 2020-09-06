@@ -6,26 +6,32 @@
       "0":{   
         "n":5,                           
         "0":{       
-          "pilote":["Colmar Housen Prévol, bonjour, Air Europe 03."],
-          "atc":["Air Europe 03, bonjour, j'écoute."]   
+          "pilote":["Colmar Housen Prévol, bonjour, Royal Air Maroc 206."],
+          "atc":["Royal Air Maroc 206, bonjour, j'écoute."],
+          "intructions":"Dites Bonjour, et informez le pilote que vous l'écoutez."   
         },      
         "1":{       
           "pilote":["Air Europe 03, Demandons paramètres pour le départ.","Piste 26, Q_N_H 1013, Air Europe 03."],
-          "atc":["Air Europe 03, piste 26, vent (240) degrés (10) noeuds, visibilité (5) kilomètres, température 20, Q_N_H 1013, niveau de transition (6_0), il est 15 heures 37."]
+          "atc":["Air Europe 03, piste 26, vent (240) degrés (10) noeuds, visibilité (5) kilomètres, température 20, Q_N_H 1013, niveau de transition (6_0), il est 15 heures 37."],
+          "intructions":"<h2>Paramètres : </h2>Piste 26, <br>Vent (240) dergrés (10) noeuds,<br>visibilité (5) kilomètres, température 20, Q_N_H 1013, niveau de transition (6_0), il est 15 heures 37."
         },       
         "2":{       
           "pilote":[" Air Europe 03, Cessna 152, parking aviation générale, demandons consignes roulage pour vol à destination de Strasbourg Polygone avec information Lima.",
             "Transpondeur 70_00, roulons point d'attente piste 26 via Alpha et rappelons prêt, Air Europe 03."],
-          "atc":["Air Europe 03, transpondeur 70_00, roulez point d'attente piste 26 via Alpha et rappelez prêt."]
+          "atc":["Air Europe 03, transpondeur 70_00, roulez point d'attente piste 26 via Alpha et rappelez prêt."],
+          "instructions":"Point d'attente piste 26 via alpha. Rappelez prêt."
+
         },
         "3":{        
           "pilote":["Air Europe 03, Cessna 152, parking aviation générale, demandons consignes roulage pour des tours de piste avec information Lima.",
             "Air Europe 03, Cessna 152, parking aviation générale, demandons consignes roulage pour des tours de piste avec information Lima."],
-          "atc":["Air Europe 03, transpondeur 70_00, roulez point d'attente piste 26 via Alpha et rappelez prêt."]
+          "atc":["Air Europe 03, transpondeur 70_00, roulez point d'attente piste 26 via Alpha et rappelez prêt."],
+          "instructions":"point d'attente piste 26 via Alpha, rappelez prêt."
         },
         "4":{        
           "pilote":["","Affirm, Air Europe 03.","Transpondeur 70_00, roulons point d'attente piste 26 intersection Alpha et rappelons prêt, Air Europe 03."],     
-          "atc":["Air Europe 03, pouvez-vous partir de la piste 26 depuis intersection Alpha ? TORA (1800) mètres.","Air Europe 03, transpondeur 70_00, roulez point d'attente piste 26 intersection Alpha et rappelez prêt."]
+          "atc":["Air Europe 03, pouvez-vous partir de la piste 26 depuis intersection Alpha ? TORA (1800) mètres.","Air Europe 03, transpondeur 70_00, roulez point d'attente piste 26 intersection Alpha et rappelez prêt."],
+          "instructions":"Demandez s'il pourait partir de la piste 26 depuis intersection Alpha, Tora (1800) mètres."
         }
       } ,
       "1":{ 

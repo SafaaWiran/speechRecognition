@@ -1,30 +1,36 @@
 <!doctype html>
 	<head>
+		<!--script src="https://kit.fontawesome.com/4cc9603e69.js" crossorigin="anonymous"></script-->
+		<link rel="stylesheet" href="C:/coursera/Bootstrap4/conFusion/node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="C:/coursera/Bootstrap4/conFusion/node_modules/font-awesome/css/font-awesome.min.css">
+		<link rel="css/stylesheet" href="C:/coursera/Bootstrap4/conFusion/node_mudules/bootstrap-social/bootstrap-social.css">
 		<link rel="stylesheet" href="style.css">
-		<script src="https://kit.fontawesome.com/4cc9603e69.js" crossorigin="anonymous"></script>
 		<script src="../model/app.js"></script>
 		<title>Simulation</title>
 	</head>
 	<body>
 		
-		<h2 id="title" ></h2>
+		<h5 id="title"></h5>
 		<div>
-			<b>Pilote : </b><p id="pilote" class="hide"></p>
+			<b>Pilote : </b><div id="pilote" class="hide"><p id="pilote1"></p><p id="pilote2" class="hide"></p></div>
 			<button id="syn" onclick="synthesis()"><i class="fa fa-play-circle-o" aria-hidden="true"></i></button>&ThinSpace;<button onclick="showpilote()"><i class="fa fa-eye" aria-hidden="true"></i></button>
 		</div> 
 		<fieldset id="field">
 			<div style="text-align: center;">
-				<h1>Instructions</h1>
+				<h3>Cliquez sur <i class="fa fa-play-circle-o" aria-hidden="true"></i> pour démarrer et <i class="fa fa-microphone" aria-hidden="true"></i> pour répondre. Une fois votre réponse est bien affichée, cliquez sur "check".</h3>
+				<p id="Instructions"></p>
 			</div>
 		</fieldset>
 		<div>
-			<p>Cliquez sur le bouton pour répondre</p>
         	<p><button id="button" type="button" onclick="runSpeechRecognition()"><i class="fa fa-microphone" aria-hidden="true"></i></button> &nbsp;  <span id="action"></span></p>
 		</div>
 		<div id="output" class="hide">	
 		</div>
-		<button onclick="submit()">check</button>
-		<div id="atc" class="hide"></div>
+		<button id="submit" onclick="submit()">check</button>
+		<div id="atc" class="hide"></div><div id="atc2" class="hide"></div>
+		<script src="C:/coursera/Bootstrap4/conFusion/node_modules/jquery/dist/jquery.slim.min.js"></script>
+    	<script src="C:/coursera/Bootstrap4/conFusion/node_modules/popper.js/dist/umd/popper.min.js"></script>
+    	<script src="C:/coursera/Bootstrap4/conFusion/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="../controller/json.js"></script>
 	</body>
 </html>
