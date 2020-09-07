@@ -8,7 +8,7 @@
         "0":{       
           "pilote":["Colmar Housen Prévol, bonjour, Royal Air Maroc 206."],
           "atc":["Royal Air Maroc 206, bonjour, j'écoute."],
-          "intructions":"Dites Bonjour, et informez le pilote que vous l'écoutez."   
+           
         },      
         "1":{       
           "pilote":["Air Europe 03, Demandons paramètres pour le départ.","Piste 26, Q_N_H 1013, Air Europe 03."],
@@ -37,16 +37,19 @@
       "1":{ 
         "n":4,          
         "0":{         
-          "pilote":[""],
-          "atc":["Air Europe 03, Expédiez le roulage."]
+          "pilote":["(Air Europe 03)"],
+          "atc":["Air Europe 03, Expédiez le roulage."],
+          "instructions": "Accélérez roulage"
         },
         "1":{       
-          "pilote":[""],
-          "atc":["Air Europe 03, Expédiez le roulage."]
+          "pilote":["(Air Europe 03)"],
+          "atc":[" Air Europe 03, Ralentissez.."],
+          "instructions": "Ralentir roulage"
         },
         "2":{      
-          "pilote":["","Maintenons position avant la prochaine intersection pour laisser passer un Cessna 172 droite vers la gauche, Air Europe 03."],
-          "atc":[" Air Europe 03, maintenez position avant la prochaine intersection pour laisser passer un Cessna 172 droite vers la gauche."]
+          "pilote":["(Air Europe 03)","Maintenons position avant la prochaine intersection pour laisser passer un Cessna 172 droite vers la gauche, Air Europe 03."],
+          "atc":[" Air Europe 03, maintenez position avant la prochaine intersection pour laisser passer un Cessna 172 droite vers la gauche."],
+          "instructions": "<h4>Priorité traffic</h4>"
         } ,
         "3":{      
           "pilote":["","Traversons piste 04 gauche, Air Europe 03."],
