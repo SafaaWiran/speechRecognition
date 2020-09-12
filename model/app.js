@@ -1,11 +1,18 @@
-
+let n=0;
 
 //Voice synthesis set up
 function synthesis(){
     let utterance = new SpeechSynthesisUtterance(pilote1.textContent);
 
-    speechSynthesis.speak(utterance);    
+    if(n===0){
+        speechSynthesis.speak(utterance);  
+        n=1;
+    } 
+    else {
+        n=0;
+        speechSynthesis.cancel();  
     }
+}
     
 
 //Show pilote speech
@@ -103,10 +110,6 @@ function submit(){
     }
     
 }
-
-
-            
-
 
 
             

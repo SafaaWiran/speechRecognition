@@ -4,11 +4,12 @@
 let pilote1=document.querySelector('#pilote1');
 let pilote2=document.querySelector('#pilote2');
 let piloteClass=document.querySelector('#piloteClass');
-let case1=document.querySelector('#case1');
-let case2=document.querySelector('#case2');
-let case3=document.querySelector('#case3');
-let atc=document.querySelector('#atc');  
-let atc2=document.querySelector('#atc2');
+var case1=document.querySelector('#case1');
+var case2=document.querySelector('#case2');
+var case3=document.querySelector('#case3');
+var atc=document.querySelector('#atc');  
+var atc2=document.querySelector('#atc2');
+
 
 //Declaration
 let random1, random2, random3 ;
@@ -23,14 +24,21 @@ function jsonReader() {
     request.responseType = 'json';
     request.send();
     request.onload = function () {
+        
         let myJson = request.response;
         
         //ajouter du contenu à la page HTML à partir de json
         random1=getRandom(myJson,case1) ;
         random2=getRandom(myJson,case2) ;
-        random3=getRandom(myJson,case3) ;        
-    } 
-}
+        random3=getRandom(myJson,case3) ;    
+
+       case1.addEventListener('click',function(){write(random1);});
+       case2.addEventListener('click',function(){write(random2);});
+       case3.addEventListener('click',function(){write(random3);});
+    }
+        
+} 
+    
 
 
 function getRandom(myJson,caseX){
@@ -64,19 +72,15 @@ function write(random) {
     if(!random[3]) atc2.innerHTML ="Très bien";
     else atc2.innerHTML = "La Bonne Réponse 2: "+random[3];
     piloteClass.classList.remove("hide");
+
+    synthesis();
 }
 
 jsonReader(); 
 
-try {
-    case1.addEventListener('click',write(random1));
-    case2.addEventListener('click',write(random2));
-    case3.addEventListener('click',write(random3));
-} catch(error){
-    case1.addEventListener('click',write(random1));
-    case2.addEventListener('click',write(random2));
-    case3.addEventListener('click',write(random3));
-}
+
+
+
     
 
 
