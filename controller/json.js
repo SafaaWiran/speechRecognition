@@ -3,10 +3,15 @@
 //Extraire les variables de ma page speech.html
 let pilote1=document.querySelector('#pilote1');
 let pilote2=document.querySelector('#pilote2');
-let title=document.querySelector('#title');
+let piloteClass=document.querySelector('#piloteClass');
+let case1=document.querySelector('#case1');
+let case2=document.querySelector('#case2');
+let case3=document.querySelector('#case3');
 let atc=document.querySelector('#atc');  
-let atc2=document.querySelector('#atc2'); 
-                   
+let atc2=document.querySelector('#atc2');
+
+//Declaration
+let random1, random2, random3 ;
 
 //Cette fonction va lire le contenu du fichier Json
 function jsonReader() {
@@ -21,17 +26,14 @@ function jsonReader() {
         let myJson = request.response;
         
         //ajouter du contenu à la page HTML à partir de json
-        let random=getRandom(myJson)
-        pilote1.innerHTML = random[0];
-        atc.innerHTML = "La Bonne Réponse : "+random[2];
-        if(!random[1]) pilote2.innerHTML="clear";
-        else pilote2.innerHTML = "Reply : "+random[1];
-        if(!random[3]) atc2.innerHTML ="Très bien";
-        else atc2.innerHTML = "La Bonne Réponse 2: "+random[3];
+        random1=getRandom(myJson,case1) ;
+        random2=getRandom(myJson,case2) ;
+        random3=getRandom(myJson,case3) ;        
     } 
 }
 
-function getRandom(myJson){
+
+function getRandom(myJson,caseX){
     let a,b,c,d ;
     //Génération de paramétres aléatoires
     a=0;
@@ -42,7 +44,7 @@ function getRandom(myJson){
     d=myJson[a][b][c]["n"];
     d=Math.floor(Math.random()*d);
     //Affichage de la position du cas généré dans le haut de la page
-    title.innerHTML=a+"."+b+"."+c+"."+d ;
+    caseX.innerHTML=a+"."+b+"."+c+"."+d ;
     //Extraires les cas aléatoires de myJson
     let e=myJson[a][b][c][d]["pilote"][0];
     if(e==="")e="speak";
@@ -54,6 +56,29 @@ function getRandom(myJson){
     return [e,f,g,h] ;
 }
 
+function write(random) {
+    pilote1.innerHTML = random[0];
+    atc.innerHTML = "La Bonne Réponse : "+random[2];
+    if(!random[1]) pilote2.innerHTML="clear";
+    else pilote2.innerHTML = "Reply : "+random[1];
+    if(!random[3]) atc2.innerHTML ="Très bien";
+    else atc2.innerHTML = "La Bonne Réponse 2: "+random[3];
+    piloteClass.classList.remove("hide");
+}
+
 jsonReader(); 
+
+try {
+    case1.addEventListener('click',write(random1));
+    case2.addEventListener('click',write(random2));
+    case3.addEventListener('click',write(random3));
+} catch(error){
+    case1.addEventListener('click',write(random1));
+    case2.addEventListener('click',write(random2));
+    case3.addEventListener('click',write(random3));
+}
+    
+
+
 
 

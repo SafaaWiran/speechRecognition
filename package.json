@@ -19,7 +19,13 @@
   },
   "homepage": "https://github.com/SafaaWiran/speechRecognition#readme",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "lite-server": "^2.5.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^1.12.4",
+    "popper.js": "^1.16.1"
+  }
 }

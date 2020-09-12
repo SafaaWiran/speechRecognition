@@ -3,17 +3,10 @@
 //Voice synthesis set up
 function synthesis(){
     let utterance = new SpeechSynthesisUtterance(pilote1.textContent);
-    let start=document.querySelector("#syn");
+
+    speechSynthesis.speak(utterance);    
+    }
     
-    if(start.innerHTML==='<i class="fa fa-play-circle-o" aria-hidden="true"></i>'){  
-        speechSynthesis.speak(utterance); 
-        start.innerHTML='<i class="fa fa-stop-circle-o" aria-hidden="true"></i>'; 
-    }
-    else {
-        speechSynthesis.cancel();
-        start.innerHTML='<i class="fa fa-play-circle-o" aria-hidden="true"></i>'; 
-    }
-}
 
 //Show pilote speech
 function showpilote(){
@@ -106,11 +99,12 @@ function submit(){
         pilote1.classList.add("hide");
         if(pilote2.innerHTML){
             pilote2.classList.remove("hide");
-        }
-        
+        } 
     }
     
 }
+
+
             
 
 

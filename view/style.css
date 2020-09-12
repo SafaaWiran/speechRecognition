@@ -33,7 +33,7 @@ button {
 }
 
 #field {
-    width:75%;
+    width:100%;
     margin-top: 80px;
     margin-bottom: 60px;
     margin-right: auto;
@@ -42,8 +42,25 @@ button {
     padding-right: 20px;
     padding-bottom: 20px;
     margin-left: auto;
-    background-color: #0B4359;
     color: gray;
     border: 2px;
     border-color: gray ;
+}
+
+.footer {
+    background-color: darkslategray;
+    margin: 0px auto;
+    padding: 20px 0px; 
+}
+
+.table {
+    margin: 20px ;
+}
+
+.strips {
+    margin: 20px ;
+}
+
+.container {
+    height: 450px;
 }

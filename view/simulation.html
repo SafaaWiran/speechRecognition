@@ -1,36 +1,106 @@
 <!doctype html>
+<html>
 	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		
 		<!--script src="https://kit.fontawesome.com/4cc9603e69.js" crossorigin="anonymous"></script-->
-		<link rel="stylesheet" href="C:/coursera/Bootstrap4/conFusion/node_modules/bootstrap/dist/css/bootstrap.min.css">
-		<link rel="stylesheet" href="C:/coursera/Bootstrap4/conFusion/node_modules/font-awesome/css/font-awesome.min.css">
-		<link rel="css/stylesheet" href="C:/coursera/Bootstrap4/conFusion/node_mudules/bootstrap-social/bootstrap-social.css">
+		<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+		<link rel="css/stylesheet" href="../node_mudules/bootstrap-social/bootstrap-social.css">
 		<link rel="stylesheet" href="style.css">
 		<script src="../model/app.js"></script>
+
 		<title>Simulation</title>
 	</head>
 	<body>
-		
-		<h6 id="title"></h6>
-		<div>
-			<b>Pilote : </b><div id="pilote" class="hide"><p id="pilote1"></p><p id="pilote2" class="hide"></p></div>
-			<button id="syn" onclick="synthesis()"><i class="fa fa-play-circle-o" aria-hidden="true"></i></button>&ThinSpace;<button onclick="showpilote()"><i class="fa fa-eye" aria-hidden="true"></i></button>
-		</div> 
-		<fieldset id="field">
-			<div style="text-align: center;">
-				<h4>Cliquez sur <i class="fa fa-play-circle-o" aria-hidden="true"></i> pour démarrer et <i class="fa fa-microphone" aria-hidden="true"></i> pour répondre. Une fois votre réponse est bien affichée, cliquez sur "check".</h4>
-				<p id="Instructions"></p>
+		<nav class="navbar navbar-dark bg-dark">
+			<a class="navbar-brand" href="../index.html">
+			  <i class="fa fa-angle-left" width="30" height="10" alt=""></i>
+			</a>
+			
+			<a class="nav item" href="#">Sign Up/In</a>
+		</nav>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-sm-6">
+					<div>
+						<fieldset id="field">
+							<div style="text-align: center;">
+								<h4>Cliquez sur <i class="fa fa-play-circle-o" aria-hidden="true"></i> pour démarrer et <i class="fa fa-microphone" aria-hidden="true"></i> pour répondre. Une fois votre réponse est bien affichée, cliquez sur "check".</h4>
+								<p id="Instructions"></p>
+							</div>
+						</fieldset>
+					</div>
+					
+					<div class="hide" id="piloteClass">
+						<div id="pilote" class="hide"><p id="pilote1"></p><p id="pilote2" class="hide"></p></div>
+						<button id="syn" >
+							<i class="fa fa-play-circle-o" aria-hidden="true"></i>
+						</button>&ThinSpace;
+						<button onclick="showpilote()"><i class="fa fa-eye" aria-hidden="true"></i></button>
+						<div id="atc" class="hide"></div><div id="atc2" class="hide"></div>
+					</div> 	
+				</div>
+				<div class="col-12 col-sm-6">
+					<div class="row-content">
+						<div class="col">
+							<table class="table table-striped table-dark">
+								<thead class="thead-dark">
+									<tr>
+										<th scope="col">Runway</th>
+										<th scope="col">Wind</th>
+										<th scope="col">Visiblity</th>
+										<th scope="col">Temperature</th>
+										<th scope="col">QNH</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										  <th scope="row">25</th>
+										  <td>251</td>
+										  <td>10</td>
+										  <td>27</td>
+										  <td>1020</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>	
+					</div>
+					<div class="row-content strips">
+						<div class="col">
+							<button type="button" id="case1" class="btn btn-primary btn-lg btn-block" onclick="synthesis()"></button>
+							<button type="button" id="case2" class="btn btn-primary btn-lg btn-block" onclick="synthesis()"></button>
+							<button type="button" id="case3" class="btn btn-primary btn-lg btn-block" onclick="synthesis()"></button>
+						</div>
+						
+					</div>
+				</div>	
 			</div>
-		</fieldset>
-		<div>
-        	<p><button id="button" type="button" onclick="runSpeechRecognition()"><i class="fa fa-microphone" aria-hidden="true"></i></button> &nbsp;  <span id="action"></span></p>
 		</div>
-		<div id="output" class="hide">	
-		</div>
-		<button id="submit" onclick="submit()">check</button>
-		<div id="atc" class="hide"></div><div id="atc2" class="hide"></div>
-		<script src="C:/coursera/Bootstrap4/conFusion/node_modules/jquery/dist/jquery.slim.min.js"></script>
-    	<script src="C:/coursera/Bootstrap4/conFusion/node_modules/popper.js/dist/umd/popper.min.js"></script>
-    	<script src="C:/coursera/Bootstrap4/conFusion/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		
+
+		<footer class="footer">
+			<div class="container-fluid">
+				<div class="row align-items-center">
+					<div class="col order-first">
+						<button id="button" type="button" onclick="runSpeechRecognition()">
+							<i class="fa fa-microphone" aria-hidden="true"></i>
+						</button>
+					</div>
+					<div class="col-10">
+						<span id="action"></span>
+						<p id="output" >Instrutions ...</p>
+					</div>
+					<div class="col order-last">
+						<button id="submit" onclick="submit()">check</button>
+					</div>
+				</div>	
+			</div>	
+		</footer>
+		<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="../controller/json.js"></script>
 	</body>
 </html>
