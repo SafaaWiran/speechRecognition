@@ -65,14 +65,14 @@ function getRandom(myJson,caseX){
 }
 
 function write(random) {
-    pilote1.innerHTML = random[0];
+    pilote1.innerHTML = "Pilote : "+random[0];
     atc.innerHTML = "La Bonne Réponse : "+random[2];
     if(!random[1]) pilote2.innerHTML="clear";
-    else pilote2.innerHTML = "Reply : "+random[1];
-    if(!random[3]) atc2.innerHTML ="Très bien";
+    else pilote2.innerHTML = "Reply pilote : "+random[1];
+    if(!random[3]) atc2.innerHTML ="Très bien Contrôlleur !";
     else atc2.innerHTML = "La Bonne Réponse 2: "+random[3];
-    piloteClass.classList.remove("hide");
-
+    //piloteClass.classList.remove("hide");
+    
     synthesis();
 }
 

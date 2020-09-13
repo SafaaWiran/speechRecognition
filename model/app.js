@@ -98,15 +98,21 @@ function submit(){
         alert('say something');}
     else {
         alert(check(window.final_transcript,atc.textContent.replaceAll(',','').replaceAll('.','')));
+        if(pilote1.classList.length===0){
+            pilote1.classList.add("hide");  
+            if(pilote2.innerHTML){
+            pilote2.classList.remove("hide");
+            } 
+        }
+        else {
+            pilote1.classList.remove("hide");  
+        }
+            
         if(atc.classList.length===0) {
             atc.classList.add("hide");
             atc2.classList.remove("hide");
         }
-        else atc.classList.remove("hide");
-        pilote1.classList.add("hide");
-        if(pilote2.innerHTML){
-            pilote2.classList.remove("hide");
-        } 
+        else atc.classList.remove("hide");    
     }
     
 }
