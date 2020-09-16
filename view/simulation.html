@@ -21,48 +21,54 @@
 			
 			<a class="nav item" href="#">Sign Up/In</a>
 		</nav>
-		<div class="container">
-			<div class="row">
-				<div class="col-12 col-sm-6">
+		<div class="container-fluid">
+			<div class="row align-items-center" style="border: 5px ridge grey">
+				<div class="col-12 col-md-6">
+					<div>
+						<p id="scoreTotal" class="hide" style="border: 2px solid green; background-color: grey;"></p>
+					</div>
+					<div id="score" class="alert hide" role="alert"></div>
 					<div>
 						<fieldset id="field">
 							<div style="text-align: center;">
-								<h5>Cliquez sur un strip de votre choix pour démarrer et <i class="fa fa-microphone" aria-hidden="true"></i> pour répondre. Une fois votre réponse est bien affichée, cliquez sur "check".</h5>
+								<h5>Cliquez sur un strip de votre choix. Ensuite, cliquez sur <i class="fa fa-microphone" aria-hidden="true"></i> pour répondre. Une fois votre réponse est bien affichée, cliquez sur "check".</h5>
+								<p id="Instructions"></p>
 							</div>
 						</fieldset>
 					</div>
 					
-					<div id="piloteClass">
-						<div id="pilote"><p id="pilote1" class="hide"></p><p id="pilote2" class="hide"></p></div>
-						<div id="atc" class="hide"></div><div id="atc2" class="hide"></div>
-					</div> 	
+					<div id="pilote"><p id="pilote1" class="alert alert-dark hide" role="alert"></p><p id="pilote2" class="hide alert alert-dark hide" role="alert"></p></div>
+					<div id="atcBlock"><div id="atc" class="alert alert-primary hide"></div><div id="atc2" class="alert alert-primary hide" role="alert"></div></div>
+					 	
 				</div>
-				<div class="col-12 col-sm-6">
-					<div class="row-content">
-						<div class="col">
-							<table class="table table-bordered table-dark">
+				<div class="col-12 col-md-6">
+					<div class="row" style="background-color: #1d3232; border: 10px inset #8d9f9f;">
+						<div class="col table-responsive-md">
+							<table class="table table-bordered table-dark ">
 								<thead class="thead-dark">
 									<tr>
-										<th scope="col">Runway</th>
 										<th scope="col">Wind</th>
-										<th scope="col">Visiblity</th>
-										<th scope="col">Temperature</th>
+										<th scope="col">Visib.</th>
+										<th scope="col">Temp.</th>
 										<th scope="col">QNH</th>
+										<th scope="col">Niv.<br>Trans</th>
+										<th scope="col">Time</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										  <th scope="row">25</th>
-										  <td>255<br>5</td>
-										  <td>10</td>
-										  <td>27</td>
-										  <td>1020</td>
+										  <td>240º<br>10N</td>
+										  <td>5Km</td>
+										  <td>20ºC</td>
+										  <td>1013</td>
+										  <td>6_0</td>
+										  <td>15:37</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>	
 					</div>
-					<div class="row-content strips">
+					<div class="row strips">
 						<div class="col">
 							<button type="button" id="case1" class="btn btn-light btn-lg btn-block" ></button>
 							<button type="button" id="case2" class="btn btn-light btn-lg btn-block" ></button>
@@ -78,17 +84,16 @@
 		<footer class="footer">
 			<div class="container-fluid">
 				<div class="row align-items-center">
-					<div class="col order-first">
-						<button id="button" type="button" onclick="runSpeechRecognition()">
-							<i class="fa fa-microphone" aria-hidden="true"></i>
-						</button>
+					<div class="col-12 col-md-2 order-first btn-group" role="group" aria-label="Basic example" >
+						<button id="speek" type="button" class="btn btn-secondary" onclick="runSpeechRecognition()"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+						<button id="hint" type="button" class="btn btn-secondary" onclick="hint()">Hint</button>
 					</div>
-					<div class="col-10">
+					<div class="col-12 col-md-9">
 						<span id="action"></span>
-						<p id="output" >Instrutions ...</p>
+						<p id="output" >Cliquez sur le micro.</p>
 					</div>
-					<div class="col order-last">
-						<button id="submit" onclick="submit()">check</button>
+					<div class="col-12 col-md order-last">
+						<button class="btn btn-secondary" id="submit" onclick="submit()">check</button>
 					</div>
 				</div>	
 			</div>	

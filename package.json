@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/SafaaWiran/speechRecognition.git"
+    "url": "https://github.com/SafaaWiran/speechRecognition.git"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/speechrecognition"
+    "registry":"https://registry.npmjs.org/speechrecognition@1.0.0"
   },
   "author": "safaa",
   "license": "ISC",

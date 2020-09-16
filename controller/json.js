@@ -3,7 +3,6 @@
 //Extraire les variables de ma page speech.html
 let pilote1=document.querySelector('#pilote1');
 let pilote2=document.querySelector('#pilote2');
-let piloteClass=document.querySelector('#piloteClass');
 var case1=document.querySelector('#case1');
 var case2=document.querySelector('#case2');
 var case3=document.querySelector('#case3');
@@ -60,20 +59,47 @@ function getRandom(myJson,caseX){
     if(f==="")f="clear";
     let g=myJson[a][b][c][d]["atc"][0];
     let h=myJson[a][b][c][d]["atc"][1];
+    let i=myJson[a][b][c][d]["atc"][0];
 
     return [e,f,g,h] ;
 }
 
 function write(random) {
-    pilote1.innerHTML = "Pilote : "+random[0];
-    atc.innerHTML = "La Bonne Réponse : "+random[2];
-    if(!random[1]) pilote2.innerHTML="clear";
-    else pilote2.innerHTML = "Reply pilote : "+random[1];
-    if(!random[3]) atc2.innerHTML ="Très bien Contrôlleur !";
-    else atc2.innerHTML = "La Bonne Réponse 2: "+random[3];
-    //piloteClass.classList.remove("hide");
     
-    synthesis();
+    pilote1.classList.add("hide");
+    atc.classList.add("hide");
+    pilote2.classList.add("hide");
+    atc2.classList.add("hide");
+    score.classList.add("hide");
+    output.innerHTML=="intructions..."
+
+    field.innerHTML=
+    pilote1.innerHTML = random[0];
+    atc.innerHTML = random[2];
+    if(!random[1]) pilote2.innerHTML="clear";
+    else pilote2.innerHTML = random[1];
+    if(!random[3]) atc2.classList.add("hide");
+    else atc2.innerHTML = random[3];
+    //piloteClass.classList.remove("hide");
+
+    if(pilote1.classList.length===0){
+        pilote1.classList.add('hide');
+        atc.classList.add('hide');
+        score.classList.add('hide');
+    }
+
+    synthesis(pilote1.textContent);
+
+    pilote1.innerHTML="<b>pilote : <b>"+pilote1.innerHTML;
+    pilote2.innerHTML="<b>Pilote reply : <b>"+pilote2.innerHTML ;
+    atc.innerHTML="<b>ATC : <b>"+atc.innerHTML ;
+    atc2.innerHTML="<b>ATC reply: <b>"+atc2.innerHTML ;
+
+    //Boutons Speek et Hint activé
+    speek.disabled=false ;
+    hintB.disabled=false ;
+
+
 }
 
 jsonReader(); 

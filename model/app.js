@@ -1,16 +1,30 @@
-let n=0;
+let speek=document.querySelector('#speek');
+let hintB=document.querySelector('#hint');
+let submitB=document.querySelector('#submit');
+let score=document.querySelector('#score');
+let field=document.querySelector('#field');
+let output= document.querySelector('#output');
+let action = document.querySelector('#action');
+let recognition ;
+let n=0,m=0;o=0 ;
+
+//Disabling speeks
+speek.disabled=true ;
+hintB.disabled=true ;
+submitB.disabled=true ;
+
 
 //Voice synthesis set up
-function synthesis(){
-    let utterance = new SpeechSynthesisUtterance(pilote1.textContent);
-
+function synthesis(speech){
+    let utterance = new SpeechSynthesisUtterance(speech);
     if(n===0){
         speechSynthesis.speak(utterance);  
         n=1;
     } 
     else {
         n=0;
-        speechSynthesis.cancel();  
+        speechSynthesis.cancel(); 
+        speechSynthesis.speak(utterance); 
     }
 }
     
@@ -23,16 +37,13 @@ function showpilote(){
 
 //Speech recognition start
 function runSpeechRecognition() {
-    
-    let output= document.querySelector('#output');
-    let action = document.querySelector('#action');
-    let button=document.querySelector('#button');
+    m=1;
 
     //initialisation de SpeechRecognition interface
     var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
     var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent ;
     //new speech recognition object
-    var recognition = new SpeechRecognition();
+    recognition = new SpeechRecognition();
 
     //Defining speech recognition proparties
     recognition.continuous=true ;
@@ -40,8 +51,15 @@ function runSpeechRecognition() {
     recognition.lang = 'fr-FR';
     recognition.maxAlternatives = 1;
     
+    // start recognition
+
+    action.innerHTML = "<small>listening, please speak...</small>";
+    recognition.start();
+    window.final_transcript = '';
+    
     //Show recognition result
     recognition.onresult = function(event) {  
+        
         //let interim_transcript = '';
         for (let i = event.resultIndex; i < event.results.length; ++i) {
           if (event.results[i].isFinal) {
@@ -51,25 +69,14 @@ function runSpeechRecognition() {
         output.innerHTML = "<b>Vous avez dit :</b> "+window.final_transcript ; 
         output.classList.remove("hide");
     }
-    
 
-     // start recognition
-    if(button.innerHTML=='<i class="fa fa-microphone" aria-hidden="true"></i>'){
-        action.innerHTML = "<small>listening, please speak...</small>";
-        button.innerHTML="Stop" ;
-        recognition.start();
-        window.final_transcript = '';
-    }
-     //stop recognition
-    else {
-        action.innerHTML = "<small>stopped listening</small>";
-        recognition.stop();
-        button.innerHTML='<i class="fa fa-microphone" aria-hidden="true"></i>' ; 
-    }    
+    //Bouton check activé
+    submitB.disabled=false ;
 }
 
 //La fonction qui fait la comparaison entre le speech obtenu et la bonne réponse
 function check(str,expect){
+
     //On va incrémenter le n avec chaque bonne réponse
     let n=0;
     str=str.toUpperCase().split(" ");
@@ -86,35 +93,58 @@ function check(str,expect){
             if(p[0]===q[0]) n+=1/2 ;
         }
     }
-    return (n+" corrects/"+expect.length) ;
+    return (n*100/expect.length) ;
 }
 
 //cette fonction va être appelée en cliquant sur le bouton check et va appeler la fct "check" si un speech est detécté 
 function submit(){
-    let atc=document.querySelector('#atc');
-    let atc2=document.querySelector('#atc2');
-
-    if(!window.final_transcript) {
-        alert('say something');}
-    else {
-        alert(check(window.final_transcript,atc.textContent.replaceAll(',','').replaceAll('.','')));
-        if(pilote1.classList.length===0){
-            pilote1.classList.add("hide");  
-            if(pilote2.innerHTML){
-            pilote2.classList.remove("hide");
-            } 
+    let t ;
+    if(m===1) recognition.stop();
+    
+    action.innerHTML = "<small>stopped listening</small>";
+    
+    field.classList.add("hide");
+    
+    if(window.final_transcript){
+        score.classList.remove("hide");
+        let s=check(window.final_transcript,atc.textContent.replaceAll(',','').replaceAll('.',''));
+        if(s<50){
+            score.innerHTML=s+"% Correct, r&eacutep&eacutetez";   
+            score.classList.add("alert-danger");
+            return 0 ;
         }
         else {
-            pilote1.classList.remove("hide");  
+            score.classList.add("alert-success");
+            score.innerHTML=s+"% Correct, continuez"; 
         }
-            
-        if(atc.classList.length===0) {
-            atc.classList.add("hide");
-            atc2.classList.remove("hide");
-        }
-        else atc.classList.remove("hide");    
     }
     
+    synthesis(pilote2.textContent); 
+    t=pilote1.classList.toggle("hide");  
+    if(t){
+        
+        t=pilote2.classList.toggle("hide");
+        if(t) pilote2.classList.toggle("hide");
+    }
+
+    t=atc.classList.toggle("hide");  
+    if(t){
+        t=atc2.classList.toggle("hide");
+        if(t) atc2.classList.toggle("hide");
+    }     
+  
+}      
+
+
+function hint(){
+
+    if(output.innerHTML===atc.textContent ){
+        output.innerHTML=atc2.textContent ;
+    }
+    else {
+        output.innerHTML=atc.textContent ;
+    }
+    submitB.disabled=false ;
 }
 
 

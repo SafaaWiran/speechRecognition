@@ -1,28 +1,34 @@
 body {
     font-family: Andale Mono, monospace;
-    background-color:#112426 ;
-    color:azure ;
+    color:#112426 ;
+    background-color: #b3bfbf
+}
+
+.footer {
+    background-color: darkslategray;
+    padding: 20px 0px; 
+    height: 15% ;
+}
+
+.container {
+    height: 75%;
 }
 
 #title {
     text-align : right ;
 }
 
-button {
-    padding:10px;
-    background-color:#0B4359;
-    color: #FFFFFF;
-    border: 0px;
-    cursor:pointer;
-    border-radius: 5px;
-}
-#output, #atc, #atc2 {
+#output{
     background-color:#1C1A17;
     color:#7C7C7C;
     padding:10px;
     width: 100%;
     margin-top:20px;
     line-height:30px;
+}
+
+#output {
+    border-radius:10px;
 }
 
 .hide {
@@ -33,34 +39,43 @@ button {
 }
 
 #field {
-    width:100%;
-    margin-top: 80px;
-    margin-bottom: 60px;
-    margin-right: auto;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    margin-left: auto;
-    color: gray;
-    border: 2px;
-    border-color: gray ;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+
 }
 
-.footer {
-    background-color: darkslategray;
-    margin: 0px auto;
-    padding: 20px 0px; 
-}
 
 .table {
-    margin: 20px ;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: table ;
+    box-sizing: border-box;
+
 }
 
 .strips {
-    margin: 20px ;
+    padding: 2% 2% 2% 2%;
+    background-color: #0c1515;
+    border: 5px inset #8d9f9f;
 }
 
-.container {
-    height: 450px;
+
+
+#atcBlock, #pilote, #score{
+    margin-bottom: 50px;
 }
+
+#case1, #case2, #case3 {
+    margin-top : 5%  ;
+    margin-bottom : 5%  ;
+    border-radius:2px;
+} 
+
+
+
+
