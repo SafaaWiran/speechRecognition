@@ -39,22 +39,22 @@
         "0":{         
           "pilote":[""],
           "atc":["Air Europe 03, Expédiez le roulage."],
-          "instructions": ["Air Europe 03 en circulation. L'avion Doit accélérer le roulage."]
+          "instructions":["Air Europe 03 en circulation. L'avion Doit accélérer le roulage."]
         },
         "1":{       
           "pilote":[""],
           "atc":[" Air Europe 03, Ralentissez.."],
-          "instructions": ["Air Europe 03 en circulation. L'avion doit ralentir le roulage."]
+          "instructions":["Air Europe 03 en circulation. L'avion doit ralentir le roulage."]
         },
         "2":{      
           "pilote":["","Maintenons position avant la prochaine intersection pour laisser passer un Cessna 172 droite vers la gauche, Air Europe 03."],
           "atc":["Air Europe 03, maintenez position avant la prochaine intersection pour laisser passer un Cessna 172 droite vers la gauche."],
-          "instructions": ["<h4>Priorité traffic</h4>Air Europe 03 en circulation. Prochaine intersection avec un Cessna 172 à droite. L'avion doit la laisser passer vers la gauche."]
+          "instructions":["<h4>Priorité traffic</h4>Air Europe 03 en circulation. Prochaine intersection avec un Cessna 172 à droite. L'avion doit la laisser passer vers la gauche."]
         } ,
         "3":{      
           "pilote":["","Traversons piste 04 gauche, Air Europe 03."],
           "atc":["Air Europe 03, traversez piste 04 gauche."],
-          "instructions": ["Air Europe 03 en circulation. L'avion doit traverser la piste 04 gauche"]
+          "instructions":["Air Europe 03 en circulation. L'avion doit traverser la piste 04 gauche"]
         }   
       },
       "2":{ 
@@ -113,7 +113,7 @@
           } ,
           "1":{    
             "pilote":["Air Europe 03, En vent arrière, main gauche, piste 26.","Numéro 2, Cessna 172 en vue, rappellerons fin de vent arrière, Air Europe 03."],
-            "atc":[" Air Europe 03, numéro 2 derrière un Cessna 172 en base main gauche, rappelez fin de vent arrière piste 26."],
+            "atc":["Air Europe 03, numéro 2 derrière un Cessna 172 en base main gauche, rappelez fin de vent arrière piste 26."],
             "instructions":["Numéro 2 derrière un Cessna 172 en base main gauche."]
           }      
         },
