@@ -59,9 +59,9 @@ function getRandom(myJson,caseX){
     if(f==="")f="clear";
     let g=myJson[a][b][c][d]["atc"][0];
     let h=myJson[a][b][c][d]["atc"][1];
-    let i=myJson[a][b][c][d]["atc"][0];
+    let i=myJson[a][b][c][d]["instructions"][0];
 
-    return [e,f,g,h] ;
+    return [e,f,g,h,i] ;
 }
 
 function write(random) {
@@ -73,14 +73,13 @@ function write(random) {
     score.classList.add("hide");
     output.innerHTML=="intructions..."
 
-    field.innerHTML=
+    field.innerHTML=random[4];
     pilote1.innerHTML = random[0];
     atc.innerHTML = random[2];
     if(!random[1]) pilote2.innerHTML="clear";
     else pilote2.innerHTML = random[1];
     if(!random[3]) atc2.classList.add("hide");
     else atc2.innerHTML = random[3];
-    //piloteClass.classList.remove("hide");
 
     if(pilote1.classList.length===0){
         pilote1.classList.add('hide');
@@ -91,9 +90,9 @@ function write(random) {
     synthesis(pilote1.textContent);
 
     pilote1.innerHTML="<b>pilote : <b>"+pilote1.innerHTML;
-    pilote2.innerHTML="<b>Pilote reply : <b>"+pilote2.innerHTML ;
+    pilote2.innerHTML="<b>Pilote : <b>"+pilote2.innerHTML ;
     atc.innerHTML="<b>ATC : <b>"+atc.innerHTML ;
-    atc2.innerHTML="<b>ATC reply: <b>"+atc2.innerHTML ;
+    atc2.innerHTML="<b>ATC : <b>"+atc2.innerHTML ;
 
     //Boutons Speek et Hint activé
     speek.disabled=false ;

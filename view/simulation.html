@@ -30,9 +30,8 @@
 					<div id="score" class="alert hide" role="alert"></div>
 					<div>
 						<fieldset id="field">
-							<div style="text-align: center;">
+							<div>
 								<h5>Cliquez sur un strip de votre choix. Ensuite, cliquez sur <i class="fa fa-microphone" aria-hidden="true"></i> pour répondre. Une fois votre réponse est bien affichée, cliquez sur "check".</h5>
-								<p id="Instructions"></p>
 							</div>
 						</fieldset>
 					</div>
@@ -47,6 +46,7 @@
 							<table class="table table-bordered table-dark ">
 								<thead class="thead-dark">
 									<tr>
+										<th scope="col">Piste en<br>service</th>
 										<th scope="col">Wind</th>
 										<th scope="col">Visib.</th>
 										<th scope="col">Temp.</th>
@@ -57,12 +57,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										  <td>240º<br>10N</td>
-										  <td>5Km</td>
-										  <td>20ºC</td>
-										  <td>1013</td>
-										  <td>6_0</td>
-										  <td>15:37</td>
+										<td>26</td>
+										<td>240º<br>10N</td>
+										<td>5Km</td>
+										<td>20ºC</td>
+										<td>1013</td>
+										<td>6_0</td>
+										<td>15:37</td>
 									</tr>
 								</tbody>
 							</table>
@@ -90,7 +91,7 @@
 					</div>
 					<div class="col-12 col-md-9">
 						<span id="action"></span>
-						<p id="output" >Cliquez sur le micro.</p>
+						<p id="output" >Cliquez sur le micro pour répondre, ou "Hint" pour voir la réponse.</p>
 					</div>
 					<div class="col-12 col-md order-last">
 						<button class="btn btn-secondary" id="submit" onclick="submit()">check</button>
