@@ -11,8 +11,8 @@
           "instructions":["..."]
         },      
         "1":{       
-          "pilote":["Air France 03, Demandons paramètres pour le départ.","Piste 26, QNH 1013, Air France 10."],
-          "atc":["Air France 10, piste 26, vent (240) degrés (10) noeuds, visibilité (5) kilomètres, température 20, QNH 1013, niveau de transition (60), il est 15 heures 37."],
+          "pilote":["Royal Air Maroc 03, Demandons paramètres pour le départ.","Piste 26, QNH 1013, Royal Air Maroc 10."],
+          "atc":["Royal Air Maroc 10, piste 26, vent (240) degrés (10) noeuds, visibilité (5) kilomètres, température 20, QNH 1013, niveau de transition (60), il est 15 heures 37."],
           "instructions":["..."]
         },       
         "2":{       

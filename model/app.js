@@ -5,8 +5,9 @@ let score=document.querySelector('#score');
 let field=document.querySelector('#field');
 let output= document.querySelector('#output');
 let action = document.querySelector('#action');
+let scoreTotal=document.querySelector('#scoreTotal');
 let recognition ;
-let n=0,m=0;o=0 ;
+let n=0,m=0;o=0;s=0;
 
 //Disabling speeks
 speek.disabled=true ;
@@ -91,15 +92,18 @@ function check(str,expect){
 
 //cette fonction va être appelée en cliquant sur le bouton check et va appeler la fct "check" si un speech est detécté 
 function submit(){
-
+    scoreTotal.classList.remove("hide");
+    
     if(m===1) recognition.stop();
     action.innerHTML = "<small>stopped listening</small>";
     
     field.classList.add("hide");
     
     if(window.final_transcript){
+        
         score.classList.remove("hide");
-        let s=check(window.final_transcript,atc.textContent.replaceAll(',','').replaceAll('.',''));
+        s+=check(window.final_transcript,atc.textContent.replaceAll(',','').replaceAll('.',''));
+        scoreTotal.innerHTML=s;
         if(s<50){
             score.innerHTML=s+"% Correct, r&eacutep&eacutetez";   
             score.classList.add("alert-danger");

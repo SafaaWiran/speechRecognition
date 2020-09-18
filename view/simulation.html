@@ -9,7 +9,6 @@
 		<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="style.css">
-		
 
 		<title>Simulation</title>
 	</head>
@@ -22,24 +21,24 @@
 			<a class="nav item" href="#">Sign Up/In</a>
 		</nav>
 		<div class="container-fluid">
-			<div class="row align-items-center" style="border: 5px ridge grey">
+			<div class="row" style="border: 5px ridge grey">
 				<div class="col-12 col-md-6">
-					<div>
-						<p id="scoreTotal" class="hide" style="border: 2px solid green; background-color: grey;"></p>
+					<div class="row" style="border: 5px ridge #8d9f9f; background-color: #c6cfcf;">
+						<b>Score total : </b> <p id="scoreTotal">0</p>%
 					</div>
-					<div id="score" class="alert hide" role="alert"></div>
-					<div>
-						<fieldset id="field">
+					<div class="row align-items-center">
+						<div class="col">
+							<div id="score" class="alert hide" role="alert"></div>
 							<div>
-								<h5>Cliquez sur un strip de votre choix. Ensuite, cliquez sur <i class="fa fa-microphone" aria-hidden="true"></i> pour répondre. Une fois votre réponse est bien affichée, cliquez sur "check".</h5>
+								<fieldset id="field">
+									<div>
+										<h5>Cliquez sur un strip de votre choix. Ensuite, cliquez sur <i class="fa fa-microphone" aria-hidden="true"></i> pour répondre. Une fois votre réponse est bien affichée, cliquez sur "check".</h5>
+									</div>
+								</fieldset>
 							</div>
-						</fieldset>
-					</div>
-					
-					<div><p id="pilote1" class="alert alert-dark hide" role="alert"></p><p id="atc" class="alert alert-primary hide"></p></div>
-					<div><p id="pilote2" class="hide alert alert-dark hide" role="alert"></p><p id="atc2" class="alert alert-primary hide" role="alert"></p></div>
-					<div><p id="pilote3" class="hide alert alert-dark hide" role="alert"></p></div>
-					 	
+							<div><p id="pilote1" class="alert alert-dark hide" role="alert"></p><p id="atc" class="alert alert-primary hide"></p></div>
+						</div>	
+					</div>	 	
 				</div>
 				<div class="col-12 col-md-6">
 					<div class="row" style="background-color: #1d3232; border: 10px inset #8d9f9f;">
@@ -81,8 +80,6 @@
 				</div>	
 			</div>
 		</div>
-		
-
 		<footer class="footer">
 			<div class="container-fluid">
 				<div class="row align-items-center">
