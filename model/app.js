@@ -27,18 +27,11 @@ function synthesis(speech){
         speechSynthesis.speak(utterance); 
     }
 }
-    
-
-//Show pilote speech
-function showpilote(){
-    let pilote=document.getElementById("pilote");
-    pilote.classList.remove("hide"); 
-}
 
 //Speech recognition start
 function runSpeechRecognition() {
     m=1;
-
+    clickedCase().style="background-color: #7a8f8f;";
     //initialisation de SpeechRecognition interface
     var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
     var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent ;
@@ -98,9 +91,8 @@ function check(str,expect){
 
 //cette fonction va être appelée en cliquant sur le bouton check et va appeler la fct "check" si un speech est detécté 
 function submit(){
-    let t ;
+
     if(m===1) recognition.stop();
-    
     action.innerHTML = "<small>stopped listening</small>";
     
     field.classList.add("hide");
@@ -111,7 +103,8 @@ function submit(){
         if(s<50){
             score.innerHTML=s+"% Correct, r&eacutep&eacutetez";   
             score.classList.add("alert-danger");
-            return 0 ;
+            window.final_transcript="";
+            return 0;
         }
         else {
             score.classList.add("alert-success");
@@ -119,31 +112,37 @@ function submit(){
         }
     }
     
-    synthesis(pilote2.textContent); 
-    t=pilote1.classList.toggle("hide");  
-    if(t){
-        
-        t=pilote2.classList.toggle("hide");
-        if(t) pilote2.classList.toggle("hide");
+    if(!atc.classList.toggle("hide")){
+        pilote1.classList.remove("hide");
+        atc.classList.remove("hide");
+        synthesis(pilote2);
+        if(atc2) {
+            clickedCase().style="background-color: #152323; color: #d9dfdf";
+            submitB.disabled=true ;
+            speek.disabled=true ;
+            hintB.disabled=true ;
+        }
+    } else {
+        clickedCase().style="background-color: #152323; color: #d9dfdf";
+        pilote1.innerHTML=pilote2 ;
+        atc.innerHTML=atc2 ;
+        synthesis(pilote3);
+        submitB.disabled=true ;
+        speek.disabled=true ;
+        hintB.disabled=true ;
     }
 
-    t=atc.classList.toggle("hide");  
-    if(t){
-        t=atc2.classList.toggle("hide");
-        if(t) atc2.classList.toggle("hide");
-    }     
-  
+    if(!pilote1.innerHTML){
+        pilote1.classList.add("hide");
+    } else pilote1.innerHTML="<b>Pilote : </b>"+pilote1.innerHTML ;
+    atc.innerHTML="<b>ATC : </b>"+atc.innerHTML ;
 }      
 
-
 function hint(){
+    clickedCase().style="background-color: #7a8f8f;";
+    if(output.innerHTML===atc.textContent && atc2!="") output.innerHTML=atc2 ;
+    else output.innerHTML=atc.textContent ;
 
-    if(output.innerHTML===atc.textContent ){
-        output.innerHTML=atc2.textContent ;
-    }
-    else {
-        output.innerHTML=atc.textContent ;
-    }
     submitB.disabled=false ;
 }
 

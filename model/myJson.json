@@ -12,26 +12,26 @@
         },      
         "1":{       
           "pilote":["Air France 03, Demandons paramètres pour le départ.","Piste 26, QNH 1013, Air France 10."],
-          "atc":["Air France 10, piste 26, vent (240) degrés (10) noeuds, visibilité (5) kilomètres, température 20, QNH 1013, niveau de transition (6_0), il est 15 heures 37."],
-          "instructions":["Piste 26."]
+          "atc":["Air France 10, piste 26, vent (240) degrés (10) noeuds, visibilité (5) kilomètres, température 20, QNH 1013, niveau de transition (60), il est 15 heures 37."],
+          "instructions":["..."]
         },       
         "2":{       
           "pilote":[" Air Europe 03, Cessna 152, parking aviation générale, demandons consignes roulage pour vol à destination de Strasbourg Polygone avec information Lima.",
-            "Transpondeur 70_00, roulons point d'attente piste 26 via Alpha et rappelons prêt, Air Europe 03."],
-          "atc":["Air Europe 03, transpondeur 70_00, roulez point d'attente piste 26 via Alpha et rappelez prêt."],
-          "instructions":["Transpondeur 70_00. Roulage point d'attente à la piste 26 via Alpha."]
+            "Transpondeur 7000, roulons point d'attente piste 26 via Alpha et rappelons prêt, Air Europe 03."],
+          "atc":["Air Europe 03, transpondeur 7000, roulez point d'attente piste 26 via Alpha et rappelez prêt."],
+          "instructions":["Transpondeur 7000. Roulage point d'attente à la piste 26 via Alpha."]
 
         },
         "3":{        
           "pilote":["Air Europe 03, Cessna 152, parking aviation générale, demandons consignes roulage pour des tours de piste avec information Lima.",
             "Air Europe 03, Cessna 152, parking aviation générale, demandons consignes roulage pour des tours de piste avec information Lima."],
-          "atc":["Air Europe 03, transpondeur 70_00, roulez point d'attente piste 26 via Alpha et rappelez prêt."],
-          "instructions":["Transpondeur 70_00. Roulage point d'attente piste 26 via Alpha."]
+          "atc":["Air Europe 03, transpondeur 7000, roulez point d'attente piste 26 via Alpha et rappelez prêt."],
+          "instructions":["Transpondeur 7000. Roulage point d'attente piste 26 via Alpha."]
         },
         "4":{        
-          "pilote":["","Affirm, Air Europe 03.","Transpondeur 70_00, roulons point d'attente piste 26 intersection Alpha et rappelons prêt, Air Europe 03."],     
-          "atc":["Air Europe 03, pouvez-vous partir de la piste 26 depuis intersection Alpha ? TORA (1800) mètres.","Air Europe 03, transpondeur 70_00, roulez point d'attente piste 26 intersection Alpha et rappelez prêt."],
-          "instructions":["Air Europe 03 doit si possible partir de la piste 26 depuis intersection Alpha, Tora (1800) mètres.",""]
+          "pilote":["","Affirm, Air Europe 03.","Transpondeur 7000, roulons point d'attente piste 26 intersection Alpha et rappelons prêt, Air Europe 03."],     
+          "atc":["Air Europe 03, pouvez-vous partir de la piste 26 depuis intersection Alpha ? TORA (1800) mètres.","Air Europe 03, transpondeur 7000, roulez point d'attente piste 26 intersection Alpha et rappelez prêt."],
+          "instructions":["Air Europe 03 doit si possible partir de la piste 26 depuis intersection Alpha, Tora (1800) mètres.","Transpondeur 7000. Roulage point d'attente piste 26 intersection Alpha. Rappel prêt."]
         }
       } ,
       "1":{ 
@@ -207,8 +207,8 @@
           },
           "2":{  
             "pilote":["Académie Tour, Air Europe 03, finale piste 26.","Autorisé toucher piste 26, (numéro 2) Air Europe 03.","Autorisé toucher piste 26, (numéro X) Air Europe 03."],
-            "atc":["Air Europe 03, autorisé toucher piste 26, (numéro X) vent 240 degrés 10 nœuds.","Air Europe 03, autorisé toucher piste 26, (numéro X) vent 240 degrés 10 nœuds."] ,
-            "instructions":["Autorisé toucher."] 
+            "atc":["Air Europe 03, autorisé toucher piste 26, (numéro X) vent 240 degrés 10 nœuds.","Air Europe 03, autorisé toucher piste 26, (numéro X) vent 200 degrés 10 nœuds."] ,
+            "instructions":["Autorisé toucher, vent 240 degrés.","Autorisé toucher, vent 240 degrés."] 
           },
           "3":{    
             "pilote":["Académie Tour, Air Europe 03, finale piste 26.","Remettons les gaz, Air Europe 03."],
