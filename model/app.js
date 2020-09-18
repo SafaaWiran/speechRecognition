@@ -7,7 +7,7 @@ let output= document.querySelector('#output');
 let action = document.querySelector('#action');
 let scoreTotal=document.querySelector('#scoreTotal');
 let recognition ;
-let n=0,m=0;o=0;s=0;
+let n=0,m=0;o=0;sT=0;t=1;
 
 //Disabling speeks
 speek.disabled=true ;
@@ -87,11 +87,12 @@ function check(str,expect){
             if(p[0]===q[0]) n+=1/2 ;
         }
     }
-    return (n*100/expect.length) ;
+    return (n*100/expect.length.toFixed(2)) ;
 }
 
 //cette fonction va être appelée en cliquant sur le bouton check et va appeler la fct "check" si un speech est detécté 
 function submit(){
+    let s;
     scoreTotal.classList.remove("hide");
     
     if(m===1) recognition.stop();
@@ -102,15 +103,19 @@ function submit(){
     if(window.final_transcript){
         
         score.classList.remove("hide");
-        s+=check(window.final_transcript,atc.textContent.replaceAll(',','').replaceAll('.',''));
-        scoreTotal.innerHTML=s;
+        s=check(window.final_transcript,atc.textContent.replaceAll(',','').replaceAll('.',''));
+        sT+=s ;
+        t++;
+        scoreTotal.innerHTML=sT/t;
         if(s<50){
-            score.innerHTML=s+"% Correct, r&eacutep&eacutetez";   
+            score.innerHTML=s+"% Correct, r&eacutep&eacutetez";  
+            score.classList.remove("alert-success"); 
             score.classList.add("alert-danger");
             window.final_transcript="";
             return 0;
         }
         else {
+            score.classList.remove("alert-danger");
             score.classList.add("alert-success");
             score.innerHTML=s+"% Correct, continuez"; 
         }

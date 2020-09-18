@@ -14,10 +14,6 @@ body {
     height: 75%;
 }
 
-#title {
-    text-align : right ;
-}
-
 #output{
     background-color:#1C1A17;
     color:#7C7C7C;

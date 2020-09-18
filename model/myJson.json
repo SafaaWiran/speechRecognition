@@ -154,8 +154,8 @@
         "4":{    
           "n":3,  
           "0":{     
-            "pilote":["(lieu transit) Tour de Royal Air Maroc, bonjour."],
-            "atc":[" (lieu transit) Tour, bonjour, j'écoute."],
+            "pilote":["Académie Tour de Royal Air Maroc, bonjour."],
+            "atc":[" Académie Tour, bonjour, j'écoute."],
             "instructions":[""]  
           },
           "1":{     
@@ -196,18 +196,18 @@
         "1":{
           "n":5,      
           "0":{    
-            "pilote":["Académie Tour, Royal Air Maroc, finale piste 26.","(numéro X), Autorisé atterrissage piste 26, Royal Air Maroc."],
-            "atc":["Royal Air Maroc, (numéro X), autorisé atterrissage piste 26 vent 240 degrés 10 nœuds."] ,
+            "pilote":["Académie Tour, Royal Air Maroc, finale piste 26.","Académie Tour, Autorisé atterrissage piste 26, Royal Air Maroc."],
+            "atc":["Royal Air Maroc, Académie Tour, autorisé atterrissage piste 26 vent 240 degrés 10 nœuds."] ,
             "instructions":["Autorisé complet."]
           },
           "1":{  
-            "pilote":["Strasbourg Polygone Tour, Royal Air Maroc, finale piste 26."," (numéro X), autorisé option piste 26, Royal Air Maroc."],
-            "atc":[" Royal Air Maroc, (numéro X), autorisé option piste 26, vent 240 degrés 10 nœuds."] ,
+            "pilote":["Strasbourg Polygone Tour, Royal Air Maroc, finale piste 26."," Académie Tour, autorisé option piste 26, Royal Air Maroc."],
+            "atc":[" Royal Air Maroc, Académie Tour, autorisé option piste 26, vent 240 degrés 10 nœuds."] ,
             "instructions":["Autorisé option."]
           },
           "2":{  
-            "pilote":["Académie Tour, Royal Air Maroc, finale piste 26.","Autorisé toucher piste 26, (numéro 2) Royal Air Maroc.","Autorisé toucher piste 26, (numéro X) Royal Air Maroc."],
-            "atc":["Royal Air Maroc, autorisé toucher piste 26, (numéro X) vent 240 degrés 10 nœuds.","Royal Air Maroc, autorisé toucher piste 26, (numéro X) vent 200 degrés 10 nœuds."] ,
+            "pilote":["Académie Tour, Royal Air Maroc, finale piste 26.","Autorisé toucher piste 26, (numéro 2) Royal Air Maroc.","Autorisé toucher piste 26, Académie Tour Royal Air Maroc."],
+            "atc":["Royal Air Maroc, autorisé toucher piste 26, Académie Tour vent 240 degrés 10 nœuds.","Royal Air Maroc, autorisé toucher piste 26, Académie Tour vent 200 degrés 10 nœuds."] ,
             "instructions":["Autorisé toucher, vent 240 degrés.","Autorisé toucher, vent 240 degrés."] 
           },
           "3":{    
