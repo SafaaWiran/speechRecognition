@@ -70,7 +70,7 @@ function runSpeechRecognition() {
 
 //La fonction qui fait la comparaison entre le speech obtenu et la bonne réponse
 function check(str,expect){
-
+    expect=expect.replaceAll(',','').replaceAll('.','');
     //On va incrémenter le n avec chaque bonne réponse
     let n=0;
     str=str.toUpperCase().split(" ");
@@ -87,7 +87,7 @@ function check(str,expect){
             if(p[0]===q[0]) n+=1/2 ;
         }
     }
-    return (n*100/expect.length.toFixed(2)) ;
+    return ((n*100/expect.length).toFixed(2)) ;
 }
 
 //cette fonction va être appelée en cliquant sur le bouton check et va appeler la fct "check" si un speech est detécté 
@@ -101,12 +101,11 @@ function submit(){
     field.classList.add("hide");
     
     if(window.final_transcript){
-        
         score.classList.remove("hide");
-        s=check(window.final_transcript,atc.textContent.replaceAll(',','').replaceAll('.',''));
-        sT+=s ;
+        s=check(window.final_transcript,atc.textContent);
+        sT+=parseFloat(s) ;
+        scoreTotal.innerHTML=sT/t ;
         t++;
-        scoreTotal.innerHTML=sT/t;
         if(s<50){
             score.innerHTML=s+"% Correct, r&eacutep&eacutetez";  
             score.classList.remove("alert-success"); 
@@ -117,7 +116,7 @@ function submit(){
         else {
             score.classList.remove("alert-danger");
             score.classList.add("alert-success");
-            score.innerHTML=s+"% Correct, continuez"; 
+            score.innerHTML=s+"% Correct"; 
         }
     }
     
@@ -130,6 +129,7 @@ function submit(){
             submitB.disabled=true ;
             speek.disabled=true ;
             hintB.disabled=true ;
+            caseMove(clickedCase());
         }
     } else {
         clickedCase().style="background-color: #152323; color: #d9dfdf";
@@ -139,6 +139,7 @@ function submit(){
         submitB.disabled=true ;
         speek.disabled=true ;
         hintB.disabled=true ;
+        caseMove(clickedCase());
     }
 
     if(!pilote1.innerHTML){
@@ -153,6 +154,10 @@ function hint(){
     else output.innerHTML=atc.textContent ;
 
     submitB.disabled=false ;
+}
+
+function caseMove(caseX){
+    caseX.addEventListener('dblclick', function() {getRandom(myJson, caseX); caseX.style="background-color: white" ;});
 }
 
 

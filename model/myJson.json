@@ -16,21 +16,21 @@
           "instructions":["..."]
         },       
         "2":{       
-          "pilote":["Royal Air Maroc, Cessna 152, parking aviation générale, demandons consignes roulage pour vol à destination de Strasbourg Polygone avec information Lima.",
+          "pilote":["Royal Air Maroc 03, Cessna 152, parking aviation générale, demandons consignes roulage pour vol à destination de Strasbourg Polygone avec information Lima.",
             "Transpondeur 7000, roulons point d'attente piste 26 via Alpha et rappelons prêt, Royal Air Maroc."],
-          "atc":["Royal Air Maroc, transpondeur 7000, roulez point d'attente piste 26 via Alpha et rappelez prêt."],
+          "atc":["Royal Air Maroc 03, transpondeur 7000, roulez point d'attente piste 26 via Alpha et rappelez prêt."],
           "instructions":["Transpondeur 7000. Roulage point d'attente à la piste 26 via Alpha."]
 
         },
         "3":{        
-          "pilote":["Royal Air Maroc, Cessna 152, parking aviation générale, demandons consignes roulage pour des tours de piste avec information Lima.",
-            "Royal Air Maroc, Cessna 152, parking aviation générale, demandons consignes roulage pour des tours de piste avec information Lima."],
-          "atc":["Royal Air Maroc, transpondeur 7000, roulez point d'attente piste 26 via Alpha et rappelez prêt."],
+          "pilote":["Royal Air Maroc 03, Cessna 152, parking aviation générale, demandons consignes roulage pour des tours de piste avec information Lima.",
+            "Royal Air Maroc 03, Cessna 152, parking aviation générale, demandons consignes roulage pour des tours de piste avec information Lima."],
+          "atc":["Royal Air Maroc 03, transpondeur 7000, roulez point d'attente piste 26 via Alpha et rappelez prêt."],
           "instructions":["Transpondeur 7000. Roulage point d'attente piste 26 via Alpha."]
         },
         "4":{        
           "pilote":["","Affirm, Royal Air Maroc.","Transpondeur 7000, roulons point d'attente piste 26 intersection Alpha et rappelons prêt, Royal Air Maroc."],     
-          "atc":["Royal Air Maroc, pouvez-vous partir de la piste 26 depuis intersection Alpha ? TORA (1800) mètres.","Royal Air Maroc, transpondeur 7000, roulez point d'attente piste 26 intersection Alpha et rappelez prêt."],
+          "atc":["Royal Air Maroc 03, pouvez-vous partir de la piste 26 depuis intersection Alpha ? TORA (1800) mètres.","Royal Air Maroc 03, transpondeur 7000, roulez point d'attente piste 26 intersection Alpha et rappelez prêt."],
           "instructions":["Royal Air Maroc doit si possible partir de la piste 26 depuis intersection Alpha, Tora (1800) mètres.","Transpondeur 7000. Roulage point d'attente piste 26 intersection Alpha. Rappel prêt."]
         }
       } ,
@@ -38,22 +38,22 @@
         "n":4,          
         "0":{         
           "pilote":[""],
-          "atc":["Royal Air Maroc, Expédiez le roulage."],
+          "atc":["Royal Air Maroc 03, Expédiez le roulage."],
           "instructions":["Royal Air Maroc en circulation. L'avion Doit accélérer le roulage."]
         },
         "1":{       
           "pilote":[""],
-          "atc":[" Royal Air Maroc, Ralentissez.."],
+          "atc":[" Royal Air Maroc 03, Ralentissez.."],
           "instructions":["Royal Air Maroc en circulation. L'avion doit ralentir le roulage."]
         },
         "2":{      
           "pilote":["","Maintenons position avant la prochaine intersection pour laisser passer un Cessna 172 droite vers la gauche, Royal Air Maroc."],
-          "atc":["Royal Air Maroc, maintenez position avant la prochaine intersection pour laisser passer un Cessna 172 droite vers la gauche."],
+          "atc":["Royal Air Maroc 03, maintenez position avant la prochaine intersection pour laisser passer un Cessna 172 droite vers la gauche."],
           "instructions":["<h4>Priorité traffic</h4>Royal Air Maroc en circulation. Prochaine intersection avec un Cessna 172 à droite. L'avion doit la laisser passer vers la gauche."]
         } ,
         "3":{      
           "pilote":["","Traversons piste 04 gauche, Royal Air Maroc."],
-          "atc":["Royal Air Maroc, traversez piste 04 gauche."],
+          "atc":["Royal Air Maroc 03, traversez piste 04 gauche."],
           "instructions":["Royal Air Maroc en circulation. L'avion doit traverser la piste 04 gauche"]
         }   
       },
@@ -66,17 +66,17 @@
         },
         "1":{   
           "pilote":["Point d'attente piste 26, prêt au départ, Royal Air Maroc.","Nous alignons piste 26, autorisé décollage, rappellerons Novembre, Royal Air Maroc."],
-          "atc":["Royal Air Maroc, alignez-vous piste 26, autorisé décollage, vent 240 degrés 10 nœuds, rappelez Novembre."],
+          "atc":["Royal Air Maroc 03, alignez-vous piste 26, autorisé décollage, vent 240 degrés 10 nœuds, rappelez Novembre."],
           "instructions":["S'aligner piste 26. Décollage autorisé. Rappel Novembre."] 
         },
         "2":{     
           "pilote":["Point d'attente piste 26, prêt au départ, Royal Air Maroc.","Nous alignons piste 26, autorisé décollage, rappellerons vent arrière main gauche piste 26, Royal Air Maroc."],
-          "atc":["Royal Air Maroc, alignez-vous piste 26, autorisé décollage, vent 240 degrés 10 nœuds, rappelez vent arrière main gauche piste 26."],
+          "atc":["Royal Air Maroc 03, alignez-vous piste 26, autorisé décollage, vent 240 degrés 10 nœuds, rappelez vent arrière main gauche piste 26."],
           "instructions":["S'aligner piste 26. Décollage autorisé. Rappel vent arrière main gauche piste 26."] 
         },
         "3":{       
           "pilote":["Point d'attente piste 26, prêt au départ, Royal Air Maroc.","Nous alignons piste 26, autorisé décollage, rappellerons verticale terrain 1500 pieds, Royal Air Maroc."],
-          "atc":["Royal Air Maroc, alignez-vous piste 26, autorisé décollage, vent 240 degrés 10 nœuds, rappelez verticale terrain 1500 pieds."],
+          "atc":["Royal Air Maroc 03, alignez-vous piste 26, autorisé décollage, vent 240 degrés 10 nœuds, rappelez verticale terrain 1500 pieds."],
           "instructions":["S'aligner piste 26. Décollage autorisé. Rappel verticale terrain 1500 pieds."] 
         }
       }
@@ -86,18 +86,18 @@
       "0":{ 
         "n":3,     
           "0":{     
-            "pilote":["Académie Tour, Royal Air Maroc, nous sommes au point d'attente piste 26, prêt au départ.","Nous alignons piste 26, autorisé décollage, rappellerons Novembre, Royal Air Maroc."],
-            "atc":["Royal Air Maroc, alignez-vous piste 26, autorisé décollage, vent 240 degrés 10 nœuds, rappelez Novembre."],
+            "pilote":["Académie Tour, Royal Air Maroc 03, nous sommes au point d'attente piste 26, prêt au départ.","Nous alignons piste 26, autorisé décollage, rappellerons Novembre, Royal Air Maroc."],
+            "atc":["Royal Air Maroc 03, alignez-vous piste 26, autorisé décollage, vent 240 degrés 10 nœuds, rappelez Novembre."],
             "instructions":["S'aligner piste 26. Décollage autorisé. Rappel Novembre."] 
           },
           "1":{    
-            "pilote":["Colmar Housen Tour, Royal Air Maroc, nous sommes au point d'attente piste 26, prêt au départ.","Nous alignons piste 26, autorisé décollage, rappellerons vent arrière main gauche piste 26, Royal Air Maroc."],
-            "atc":["Royal Air Maroc, alignez-vous piste 26, autorisé décollage, vent 240 degrés 10 nœuds, rappelez vent arrière main gauche piste 26."],
+            "pilote":["Colmar Housen Tour, Royal Air Maroc 03, nous sommes au point d'attente piste 26, prêt au départ.","Nous alignons piste 26, autorisé décollage, rappellerons vent arrière main gauche piste 26, Royal Air Maroc."],
+            "atc":["Royal Air Maroc 03, alignez-vous piste 26, autorisé décollage, vent 240 degrés 10 nœuds, rappelez vent arrière main gauche piste 26."],
             "instructions":["S'aligner piste 26. Décollage autorisé. Rappel vent arrière main gauche piste 26."] 
           },
           "2":{    
-            "pilote":["Colmar Housen Tour, Royal Air Maroc, nous sommes au point d'attente piste 26, prêt au départ."," Nous alignons piste 26, autorisé décollage, rappellerons verticale terrain 1500 pieds, Royal Air Maroc."],
-            "atc":[" Royal Air Maroc, alignez-vous piste 26, autorisé décollage, vent 240 degrés 10 nœuds, rappelez verticale terrain 1500 pieds."],
+            "pilote":["Colmar Housen Tour, Royal Air Maroc 03, nous sommes au point d'attente piste 26, prêt au départ."," Nous alignons piste 26, autorisé décollage, rappellerons verticale terrain 1500 pieds, Royal Air Maroc."],
+            "atc":[" Royal Air Maroc 03, alignez-vous piste 26, autorisé décollage, vent 240 degrés 10 nœuds, rappelez verticale terrain 1500 pieds."],
             "instructions":["S'aligner piste 26. Décollage autorisé. Rappel verticale terrain 1500 pieds."] 
           }   
         }
@@ -107,21 +107,21 @@
       "0":{  
         "n":2,   
           "0":{    
-            "pilote":["Royal Air Maroc, En vent arrière, main gauche, piste 26.","Rappellerons fin de vent arrière, Royal Air Maroc."],
-            "atc":["Royal Air Maroc, rappelez fin de vent arrière piste 26."],
+            "pilote":["Royal Air Maroc 03, En vent arrière, main gauche, piste 26.","Rappellerons fin de vent arrière, Royal Air Maroc."],
+            "atc":["Royal Air Maroc 03, rappelez fin de vent arrière piste 26."],
             "instructions":["Reçu."]
           } ,
           "1":{    
-            "pilote":["Royal Air Maroc, En vent arrière, main gauche, piste 26.","Numéro 2, Cessna 172 en vue, rappellerons fin de vent arrière, Royal Air Maroc."],
-            "atc":["Royal Air Maroc, numéro 2 derrière un Cessna 172 en base main gauche, rappelez fin de vent arrière piste 26."],
+            "pilote":["Royal Air Maroc 03, En vent arrière, main gauche, piste 26.","Numéro 2, Cessna 172 en vue, rappellerons fin de vent arrière, Royal Air Maroc."],
+            "atc":["Royal Air Maroc 03, numéro 2 derrière un Cessna 172 en base main gauche, rappelez fin de vent arrière piste 26."],
             "instructions":["Numéro 2 derrière un Cessna 172 en base main gauche."]
           }      
         },
         "1":{  
           "n":1,     
           "1":{     
-            "pilote":["Colmar Housen Tour, Royal Air Maroc, approchons de Novembre.","Auto-information, 122 décimal 8, merci pour le contrôle, Royal Air Maroc."],
-            "atc":["Royal Air Maroc, service du contrôle terminé, auto-information, 122 décimal 8."],
+            "pilote":["Colmar Housen Tour, Royal Air Maroc 03, approchons de Novembre.","Auto-information, 122 décimal 8, merci pour le contrôle, Royal Air Maroc."],
+            "atc":["Royal Air Maroc 03, service du contrôle terminé, auto-information, 122 décimal 8."],
             "instructions":["Fin service. 122 décimal 8."]  
           }
         }, 
@@ -129,51 +129,51 @@
           "n":1,    
           "0":{    
             "pilote":["","Bien compris, Royal Air Maroc.","TB-9 en vue, 1000 pieds plus haut, Royal Air Maroc."],
-            "atc":["Royal Air Maroc, trafic à 11 heures, 4 nautiques, gauche vers droite, TB-9, 1000 pieds plus haut."],
+            "atc":["Royal Air Maroc 03, trafic à 11 heures, 4 nautiques, gauche vers droite, TB-9, 1000 pieds plus haut."],
             "instructions":["Trafic à 11 heures, 4 nautiques, gauche vers droite, TB-9, 1000 pieds plus haut."]  
           }
         },
         "3":{ 
           "n":3,     
           "0":{ 
-            "pilote":["Académie Tour, Royal Air Maroc, bonjour."],
-            "atc":["Royal Air Maroc, Strasbourg Polygone Tour, bonjour."],
+            "pilote":["Académie Tour, Royal Air Maroc 03, bonjour."],
+            "atc":["Royal Air Maroc 03, Strasbourg Polygone Tour, bonjour."],
             "instructions":["..."]  
           },
           "1":{     
-            "pilote":["Royal Air Maroc, Cessna 172 en provenance de Colmar Housen, à destination de vos installations, verticale Novembre, 1500 pieds, avec information Lima, demandons intégration pour un complet.","Rappellerons verticale (point intermédiaire), Royal Air Maroc."],
-            "atc":["Royal Air Maroc, rappelez verticale."] ,
+            "pilote":["Royal Air Maroc 03, Cessna 172 en provenance de Colmar Housen, à destination de vos installations, verticale Novembre, 1500 pieds, avec information Lima, demandons intégration pour un complet.","Rappellerons verticale (point intermédiaire), Royal Air Maroc."],
+            "atc":["Royal Air Maroc 03, rappelez verticale."] ,
             "instructions":["..."]
           },
           "2":{       
-            "pilote":["Royal Air Maroc, Cessna 172 en provenance de Colmar Housen, à destination de vos installations, verticale Novembre, 1500 pieds, avec information Lima, demandons intégration pour un toucher.","Rappellerons verticale (point intermédiaire), Royal Air Maroc."],
-            "atc":[" Royal Air Maroc, rappelez verticale (point intermédiaire)."],
+            "pilote":["Royal Air Maroc 03, Cessna 172 en provenance de Colmar Housen, à destination de vos installations, verticale Novembre, 1500 pieds, avec information Lima, demandons intégration pour un toucher.","Rappellerons verticale (point intermédiaire), Royal Air Maroc."],
+            "atc":[" Royal Air Maroc 03, rappelez verticale (point intermédiaire)."],
             "instructions":["..."]  
           }
         },
         "4":{    
           "n":3,  
           "0":{     
-            "pilote":["Académie Tour de Royal Air Maroc, bonjour."],
+            "pilote":["Académie Tour de Royal Air Maroc 03, bonjour."],
             "atc":[" Académie Tour, bonjour, j'écoute."],
             "instructions":[""]  
           },
           "1":{     
-            "pilote":["Royal Air Maroc, Cessna 172 en provenance de Colmar Housen, à destination de Strasbourg Polygone, verticale Novembre, 1500 pieds, avec information Lima, demandons transit.","Rappellerons verticale terrain, Royal Air Maroc."],
-            "atc":["Royal Air Maroc, rappelez verticale terrain."] ,
+            "pilote":["Royal Air Maroc 03, Cessna 172 en provenance de Colmar Housen, à destination de Strasbourg Polygone, verticale Novembre, 1500 pieds, avec information Lima, demandons transit.","Rappellerons verticale terrain, Royal Air Maroc."],
+            "atc":["Royal Air Maroc 03, rappelez verticale terrain."] ,
             "instructions":["..."] 
           },
           "2":{      
-            "pilote":["Royal Air Maroc, verticale terrain.","Rappellerons verticale Novembre."],
-            "atc":["Royal Air Maroc, rappelez verticale Novembre."] ,
+            "pilote":["Royal Air Maroc 03, verticale terrain.","Rappellerons verticale Novembre."],
+            "atc":["Royal Air Maroc 03, rappelez verticale Novembre."] ,
             "instructions":["Rappel verticale Novembre."] 
           }
         },
         "5":{  
           "n":1,   
           "0":{     
-            "pilote":["Académie Tour, Royal Air Maroc, approchons de Novembre.","Auto-information, 122 décimal 8, merci pour le contrôle, Royal Air Maroc."],
-            "atc":["Royal Air Maroc, service du contrôle terminé, auto-information, 122 décimal 8."] ,
+            "pilote":["Académie Tour, Royal Air Maroc 03, approchons de Novembre.","Auto-information, 122 décimal 8, merci pour le contrôle, Royal Air Maroc."],
+            "atc":["Royal Air Maroc 03, service du contrôle terminé, auto-information, 122 décimal 8."] ,
             "instructions":["Fin service. 122 décimal 8."] 
           }
         }
@@ -183,41 +183,41 @@
       "0":{ 
         "n":2,     
         "0":{    
-          "pilote":["Royal Air Maroc, fin de vent arrière piste pour un complet, piste 26.","Rappellerons finale piste 26, Royal Air Maroc."],
-          "atc":["Royal Air Maroc, rappellez finale piste 26."] ,
+          "pilote":["Royal Air Maroc 03, fin de vent arrière piste pour un complet, piste 26.","Rappellerons finale piste 26, Royal Air Maroc."],
+          "atc":["Royal Air Maroc 03, rappellez finale piste 26."] ,
           "instructions":["..."]
           },
           "1":{     
-            "pilote":["Royal Air Maroc, fin de vent arrière pour un toucher, piste 26.","Rappellerons finale piste 26, Royal Air Maroc."],
-            "atc":["Royal Air Maroc, rappellez finale piste 26."] ,
+            "pilote":["Royal Air Maroc 03, fin de vent arrière pour un toucher, piste 26.","Rappellerons finale piste 26, Royal Air Maroc."],
+            "atc":["Royal Air Maroc 03, rappellez finale piste 26."] ,
             "instructions":["..."]
           }
         },
         "1":{
           "n":5,      
           "0":{    
-            "pilote":["Académie Tour, Royal Air Maroc, finale piste 26.","Académie Tour, Autorisé atterrissage piste 26, Royal Air Maroc."],
-            "atc":["Royal Air Maroc, Académie Tour, autorisé atterrissage piste 26 vent 240 degrés 10 nœuds."] ,
+            "pilote":["Académie Tour, Royal Air Maroc 03, finale piste 26.","Académie Tour, Autorisé atterrissage piste 26, Royal Air Maroc."],
+            "atc":["Royal Air Maroc 03, Académie Tour, autorisé atterrissage piste 26 vent 240 degrés 10 nœuds."] ,
             "instructions":["Autorisé complet."]
           },
           "1":{  
-            "pilote":["Strasbourg Polygone Tour, Royal Air Maroc, finale piste 26."," Académie Tour, autorisé option piste 26, Royal Air Maroc."],
-            "atc":[" Royal Air Maroc, Académie Tour, autorisé option piste 26, vent 240 degrés 10 nœuds."] ,
+            "pilote":["Strasbourg Polygone Tour, Royal Air Maroc 03, finale piste 26."," Académie Tour, autorisé option piste 26, Royal Air Maroc."],
+            "atc":[" Royal Air Maroc 03, Académie Tour, autorisé option piste 26, vent 240 degrés 10 nœuds."] ,
             "instructions":["Autorisé option."]
           },
           "2":{  
-            "pilote":["Académie Tour, Royal Air Maroc, finale piste 26.","Autorisé toucher piste 26, (numéro 2) Royal Air Maroc.","Autorisé toucher piste 26, Académie Tour Royal Air Maroc."],
-            "atc":["Royal Air Maroc, autorisé toucher piste 26, Académie Tour vent 240 degrés 10 nœuds.","Royal Air Maroc, autorisé toucher piste 26, Académie Tour vent 200 degrés 10 nœuds."] ,
+            "pilote":["Académie Tour, Royal Air Maroc 03, finale piste 26.","Autorisé toucher piste 26, (numéro 2) Royal Air Maroc.","Autorisé toucher piste 26, Académie Tour Royal Air Maroc."],
+            "atc":["Royal Air Maroc 03, autorisé toucher piste 26, Académie Tour vent 240 degrés 10 nœuds.","Royal Air Maroc 03, autorisé toucher piste 26, Académie Tour vent 200 degrés 10 nœuds."] ,
             "instructions":["Autorisé toucher, vent 240 degrés.","Autorisé toucher, vent 240 degrés."] 
           },
           "3":{    
-            "pilote":["Académie Tour, Royal Air Maroc, finale piste 26.","Remettons les gaz, Royal Air Maroc."],
-            "atc":["Royal Air Maroc, remettez les gaz."] ,
+            "pilote":["Académie Tour, Royal Air Maroc 03, finale piste 26.","Remettons les gaz, Royal Air Maroc."],
+            "atc":["Royal Air Maroc 03, remettez les gaz."] ,
             "instructions":["Remise des gaz."] 
           },
           "4":{     
-            "pilote":["Académie Tour, Royal Air Maroc, finale piste 26.","Royal Air Maroc, remettons les gaz."],
-            "atc":["Royal Air Maroc, Rappelez à 1500 pieds."] ,
+            "pilote":["Académie Tour, Royal Air Maroc 03, finale piste 26.","Royal Air Maroc 03, remettons les gaz."],
+            "atc":["Royal Air Maroc 03, Rappelez à 1500 pieds."] ,
             "instructions":["Rappel à 1500 pieds."] 
           }
         }

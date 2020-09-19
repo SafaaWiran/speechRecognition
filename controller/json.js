@@ -9,6 +9,7 @@ let c1,c2,c3;
 var atc=document.querySelector('#atc');  
 var atc2;
 var field2;
+let myJson ;
 
 //Declaration
 let random1, random2, random3 ;
@@ -24,7 +25,7 @@ function jsonReader() {
     request.send();
     request.onload = function () {
         
-        let myJson = request.response;
+        myJson = request.response;
         
         //ajouter du contenu à la page HTML à partir de json
         random1=getRandom(myJson,case1) ;
