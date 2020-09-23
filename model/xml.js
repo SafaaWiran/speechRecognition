@@ -27,9 +27,9 @@ function getRandom(xmlDoc,caseX){
     //random=spawnTask aléatoire
     let random=xmlDoc.getElementsByTagName("spawnTask")[a];
     caseX.innerHTML=random.getAttribute("name");
-    for(let i=0;i<caseX.childNodes.length;i++) {
-        if (caseX.getElementsByClassName("ATC")[i] && caseX.getElementsByClassName("ATC")[i].getAttribute("lang")==="fr") atc[i]=caseX.getElementsByClassName("ATC")[i].childNodes[0].nodeValue ;
-        if (caseX.getElementsByClassName("Pilot")[i] && caseX.getElementsByClassName("Pilot")[i].getAttribute("lang")==="fr") pilot[i]=caseX.getElementsByClassName("Pilot")[i].childNodes[0].nodeValue ;  
+    for(let i=0;i<random.childNodes.length;i++) {
+        if (random.getElementsByClassName("ATC")[i] && random.getElementsByClassName("ATC")[i].getAttribute("lang")==="fr") atc[i]=random.getElementsByClassName("ATC")[i].childNodes[0].nodeValue ;
+        if (random.getElementsByClassName("Pilot")[i] && random.getElementsByClassName("Pilot")[i].getAttribute("lang")==="fr") pilot[i]=random.getElementsByClassName("Pilot")[i].childNodes[0].nodeValue ;  
     } 
     return [pilot,atc,instructions] ;
 }
