@@ -53,6 +53,10 @@ function getRandom(json,caseX){
     return [pilot,atc,instructions] ;
 }
 
+function caseMove(caseX){
+    caseX.addEventListener('dblclick', function() {getRandom(myJson, caseX); caseX.style="background-color: white" ;});
+}
+
 jsonReader(); 
 
 

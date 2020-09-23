@@ -34,6 +34,10 @@ function getRandom(xmlDoc,caseX){
     return [pilot,atc,instructions] ;
 }
 
+function caseMove(caseX){
+    caseX.addEventListener('dblclick', function() {getRandom(xmlDoc, caseX); caseX.style="background-color: white" ;});
+}
+
 
 
 

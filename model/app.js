@@ -190,9 +190,7 @@ function hint(){
     submitB.disabled=false ;
 }
 
-function caseMove(caseX){
-    caseX.addEventListener('dblclick', function() {getRandom(myJson, caseX); caseX.style="background-color: white" ;});
-}
+
 
 
             
