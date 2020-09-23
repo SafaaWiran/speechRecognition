@@ -166,15 +166,28 @@ function submit(){
             hintB.disabled=true ;
             caseMove(clickedCase());
         }
-    } else {
+
+    }
+    if(atc[0]===atc[1]) {
         clickedCase().style="background-color: #152323; color: #d9dfdf";
-        pilote[0].innerHTML=pilote[1] ;
-        atc[0].innerHTML=atc[1] ;
-        synthesis(pilote[2]);
+        pilote[0].innerHTML=pilote[2] ;
+        atc[0].innerHTML=atc[2] ;
         submitB.disabled=true ;
         speek.disabled=true ;
         hintB.disabled=true ;
         caseMove(clickedCase());
+    } else {
+        clickedCase().style="background-color: #2f4f4f; color: #d9dfdf";
+        pilote[0].innerHTML=pilote[1] ;
+        atc[0].innerHTML=atc[1] ;
+        synthesis(pilote[2]);
+        if(!atc[2]) {
+            clickedCase().style="background-color: #152323; color: #d9dfdf";
+            submitB.disabled=true ;
+            speek.disabled=true ;
+            hintB.disabled=true ;
+            caseMove(clickedCase());
+        }
     }
 
     if(!pilote[0].innerHTML){

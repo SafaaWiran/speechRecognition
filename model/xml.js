@@ -6,7 +6,7 @@ xhttp.onreadystatechange = function() {
     }
 };
 
-xhttp.open("GET", "https://cors-anywhere.herokuapp.com/http://aeronautique.xyz/phraseologie/phraseologieIFR.xml", true);
+xhttp.open("GET", "https://safaawiran.github.io/speechRecognition/model/IFR.xml", true);
 xhttp.send();
 
 function xmlReader(xml) {
@@ -22,7 +22,7 @@ function xmlReader(xml) {
 }
 
 function getRandom(xmlDoc,caseX){
-    let a=Math.floor(Math.random()*20);
+    let a=Math.floor(Math.random()*81);
     let pilot=[], atc=[], instructions=["",""];
     //random=spawnTask aléatoire
     let random=xmlDoc.getElementsByTagName("spawnTask")[a];
