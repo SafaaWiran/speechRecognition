@@ -221,8 +221,63 @@
             "instructions":["Rappel à 1500 pieds."] 
           }
         }
-      }  
-  }
+      }, 
+    "4": {
+      "0": {
+        "0": {
+          "pilote":["","Bien compris, Air Europe 03."],
+            "atc":["Air Europe 03, rappelez piste dégagée."] ,
+            "instructions":["Air Europe 03 en dégagement. Rappel piste dégagée."] 
+        },
+        "1": {
+          "pilote":["","Degageons rapidement la piste, Air Europe 03."],
+          "atc":["Air Europe 03, dégagez rapidement la piste."] ,
+          "instructions":["Air Europe 03 en dégagement. Dégagement rapide de la piste."] 
+        },
+        "2": {
+          "pilote":["","Remontons la piste puis première à droite, Air Europe 03"],
+          "atc":["Air Europe 03, faites un 180, remontez la piste puis dégagez première à droite."] ,
+          "instructions":["Air Europe 03 en dégagement. Faire 180, remonter la piste, puis dégager première à droite."] 
+        }
+      },
+      "1": {
+        "0": {
+          "pilote":["","."],
+          "atc":[""] ,
+          "instructions":["."] 
+        }
+      },
+      "2": {
+        "0": {
+          "pilote":["","."],
+          "atc":[""] ,
+          "instructions":["."] 
+        },
+        "1": {
+          "pilote":["","."],
+          "atc":[""] ,
+          "instructions":["."] 
+        }
+      },
+      "3": {
+        "0": {
+          "pilote":["","."],
+          "atc":[""] ,
+          "instructions":["."] 
+        }
+      },
+      "4": {
+        "0": {
+          "pilote":["","."],
+          "atc":[""] ,
+          "instructions":["."] 
+        }
+      }
+    }
+  },
+  "1": {
+
+  }  
 } 
 
 

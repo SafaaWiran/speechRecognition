@@ -1,7 +1,7 @@
 body {
     font-family: Andale Mono, monospace;
     color:#112426 ;
-    background-color: #b3bfbf
+    background-color: #ecefef;
 }
 
 .footer {
@@ -59,7 +59,7 @@ body {
 .strips {
     padding: 2% 2% 2% 2%;
     background-color: #0c1515;
-    border: 5px inset #8d9f9f;
+    border: 5px inset #ecefef;
 }
 
 

@@ -1,3 +1,8 @@
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 h1 {
     text-align: center;
     margin-bottom: 20px;
@@ -12,5 +17,9 @@ h1 {
 
 .row {
     margin: 15px ;
+}
+
+.footer {
+    color: white ;
 }
 

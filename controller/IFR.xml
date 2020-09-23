@@ -1,0 +1,859 @@
+<?xml version="1.0" ?>
+<processChain version="1" id="Phraseo" name="Phraséologie">
+    <tasks>
+        <spawnTask id="PARAMETRES" name="Demande paramètres">
+            <para lang="fr" class="Pilot"> [DEP] [NDEL], [POL], [CAL], demandons paramètres pour le départ, [CAA]. </para>
+            <para lang="fr" class="ATC"> [CAA], piste [RWY], vent (240) degrés (10) noeuds, visibilité (5) kilomètres, température (16), Q_N_H [QNH], niveau de transition (5_0), il est [HOU]. </para>
+            <para lang="fr" class="Pilot"> Piste [RWY], Q_N_H [QNH], [CAA]. </para>
+            <para lang="en" class="Pilot"> [DEP] [NDEL], [POL], [CAL], requesting departure information, [CAA]. </para>
+            <para lang="en" class="ATC"> Runway [RWY], wind (2_4_0) degrees (1_0) knots, visibility (5) kilometres, temperature (1_6), Q_N_H [QNH], transition level (5_0), time [HOU]. </para>
+            <para lang="en" class="Pilot"> Runway [RWY], Q_N_H [QNH], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="EST_IL_RNAV" name="Capacité RNAV ?">
+            <para lang="fr" class="Pilot"> [DEP] [NDEL], [POL], [CAL] en [POS], demandons mise en route pour [ARR], information [INF]. </para>
+            <para lang="fr" class="ATC"> [CAL], [POL], confirmez si capable départ R_NAV (BASIP 5Z). </para>
+            <para lang="fr" class="Pilot"> Départ (BASIP 5Z) impossible cause équipement, [CAA]. </para>
+            <para lang="fr" class="ATC"> [CAL], reçu, mise en route approuvée, prévoyez un départ conventionnel [STA], montée initiale [NIV], transpondeur [SQU]. </para>
+            <para lang="en" class="Pilot"> [DEP] [NDEL], [POL], [CAL] gate [POS], requesting startup to [ARR], [INF] information. </para>
+            <para lang="en" class="ATC"> [CAL], [POL], confirm if able R_NAV (BASIP 5Z) departure. </para>
+            <para lang="en" class="Pilot"> Unable (BASIP 5Z) departure due equipment, [CAA]. </para>
+            <para lang="en" class="ATC"> [CAL], roger, start-up approved, expect [STA] departure, initial climb [NIV], squawk [SQU]. </para>
+        </spawnTask>
+        <spawnTask id="NON_RNAV" name="MER RNAV capacité conv.">
+            <para lang="fr" class="Pilot"> [DEP] [NDEL], [POL], [CAL] en [POS], demandons mise en route pour [ARR], information [INF]. </para>
+            <para lang="fr" class="ATC"> [CAL], [POL], mise en route approuvée, départ (BASIP 5Z), montée initiale [NIV], transpondeur [SQU]. </para>
+            <para lang="fr" class="Pilot"> Impossible R_NAV zone terminale{La zone terminale correspond au Terminal Manoeuvring Area (TMA)}, [CAA]. </para>
+            <para lang="fr" class="ATC"> [CAL], reçu, mise en route approuvée, prévoyez un départ conventionnel [STA], montée initiale [NIV], transpondeur [SQU]. </para>
+            <para lang="en" class="Pilot"> [DEP] [NDEL], [POL], [CAL] gate [POS], requesting startup to [ARR], [INF] information. </para>
+            <para lang="en" class="ATC"> [CAL], [POL], startup approved, (BASIP 5Z) departure, initial climb [NIV], squawk [SQU]. </para>
+            <para lang="en" class="Pilot"> Unable R_NAV terminal area{La zone terminale correspond au Terminal Manoeuvring Area (TMA)}, [CAA]. </para>
+            <para lang="en" class="ATC"> [CAL], roger, start-up approved, expect [STA] departure, initial climb [NIV], squawk [SQU]. </para>
+        </spawnTask>
+        <spawnTask id="MER_OMNI" name="MER omnidirectionnel">
+            <para lang="fr" class="Pilot"> [DEP] [NDEL], [POL], [CAL] en [POS], demandons mise en route pour [ARR], information [INF]. </para>
+            <para lang="fr" class="ATC"> [CAL], [POL], départ omnidirectionnel, piste [RWY], à (800) pieds tournez à (droite) cap [CAP] en montée vers (3000) pieds QNH, transpondeur [SQU]. </para>
+            <para lang="fr" class="Pilot"> Départ omnidirectionnel, piste [RWY], à (800) pieds tournez à (droite) cap [CAP] en montée vers (3000) pieds QNH, transpondeur [SQU], [CAA]. </para>
+            <para lang="fr" class="ATC"> [CAL], correct, rappelez prêt pour le repoussage sur [DEP] [GND] {ce rappel est nécessaire uniquement en cas de transfert}. </para>
+            <para lang="en" class="Pilot"> [DEP] [NDEL], [POL], [CAL] gate [POS], requesting startup to [ARR], [INF] information. </para>
+            <para lang="en" class="ATC"> [CAL], [POL], multidirectionnal departure, runway [RWY], at (800) ft turn (right) [CAP], climb (3000) feet QNH, squawk [SQU]. </para>
+            <para lang="en" class="Pilot"> Multidirectionnal departure, runway [RWY], at (800) ft turn (right) [CAP], climb (3000) feet QNH squawk [SQU], [CAA]. </para>
+            <para lang="en" class="ATC"> [CAL], correct, report ready for push-back [DEP] [GND] {ce rappel est nécessaire uniquement en cas de transfert}. </para>
+        </spawnTask>
+        <spawnTask id="MER_APPROUVEE" name="MER approuvée">
+            <para lang="fr" class="Pilot"> [DEP] [NDEL], [POL], [CAL] en [POS], demandons mise en route pour [ARR], information [INF]. </para>
+            <para lang="fr" class="ATC">
+            [CAL], [POL], mise en route approuvée
+            <span class="AVA">, C_T_O_T (12 50) {Créneau de Départ, décollage entre 1245 et 1300}</span>
+            , départ [STA], montée initiale [NIV], transpondeur [SQU].
+            </para>
+            <para lang="fr" class="Pilot"> Mise en route approuvée, C_T_O_T (12 50), départ [STA], montée initiale [NIV], transpondeur [SQU], [CAA]. </para>
+            <para lang="fr" class="ATC"> [CAL], correct, rappelez prêt pour le repoussage sur [DEP] [GND] {ce rappel est nécessaire uniquement en cas de transfert}. </para>
+            <para lang="en" class="Pilot"> [DEP] [NDEL], [POL], [CAL] gate [POS], requesting startup to [ARR], [INF] information. </para>
+            <para lang="en" class="ATC"> [CAL], [POL], startup approved, C_TOT (1 2 5 0){Slot time, take off between 1245 and 1300}, [STA] departure, initial climb [NIV], squawk [SQU]. </para>
+            <para lang="en" class="Pilot"> Startup approved, C_TOT (1 2 5 0), [STA] departure, intitial climb [NIV], squawk [SQU]. </para>
+            <para lang="en" class="ATC"> [CAL], correct, report ready for push-back [DEP] [GND] {ce rappel est nécessaire uniquement en cas de transfert}. </para>
+        </spawnTask>
+        <spawnTask id="MER_DIFFEREE" name="MER différée">
+            <para lang="fr" class="Pilot"> [DEP] [NDEL], [POL], [CAL] en [POS], demandons mise en route pour [ARR], information [INF]. </para>
+            <para lang="fr" class="ATC"> [CAA], prévoyez mise en route (18_10) cause trafic à l'arrivée. </para>
+            <para lang="en" class="Pilot"> [DEP] [NDEL], [POL], [CAL] gate [POS], requesting startup to [ARR], [INF] information. </para>
+            <para lang="en" class="ATC"> [CAA], expect start-up time (1_8_1_0) due inbound traffic. </para>
+        </spawnTask>
+        <spawnTask id="REPOUSSAGE_STANDARD" name="Repoussage standard">
+            <para lang="fr" class="Pilot"> [DEP] [NGND], [CAA], demandons repoussage. </para>
+            <para lang="fr" class="ATC"> [CAA], repoussage approuvé. </para>
+            <para lang="en" class="Pilot"> [DEP] [NGND], [CAA], requesting push-back. </para>
+            <para lang="en" class="ATC"> [CAA], push-back approved. </para>
+        </spawnTask>
+        <spawnTask id="REPOUSSAGE_CONDITIONNEL" name="Repoussage conditionnel">
+            <para lang="fr" class="Pilot"> [DEP] [NGND], [CAA], demandons repoussage. </para>
+            <para lang="fr" class="ATC"> [CAA], en fonction du Boeing 737 passant derrière vous, repoussage approuvé. </para>
+            <para lang="fr" class="Pilot"> Nous repoussons en fonction du Boeing 737 en vue, [CAA]{Ordre ?}. </para>
+            <para lang="en" class="Pilot"> [DEP] [NGND], [CAA], requesting push-back. </para>
+            <para lang="en" class="ATC"> [CAA], according to Boeing 7 3 7 taxiing behind you, pushback approved. </para>
+            <para lang="en" class="Pilot"> Push-back approved, accordingly a 737 insight, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ROULAGE_AUTORISE" name="Roulage standard">
+            <para lang="fr" class="Pilot"> [CAA], demandons roulage. </para>
+            <para lang="fr" class="ATC"> [CAA], roulez point d'attente piste [RWY] via [VOI] [HLD]. </para>
+            <para lang="fr" class="Pilot"> Roulons point d'attente piste [RWY] via [VOI] [HLD], [CAA]. </para>
+            <para lang="en" class="Pilot"> [CAA], requesting taxi. </para>
+            <para lang="en" class="ATC"> [CAA], taxi holding point runway [RWY] via [VOI] [HLD]. </para>
+            <para lang="en" class="Pilot"> Taxi holding point runway [RWY] via [VOI] [HLD], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="TRANSFERT_TOUR1" name="Transfert tour">
+            <para lang="fr" class="ATC"> Contactez [DEP] [TWR]. </para>
+            <para lang="fr" class="Pilot"> [DEP] [TWR], merci pour le contrôle, [CAA]. </para>
+            <para lang="en" class="ATC"> Contact [DEP] [TWR]. </para>
+            <para lang="en" class="Pilot"> [DEP] [TWR], thanks for control, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ROULAGE_TRAFIC" name="Roulage avec trafic">
+            <para lang="fr" class="Pilot"> [CAA], demandons roulage. </para>
+            <para lang="fr" class="ATC"> [CAA], laissez passer l'Airbus A320 Air-France venant de votre droite, roulez point d'attente piste [RWY]. </para>
+            <para lang="fr" class="Pilot"> Laissons passer l'Airbus A320 Air-France venant de notre droite, roulons point d'attente piste [RWY], [CAA]. </para>
+            <para lang="en" class="Pilot"> [CAA], requesting taxi. </para>
+            <para lang="en" class="ATC"> [CAA], give way to Air-France Airbus comming from your right, taxi holding point runway [RWY]. </para>
+            <para lang="en" class="Pilot"> Giving way to Air-France Airbus comming from our right, taxiing holding point runway [RWY], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="REMONTEE_PISTE" name="Remontée de piste">
+            <para lang="fr" class="ATC"> [CAA], remontez piste [RWY], alignez-vous et attendez. </para>
+            <para lang="fr" class="Pilot"> Nous remontons piste [RWY], nous alignons et attendons, [CAA]. </para>
+            <para lang="en" class="ATC"> [CAA], backtrap runway [RWY], line up and wait. </para>
+            <para lang="en" class="Pilot"> Backtraping runway [RWY], lining up and waiting, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ALIGNEMENT_APRES_AVION_FINAL" name="Alignement après final">
+            <para lang="fr" class="ATC"> [CAA], A_T_R en finale, rappelez en vue. </para>
+            <para lang="fr" class="Pilot"> A_T_R en vue, [CAA]. </para>
+            <para lang="fr" class="ATC"> [CAA], derrière A_T_R en finale, alignez-vous et attendez piste [RWY] derrière. </para>
+            <para lang="fr" class="Pilot"> Derrière A_T_R en finale, nous alignerons et attendrons piste [RWY] derrière, [CAA]. </para>
+            <para lang="en" class="ATC"> [CAA], A_T_R on final, report in sight. </para>
+            <para lang="en" class="Pilot"> A_T_R in sight, [CAA]. </para>
+            <para lang="en" class="ATC"> [CAA], behind A_T_R on final, will line up and wait runway [RWY] behind. </para>
+            <para lang="en" class="Pilot"> Behind A_T_R on final, will line up and wait runway [RWY], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ALIGNEMENT" name="Alignement simple">
+            <para lang="fr" class="ATC"> [CAA], alignez-vous et attendez piste [RWY]. </para>
+            <para lang="fr" class="Pilot"> Nous alignons et attendons piste [RWY], [CAA]. </para>
+            <para lang="en" class="ATC"> [CAA], line up and wait runway [RWY]. </para>
+            <para lang="en" class="Pilot"> Lining up and wait runway [RWY], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ALIGNEMENT_POS2" name="Alignement position 2">
+            <para lang="fr" class="ATC"> [CAA], alignez-vous piste [RWY], intersection Whiskey_7, numéro deux derrière un Boeing 737. </para>
+            <para lang="fr" class="Pilot"> Nous alignons piste [RWY], intersection Whiskey_7, [CAA], numéro deux derrière un Boeing 737. </para>
+            <para lang="en" class="ATC"> [CAA], line up runway [RWY], intersection Whiskey_7, number two behind a 737. </para>
+            <para lang="en" class="Pilot"> Lining up runway [RWY], intersection Whiskey_7, number two behind a 737, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="MAINTIEN_ARRET" name="Maintien point d'attente">
+            <para lang="fr" class="Pilot"> [DEP] [NTWR], [POL], [CAA], au point d'attente [HLD]. </para>
+            <para lang="fr" class="ATC"> [CAA], maintenez avant piste [RWY] taxiway [HLD]. </para>
+            <para lang="fr" class="Pilot"> Maintenons avant piste [RWY] taxiway [HLD], [CAA]. </para>
+            <para lang="en" class="Pilot"> [DEP] [NTWR], [POL], [CAA], holding point [HLD]. </para>
+            <para lang="en" class="ATC"> [CAA], hold short of runway [RWY], taxiway [HLD], [CAA]. </para>
+            <para lang="en" class="Pilot"> Maintaining short of runway [RWY], taxiway [HLD], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="DECOLLAGE_IMMEDIAT" name="Décollage immédiat">
+        <para lang="fr" class="Pilot"> [DEP] [NTWR], [POL], [CAA], au point d'attente [HLD]. </para>
+        <para lang="fr" class="ATC"> [CAA], êtes-vous prêt pour un départ immédiat ? </para>
+        <para lang="fr" class="Pilot"> Affirm, [CAA]. </para>
+        <para lang="fr" class="ATC"> [CAA], alignez-vous piste [RWY], autorisé décollage immédiat, vent 0_50 degrés 10 nœuds. </para>
+        <para lang="fr" class="Pilot"> Nous alignons piste [RWY] et autorisé décollage, [CAA]. </para>
+        <para lang="en" class="Pilot"> [DEP] [NTWR], [POL], [CAA], holding point [HLD]. </para>
+        <para lang="en" class="ATC"> [CAA], say if ready for immediate departure. </para>
+        <para lang="en" class="Pilot"> Affirm, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], line up runway [RWY] and cleared for immediate take-off, wind 0_5_0 degrees, 10 knots. </para>
+        <para lang="en" class="Pilot"> Lining up runway [RWY] and cleared for take-off, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="TRANSFERT_SIMPLE" name="Transfert contrôleur">
+        <para lang="fr" class="ATC"> [CAA], contactez [DEP] [APP]. </para>
+        <para lang="fr" class="Pilot"> [DEP] [APP], merci pour le contrôle, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], contact [DEP] [APP]. </para>
+        <para lang="en" class="Pilot"> [DEP] [APP], thanks for control, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="TRANSFERT_SIMPLE_CTR" name="Transfert contrôleur">
+        <para lang="fr" class="ATC"> [CAA], contactez [CTR]. </para>
+        <para lang="fr" class="Pilot"> [CTR], merci pour le contrôle, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], contact [CTR]. </para>
+        <para lang="en" class="Pilot"> [CTR], thanks for control, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="TRANSFERT_SOL" name="Transfert contrôleur">
+        <para lang="fr" class="ATC"> [CAA], contactez [ARR] [GND]. </para>
+        <para lang="fr" class="Pilot"> [ARR] [GND], merci pour le contrôle, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], contact [ARR] [GND]. </para>
+        <para lang="en" class="Pilot"> [ARR] [GND], thanks for control, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="TRANSFERT_TOUR" name="Transfert tour">
+        <para lang="fr" class="ATC"> [CAA], contactez [ARR] [TWR]. </para>
+        <para lang="fr" class="Pilot"> [ARR] [TWR], merci pour le contrôle, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], contact [ARR] [TWR]. </para>
+        <para lang="en" class="Pilot"> [ARR] [TWR], thanks for control, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="TRANSFERT_UNICOM" name="Fin service">
+        <para lang="fr" class="ATC"> [CAA], service du contrôle terminé, auto-information, 122 décimal 8. </para>
+        <para lang="fr" class="Pilot"> Auto-information, 122 décimal 8, merci pour le contrôle, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], control service terminated, air-to-air frequency, one hundred twenty two decimal eight. </para>
+        <para lang="en" class="Pilot"> Air-to-air frequency, one hundred twenty two decimal eight, thanks for control, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="CONFIRMATION_SID" name="Confirmation SID">
+        <para lang="fr" class="ATC"> [CAA], montez via SID niveau [NIV]. </para>
+        <para lang="en" class="ATC"> [CAA], climb via SID level [NIV]. </para>
+        </spawnTask>
+        <spawnTask id="DIRECT_WPT" name="Direct waypoint">
+        <para lang="fr" class="ATC"> [CAA], procédez direct [WPT], montez via SID niveau [NIV]. </para>
+        <para lang="fr" class="Pilot"> Direct [WPT], montons via SID niveau [NIV], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], proceed direct [WPT], climb via SID level [NIV]. </para>
+        <para lang="en" class="Pilot"> Proceed direct [WPT], climb via SID level [NIV], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="MONTEE_DIFFEREE" name="Montée stoppée">
+        <para lang="fr" class="ATC"> [CAA], stoppez la montée niveau [NIV]. </para>
+        <para lang="fr" class="Pilot"> Stoppons la montée niveau [NIV], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], stop climbing level [NIV]. </para>
+        <para lang="en" class="Pilot"> Stop climbing level [NIV], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="NIVEAU" name="Changement de niveau">
+        <para lang="fr" class="ATC"> [CAA], montez niveau [NIV]. </para>
+        <para lang="fr" class="Pilot"> Montons niveau [NIV], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], climb level [NIV]. </para>
+        <para lang="en" class="Pilot"> Climbing level [NIV], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="DIRECT" name="Direct">
+        <para lang="fr" class="ATC"> [CAA], direct [WPT]. </para>
+        <para lang="fr" class="Pilot"> Direct [WPT], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], direct [WPT]. </para>
+        <para lang="en" class="Pilot"> Direct [WPT], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ROUTE_CONTROLEUR" name="Nouvelle route">
+        <para lang="fr" class="ATC"> [CAA], changement de route, [WPT]. </para>
+        <para lang="fr" class="Pilot"> Changement de route, [WPT], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], route amendment, [WPT]. </para>
+        <para lang="en" class="Pilot"> Route amendement, [WPT], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ROUTE_POSITIVE" name="Route acceptée">
+        <para lang="fr" class="Pilot"> [CAA], demandons changement de route via [WPT]. </para>
+        <para lang="fr" class="ATC"> [CAA], stand-by. </para>
+        <para lang="fr" class="ATC"> [CAA], direct [WPT] approuvé. </para>
+        <para lang="fr" class="Pilot"> Direct [WPT], [CAA]. </para>
+        <para lang="en" class="Pilot"> [CAA], requesting route amendement via [WPT]. </para>
+        <para lang="en" class="ATC"> [CAA], stand-by. </para>
+        <para lang="en" class="ATC"> [CAA], direct [WPT] approuved. </para>
+        <para lang="en" class="Pilot"> Direct [WPT], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ROUTE_NEGATIVE" name="Route refusée">
+        <para lang="fr" class="Pilot"> [CAA], demandons changement de route via [WPT]. </para>
+        <para lang="fr" class="ATC"> [CAA], stand-by. </para>
+        <para lang="fr" class="ATC"> [CAA], changement de route impossible cause régulation de trafic. </para>
+        <para lang="fr" class="Pilot"> Reçu, [CAA]. </para>
+        <para lang="en" class="Pilot"> [CAA], requesting route amendement via [WPT]. </para>
+        <para lang="en" class="ATC"> [CAA], stand-by. </para>
+        <para lang="en" class="ATC"> [CAA],route amendment unable due flow control. </para>
+        <para lang="en" class="Pilot"> Roger, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="TRAFIC" name="Trafic">
+        <para lang="fr" class="ATC"> [CAA], trafic à 11 heures, 4 nautiques, gauche vers droite, Airbus heavy, 1000 pieds plus haut. </para>
+        <para lang="fr" class="Pilot">
+        Reçu, [CAA] (
+        <i>et dès acquisition visuelle</i>
+        ).
+        </para>
+        <para lang="fr" class="Pilot"> Airbus en vue, 1000 pieds plus haut, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA],traffic 11 o'clock 4 miles, left to right, heavy Airbus, 1000 feet above. </para>
+        <para lang="en" class="Pilot">
+        Roger, [CAA] (
+        <i>et dès acquisition visuelle</i>
+        ).
+        </para>
+        <para lang="en" class="Pilot"> Airbus in sight, 1000 feet above, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="DESCENTE_IMMEDIATE" name="Descente immédiate">
+        <para lang="fr" class="Pilot"> [ARR], [POL], [CAA] niveau [NIV], direct [WPT]. </para>
+        <para lang="fr" class="ATC"> [CAA], descendez niveau [NIV]. </para>
+        <para lang="fr" class="Pilot"> Descendons niveau [NIV], [CAA]. </para>
+        <para lang="en" class="Pilot"> [ARR], [POL], [CAA] level [NIV], direct [WPT]. </para>
+        <para lang="en" class="ATC"> [CAA], descend level [NIV]. </para>
+        <para lang="en" class="Pilot"> Descending level [NIV], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="DESCENTE_IMMEDIATE_GUIDAGE" name="Descente immédiate">
+        <para lang="fr" class="ATC"> [CAA], annulez approche cause F_O_D, maintenez [NIV], prévoyez guidage I_L_S piste [RWY]. </para>
+        <para lang="fr" class="Pilot"> Approche annulée, maintenons [NIV], prévoyons guidage I_L_S piste [RWY]. [CAA]. </para>
+        <para lang="fr" class="ATC"> [CAA], descendez niveau [NIV]. </para>
+        <para lang="fr" class="Pilot"> Descendons niveau [NIV], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], cancel approach due F_O_D, maintain [NIV], expect vectoring I_L_S runway [RWY]. </para>
+        <para lang="en" class="Pilot"> Approach cancelled, maintening [NIV], expecting vectoring I_L_S runway, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], descend level [NIV]. </para>
+        <para lang="en" class="Pilot"> Descending level [NIV], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="DESCENTE_DELAI" name="Descente avec délai">
+        <para lang="fr" class="Pilot"> [ARR], [POL], [CAA] niveau [NIV], direct [WPT]. </para>
+        <para lang="fr" class="ATC"> [CAA], quand vous êtes prêt, descendez niveau [NIV]. </para>
+        <para lang="fr" class="Pilot"> Quand prêt, descendons niveau [NIV], [CAA]. </para>
+        <para lang="fr" class="Pilot"> [CAA], nous libérons le niveau XXX en descente au niveau [NIV]. </para>
+        <para lang="fr" class="ATC"> [CAA], reçu. </para>
+        <para lang="en" class="Pilot"> [ARR], [POL], [CAA] level [NIV], direct [WPT]. </para>
+        <para lang="en" class="ATC"> [CAA], when ready, descend level [NIV]. </para>
+        <para lang="en" class="Pilot"> Will descend level [NIV] when ready, [CAA]. </para>
+        <para lang="en" class="Pilot"> [CAA], leaving level XXX, descending level [NIV]. </para>
+        <para lang="en" class="ATC"> [CAA], roger. </para>
+        </spawnTask>
+        <spawnTask id="APPROCHE_STAR" name="Approche STAR">
+        <para lang="fr" class="Pilot"> [ARR], [POL], [CAA] niveau [NIV], direct [WPT]. </para>
+        <para lang="fr" class="ATC"> [CAA], descendez via [STA] niveau [NIV]. </para>
+        <para lang="fr" class="Pilot"> Descendons via [STA] niveau [NIV], [CAA]. </para>
+        <para lang="en" class="Pilot"> [ARR], [POL], [CAA] level [NIV], direct [WPT]. </para>
+        <para lang="en" class="ATC"> [CAA], descend via [STA] level [NIV]. </para>
+        <para lang="en" class="Pilot"> Descending via [STA] level [NIV], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="APPROCHE_DIRECT" name="Direct dans STAR">
+        <para lang="fr" class="Pilot"> [ARR], [POL], [CAA] niveau [NIV], direct [WPT]. </para>
+        <para lang="fr" class="ATC"> [CAA], procédez direct [WPT], descendez via [STA] niveau [NIV]. </para>
+        <para lang="fr" class="Pilot"> Direct [WPT] descendons via [STA] niveau [NIV], [CAA]. </para>
+        <para lang="en" class="Pilot"> [ARR], [POL], [CAA] level [NIV], direct [WPT]. </para>
+        <para lang="en" class="ATC"> [CAA], proceed direct [WPT] descend via [STA] level [NIV]. </para>
+        <para lang="en" class="Pilot"> Direct [WPT] descend via [STA] level [NIV], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="VITESSE" name="Vitesse">
+        <para lang="fr" class="ATC"> [CAA], quelle est votre vitesse ? </para>
+        <para lang="fr" class="Pilot"> [VIT] nœuds, [CAA]. </para>
+        <para lang="fr" class="ATC"> [CAA], vitesse [VIT] nœuds pour séquencement. </para>
+        <para lang="fr" class="Pilot"> [VIT] nœuds, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], say speed? </para>
+        <para lang="en" class="Pilot"> [VIT] knots, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], speed [VIT] knots for sequencing. </para>
+        <para lang="en" class="Pilot"> [VIT] knots, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="REDUCTION_VITESSE" name="Réduction vitesse">
+        <para lang="fr" class="ATC"> [CAA], annulez approche cause F_O_D, maintenez [NIV], prévoyez guidage I_L_S piste [RWY]. </para>
+        <para lang="fr" class="Pilot"> Approche annulée, maintenons [NIV], prévoyons guidage I_L_S piste [RWY]. [CAA]. </para>
+        <para lang="fr" class="ATC"> [CAA], réduisez vitesse mini en lisse. </para>
+        <para lang="fr" class="Pilot"> Réduisons (220) nœuds, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], cancel approach due F_O_D, maintain [NIV], expect vectoring I_L_S runway [RWY]. </para>
+        <para lang="en" class="Pilot"> Approach cancelled, maintening [NIV], expecting vectoring I_L_S runway, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], reduce minimum clean speed. </para>
+        <para lang="en" class="Pilot"> Reducing (220) knots, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="CHANGEMENT_CAP" name="Nouveau cap">
+        <para lang="fr" class="ATC"> [CAA], annulez approche cause F_O_D, maintenez [NIV], prévoyez guidage I_L_S piste [RWY]. </para>
+        <para lang="fr" class="Pilot"> Approche annulée, maintenons [NIV], prévoyons guidage I_L_S piste [RWY]. [CAA]. </para>
+        <para lang="fr" class="ATC"> [CAA], tournez à (droite) cap [CAP]. </para>
+        <para lang="fr" class="Pilot"> Tournons à (droite) cap [CAP], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], cancel approach due F_O_D, maintain [NIV], expect vectoring I_L_S runway [RWY]. </para>
+        <para lang="en" class="Pilot"> Approach cancelled, maintening [NIV], expecting vectoring I_L_S runway, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], turn (right) heading [CAP]. </para>
+        <para lang="en" class="Pilot"> Turning (right) heading [CAP], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="CHANGEMENT_NIVEAU_CAP" name="Changements cap et niveau">
+        <para lang="fr" class="ATC"> [CAA], annulez approche cause F_O_D, maintenez [NIV], prévoyez guidage I_L_S piste [RWY]. </para>
+        <para lang="fr" class="Pilot"> Approche annulée, maintenons [NIV], prévoyons guidage I_L_S piste [RWY]. [CAA]. </para>
+        <para lang="fr" class="ATC"> [CAA], tournez à (droite) cap [CAP], descendez [NIV] pieds QNH [QNH]. </para>
+        <para lang="fr" class="Pilot"> Tournons à (droite) cap [CAP], descendons [NIV] pieds QNH [QNH], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], cancel approach due F_O_D, maintain [NIV], expect vectoring I_L_S runway [RWY]. </para>
+        <para lang="en" class="Pilot"> Approach cancelled, maintening [NIV], expecting vectoring I_L_S runway, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], turn (right) heading [CAP], descend [NIV] feet QNH [QNH]. </para>
+        <para lang="en" class="Pilot"> Descending [NIV] feet QNH [QNH], turning (right) heading [CAP], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="INTERCEPTION_ILS" name="Cap d'interception ILS">
+        <para lang="fr" class="ATC"> [CAA], annulez approche cause F_O_D, maintenez [NIV], prévoyez guidage I_L_S piste [RWY]. </para>
+        <para lang="fr" class="Pilot"> Approche annulée, maintenons [NIV], prévoyons guidage I_L_S piste [RWY]. [CAA]. </para>
+        <para lang="fr" class="ATC"> [CAA], tournez à (droite) cap [CAP], autorisé approche I_L_S piste [RWY]. </para>
+        <para lang="fr" class="Pilot"> Tournons à (droite) cap [CAP], autorisé approche I_L_S piste [RWY], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], cancel approach due F_O_D, maintain [NIV], expect vectoring I_L_S runway [RWY]. </para>
+        <para lang="en" class="Pilot"> Approach cancelled, maintening [NIV], expecting vectoring I_L_S runway, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], turn (right) heading [CAP], cleared I_L_S approach runway [RWY]. </para>
+        <para lang="en" class="Pilot"> Turning (right) heading [CAP], cleared I_L_S approach runway [RWY], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ATTENTE_PUBLIEE" name="Attente publiée">
+        <para lang="fr" class="ATC"> [CAA], autorisé jusqu’à [STA], attendez comme publié niveau [NIV], pour régulation. </para>
+        <para lang="fr" class="Pilot"> Attendons à [STA], niveau [NIV], [CAA]. (puis...) </para>
+        <para lang="en" class="ATC"> [CAA], cleared to [STA], hold as published at level [NIV], due regulation. </para>
+        <para lang="en" class="Pilot"> Hold at [STA], level [NIV], [CAA]. (puis...) </para>
+        <para lang="fr" class="ATC"> [CAA], descendez [NIV] pieds, QNH [QNH], HAP 32. </para>
+        <para lang="fr" class="Pilot"> Descendons [NIV] pieds, QNH [QNH], HAP 32, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], descend [NIV] feet, QNH [QNH], estimated approach time 32. </para>
+        <para lang="en" class="Pilot"> Descending [NIV] feet, QNH [QNH], estimated approach time 32, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ATTENTE_PARAMETRES" name="Attente non publiée">
+        <para lang="fr" class="ATC"> [CAA], attendez à [STA], niveau [NIV], rapprochement [CAP] degrés, virages à (droite), éloignement 1 minute, vitesse [VIT] nœuds. </para>
+        <para lang="fr" class="Pilot"> Attendons à [STA], niveau [NIV], rapprochement [CAP] degrés, virages à (droite), éloignement 1 minute, vitesse [VIT] nœuds, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], hold at [STA], level [NIV], inbound track [CAP] degrees, right-hand pattern, outbound time 1 minute, speed [VIT] knots. </para>
+        <para lang="en" class="Pilot"> Holding at [STA], level [NIV], inbound track [CAP] degrees, right-hand pattern, outbound time 1 minute, speed [VIT] knots, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="APPROCHE_AUTORISE" name="Approche autorisée">
+        <para lang="fr" class="ATC"> [CAA], autorisé approche I_L_S piste [RWY]. </para>
+        <para lang="fr" class="Pilot"> Autorisé approche I_L_S piste [RWY], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], cleared I_L_S approach runway [RWY]. </para>
+        <para lang="en" class="Pilot"> Cleared I_L_S approach runway [RWY], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="TRAFIC_MVL" name="Accepte avec info trafic">
+        <para lang="fr" class="ATC"> [CAA], acceptez-vous approche à vue piste [RWY] ? </para>
+        <para lang="fr" class="Pilot"> Affirm, [CAA]. </para>
+        <para lang="fr" class="ATC"> [CAA], avez-vous visuel sur trafic précédent ?. </para>
+        <para lang="fr" class="Pilot"> Affirm, [CAA]. </para>
+        <para lang="fr" class="ATC"> [CAA], autorisé approche à vue piste [RWY], assurez votre séparation avec (Fokker 70) devant vous. </para>
+        <para lang="fr" class="Pilot"> Autorisé approche à vue piste [RWY], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], do you accept visual approach runway [RWY] ? </para>
+        <para lang="en" class="Pilot"> Affirm, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], have you visual contact on preceeding traffic ? </para>
+        <para lang="en" class="Pilot"> Affirm, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], cleared visual approach runway [RWY], maintain own separation from preceeding Fokker 70. </para>
+        <para lang="en" class="Pilot"> Cleared visual approach runway [RWY], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ACCEPTE_MVL_PILOT" name="Accepte MVL">
+        <para lang="fr" class="Pilot"> [CAA], demandons approche à vue piste [RWY]. </para>
+        <para lang="fr" class="ATC"> [CAA], autorisé approche à vue piste [RWY]. </para>
+        <para lang="fr" class="Pilot"> Autorisé approche à vue piste [RWY], [CAA]. </para>
+        <para lang="en" class="Pilot"> [CAA], requesting visual approach runway [RWY]. </para>
+        <para lang="en" class="ATC"> [CAA], cleared visual approach runway [RWY]. </para>
+        <para lang="en" class="Pilot"> Cleared visual approach runway [RWY], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ACCEPTE_MVL_TRAFIC" name="Accepte MVL">
+        <para lang="fr" class="ATC"> [CAA], acceptez-vous approche à vue piste [RWY] derrière (A 320) ? </para>
+        <para lang="fr" class="Pilot"> Affirm, [CAA]. </para>
+        <para lang="fr" class="ATC"> [CAA], autorisé approche à vue piste [RWY], assurez votre séparation avec A 320 devant vous. </para>
+        <para lang="fr" class="Pilot"> Autorisé approche à vue piste [RWY], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], do you accept visual approach runway [RWY] behind (Airbus 3_2_0) ? </para>
+        <para lang="en" class="Pilot"> Affirm, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], cleared visual approach runway [RWY], maintain own separation from preceeding (Airbus 3_2_0). </para>
+        <para lang="en" class="Pilot"> Cleared visual approach runway [RWY], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ACCEPTE_MVL" name="Accepte MVL">
+        <para lang="fr" class="ATC"> [CAA], acceptez-vous approche à vue piste [RWY] ? </para>
+        <para lang="fr" class="Pilot"> Affirm, [CAA]. </para>
+        <para lang="fr" class="ATC"> [CAA], autorisé approche à vue piste [RWY]. </para>
+        <para lang="fr" class="Pilot"> Autorisé approche à vue piste [RWY], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], do you accept visual approach runway [RWY] ? </para>
+        <para lang="en" class="Pilot"> Affirm, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], cleared visual approach runway [RWY]. </para>
+        <para lang="en" class="Pilot"> Cleared visual approach runway [RWY], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="REFUSE_MVL" name="Refuse MVL">
+        <para lang="fr" class="ATC"> [CAA], acceptez-vous approche à vue piste [RWY] ? </para>
+        <para lang="fr" class="Pilot"> Négatif, [CAA]. </para>
+        <para lang="fr" class="ATC"> [CAA], autorisé approche I_L_S piste [RWY]. </para>
+        <para lang="fr" class="Pilot"> Autorisé approche I_L_S piste [RWY], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], do you accept visual approach runway [RWY] ? </para>
+        <para lang="en" class="Pilot"> Negative, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], cleared I_L_S approach runway [RWY]. </para>
+        <para lang="en" class="Pilot"> Cleared I_L_S approach runway [RWY], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="OUVERTURE_VPT" name="Ouverture VPT">
+        <para lang="fr" class="ATC"> [CAA], rappelez à l'ouverture (droite). </para>
+        <para lang="fr" class="Pilot"> Rappellerons à l'ouverture droite, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], report breaking (right). </para>
+        <para lang="en" class="Pilot"> Will report breaking (right), [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ATTERRISSAGE_AUTORISE" name="Autorisé">
+        <para lang="fr" class="ATC"> [CAA], piste [RWY], autorisé atterrissage, vent 0_50 degrés 10 nœuds. </para>
+        <para lang="fr" class="Pilot"> Piste [RWY], autorisé atterrissage, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], runway [RWY], cleared to land, wind 0_5_0 degrees, 10 knots. </para>
+        <para lang="en" class="Pilot"> Runway [RWY], cleared to land, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ATTERRISSAGE_VITESSE_CONTROLEE" name="Autorisé, dégagement rapide">
+        <para lang="fr" class="ATC"> [CAA], piste [RWY], autorisé atterrissage, vent 0_50 degrés 10 nœuds, dégagement rapide si possible. </para>
+        <para lang="fr" class="Pilot"> Piste [RWY], autorisé atterrissage, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], runway [RWY], cleared to land, wind 0_5_0 degrees, 10 knots, expedite vacating if possible. </para>
+        <para lang="en" class="Pilot"> Runway [RWY], cleared to land, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="REMISE_GAZ" name="Remise des gaz">
+        <para lang="fr" class="ATC"> [CAA], remettez les gaz, tournez à (droite) cap 220, montez à [NIV] pieds. </para>
+        <para lang="fr" class="Pilot"> Remettons les gaz, tournons à (droite) cap 220, montons à [NIV] pieds, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], go around, turn (right) 220 degrees, climb [NIV] feet. </para>
+        <para lang="en" class="Pilot"> Going around, turning (right) 220 degrees, climbing [NIV] feet, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="REMISE_GAZ_PILOTE" name="Remise des gaz">
+        <para lang="fr" class="Pilot"> [CAA], remettons les gaz. </para>
+        <para lang="fr" class="ATC"> [CAA], rappelez à [NIV] pieds. </para>
+        <para lang="en" class="Pilot"> [CAA], going around. </para>
+        <para lang="en" class="ATC"> [CAA], report [NIV] feet. </para>
+        </spawnTask>
+        <spawnTask id="DEGAGEMENT_PISTE" name="Dégagement rapide">
+        <para lang="fr" class="Pilot"> [CAA], vitesse contrôlée. </para>
+        <para lang="fr" class="ATC"> [CAA], dégagez rapidement la piste. </para>
+        <para lang="fr" class="Pilot"> Degageons rapidement la piste, [CAA]. </para>
+        <para lang="en" class="Pilot"> [CAA], speed under control. </para>
+        <para lang="en" class="ATC"> [CAA], expedite vacating runway. </para>
+        <para lang="en" class="Pilot"> Expediting vacating runway, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="DEGAGEMENT_STANDARD" name="Dégagement standard">
+        <para lang="fr" class="Pilot"> [CAA], vitesse contrôlée. </para>
+        <para lang="fr" class="ATC"> [CAA], rappelez piste dégagée. </para>
+        <para lang="fr" class="Pilot"> Reçu, [CAA]. </para>
+        <para lang="en" class="Pilot"> [CAA], speed under control. </para>
+        <para lang="en" class="ATC"> [CAA], report runway vacating. </para>
+        <para lang="en" class="Pilot"> Roger, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="DEGAGEMENT_SORTIE" name="Dégagement particulier">
+        <para lang="fr" class="Pilot"> [CAA], vitesse contrôlée. </para>
+        <para lang="fr" class="ATC"> [CAA], dégagez première à (gauche). </para>
+        <para lang="fr" class="Pilot"> Degageons première à (gauche), [CAA]. </para>
+        <para lang="en" class="Pilot"> [CAA], speed under control. </para>
+        <para lang="en" class="ATC"> [CAA], vacate first (left). </para>
+        <para lang="en" class="Pilot"> Vacating first (left), [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="DEGAGEMENT_REMONTEE" name="Remontée et dégagement">
+        <para lang="fr" class="Pilot"> [CAA], vitesse contrôlée. </para>
+        <para lang="fr" class="ATC"> [CAA], faites un 180, remontez la piste puis dégagez première à (droite). </para>
+        <para lang="fr" class="Pilot"> Remontons la piste puis première à (droite), [CAA]. </para>
+        <para lang="en" class="Pilot"> [CAA], speed under control. </para>
+        <para lang="en" class="ATC"> [CAA], make a 180, backtrap runway then vacate first (right). </para>
+        <para lang="en" class="Pilot"> Backtraping runway then first (right), [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="PARKING" name="Parking">
+        <para lang="fr" class="ATC"> [CAA], roulez poste [POS] via [VOI], rappelez pour quitter la fréquence. </para>
+        <para lang="fr" class="Pilot"> Roulons poste [POS] via [VOI], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], taxi stand [POS] via [VOI], report to leave frequency. </para>
+        <para lang="en" class="Pilot"> Taxiing stand [POS] via [VOI], [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="QUITTER" name="Quitter">
+        <para lang="fr" class="Pilot"> [DEP] [NGND], [CAA], au parking, pour quitter. </para>
+        <para lang="fr" class="ATC"> [CAA], vous pouvez quitter la fréquence, au revoir. </para>
+        <para lang="en" class="Pilot"> [DEP] [NGND], [CAA], au parking, pour quitter. </para>
+        <para lang="en" class="ATC"> [CAA], you can leave frequency, good day. </para>
+        </spawnTask>
+        <spawnTask id="TRAFIC_SOL" name="Priorité trafic">
+        <para lang="fr" class="ATC"> [CAA], maintenez position avant la prochaine intersection pour laisser passer un airbus 321 droite vers la gauche. </para>
+        <para lang="fr" class="Pilot"> Maintenons position avant la prochaine intersection pour laisser passer un airbus 321 droite vers la gauche, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], hold position before next intersection to give way to an airbus 321 from right to left. </para>
+        <para lang="en" class="Pilot"> Holding position before next intersection to give way to an airbus 321 from right to left, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="TRAVERSER_PISTE" name="Traversée de piste">
+        <para lang="fr" class="Pilot"> [DEP] [NTWR], [POL], [CAA], au point d'attente [HLD]. </para>
+        <para lang="fr" class="ATC"> [CAA], traversez piste (04 gauche). </para>
+        <para lang="fr" class="Pilot"> Traversons piste (04 gauche), [CAA]. </para>
+        <para lang="en" class="Pilot"> [DEP] [NTWR], [POL], [CAA], holding point [HLD]. </para>
+        <para lang="en" class="ATC"> [CAA], cross runway (04 left). </para>
+        <para lang="en" class="Pilot"> Crossing runway (04 left), [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="DEMANDE_TRAVERSEE_PISTE" name="Demande de traversée">
+        <para lang="fr" class="Pilot"> [DEP] [NTWR], [POL], [CAA], au point d'attente [HLD]. </para>
+        <para lang="fr" class="Pilot"> [CAA], demandons à traverser piste (04 gauche). </para>
+        <para lang="fr" class="ATC"> [CAA], traversez piste (04 gauche). </para>
+        <para lang="fr" class="Pilot"> Traversons piste (04 gauche), [CAA]. </para>
+        <para lang="en" class="Pilot"> [DEP] [NTWR], [POL], [CAA], holding point [HLD]. </para>
+        <para lang="en" class="Pilot"> [CAA], requesting to cross runway (04 left). </para>
+        <para lang="en" class="ATC"> [CAA], crossing runway (04 left). </para>
+        <para lang="en" class="Pilot"> Crossing runway (04 left), [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="ACCELERER_TRAVERSEE_PISTE" name="Accélérer la traversée">
+        <para lang="fr" class="Pilot"> [DEP] [NTWR], [POL], [CAA], au point d'attente [HLD]. </para>
+        <para lang="fr" class="ATC"> [CAA], traversez rapidement piste (04 gauche). </para>
+        <para lang="fr" class="Pilot"> Traversons rapidement piste (04 gauche), [CAA]. </para>
+        <para lang="en" class="Pilot"> [DEP] [NTWR], [POL], [CAA], holding point [HLD]. </para>        
+        <para lang="en" class="ATC"> [CAA], expedite crossing runway (04 left). </para>
+        <para lang="en" class="Pilot"> Expediting crossing runway (04 left), [CAA]. </para>
+        </spawnTask>
+        <!--  Expressions -->
+        <!--  ajouter la correction  -->
+        <spawnTask id="ACCUSEZ" name="Accuser réception">
+        <para lang="fr" class="ATC"> [CAA], accusez réception. </para>
+        <para lang="en" class="ATC"> [CAA], acknowledge. </para>
+        <para lang="fr" class="Pilot"> Wilco, [CAA]. </para>
+        <para lang="en" class="Pilot"> Wilco, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="LENTEMENT" name="Parler lentement">
+        <para lang="fr" class="Pilot"> [CAA], parlez plus lentement. </para>
+        <para lang="en" class="Pilot"> [CAA], speak slower. </para>
+        </spawnTask>
+        <spawnTask id="REPETEA" name="Collationner">
+        <para lang="fr" class="ATC"> [CAA], collationnez. </para>
+        <para lang="en" class="ATC"> [CAA], read back. </para>
+        </spawnTask>
+        <spawnTask id="REPETEP" name="Répéter">
+        <para lang="fr" class="Pilot"> [CAA], répétez. </para>
+        <para lang="en" class="Pilot"> [CAA], say again. </para>
+        </spawnTask>
+        <spawnTask id="ALIGNEMENT_DECO" name="Alignement et décollage">
+        <para lang="fr" class="ATC"> [CAA], alignez-vous piste [RWY], autorisé décollage, vent 0_50 degrés 10 nœuds. </para>
+        <para lang="fr" class="Pilot"> Nous alignons piste [RWY], Autorisé décollage, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], line up runway [RWY], cleared for take-off, wind 0_5_0 degrees, 10 knots. </para>
+        <para lang="en" class="Pilot"> Lining up runway [RWY], cleared for take-off, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="DECOL_AUTO" name="Décollage déjà aligné">
+        <para lang="fr" class="ATC"> [CAA], piste [RWY], autorisé décollage, vent 0_50 degrés 10 nœuds. </para>
+        <para lang="fr" class="Pilot"> Piste [RWY], autorisé décollage, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], runway [RWY], cleared for take-off, wind 0_5_0 degrees, 10 knots. </para>
+        <para lang="en" class="Pilot"> Runway [RWY], cleared for take-off, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="DECOL_STOPPE" name="Décollage stoppé">
+        <para lang="fr" class="ATC"> [CAA], stoppez immédiatement, [CAA], stoppez immédiatement, un véhicule sur la piste.. </para>
+        <para lang="en" class="ATC"> [CAA], stop immediately, [CAA], stop immediately, vehicle on runway. </para>
+        <para lang="fr" class="Pilot"> Stoppons immédiatement, [CAA]. </para>
+        <para lang="en" class="Pilot"> Stopping immediately, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="DECOL_ANNULE" name="Décollage annulé">
+        <para lang="fr" class="ATC"> [CAA], maintenez position, annulez le décollage, je répète, annulez le décollage, (A_T_R en remise de gaz) </para>
+        <para lang="en" class="ATC"> [CAA], hold position, cancel take-off, I say again cancel take-off, (A_T_R going around). </para>
+        <para lang="fr" class="Pilot"> Maintenons position, [CAA]. </para>
+        <para lang="en" class="Pilot"> Holding position, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="DECOL_INTEROMPU" name="Décollage interrompu">
+        <para lang="fr" class="Pilot"> [CAA], interrompons décollage(, piste [RWY]{Indiquer la piste si plusieurs pistes possibles au décollage}). </para>
+        <para lang="en" class="Pilot"> [CAA], aborting take-off(, runway [RWY]{Indiquer la piste si plusieurs pistes possibles au décollage}). </para>
+        <!--  réponse de la tour ?  -->
+        </spawnTask>
+        <spawnTask id="DECELERE" name="Décélération roulage">
+        <para lang="fr" class="ATC"> [CAA], roulez avec précaution. </para>
+        <para lang="en" class="ATC"> [CAA], taxi with caution. </para>
+        </spawnTask>
+        <spawnTask id="ACCELERE" name="Accélération roulage">
+        <para lang="fr" class="ATC"> [CAA], expédiez le roulage. </para>
+        <para lang="en" class="ATC"> [CAA], expedite taxi. </para>
+        </spawnTask>
+        <spawnTask id="VISUEL" name="Trafic en vue">
+        <para lang="fr" class="ATC"> [CAA], avez-vous visuel sur trafic précédent ? </para>
+        <para lang="fr" class="Pilot"> Affirm, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], have you visual contact on preceeding traffic? </para>
+        <para lang="en" class="Pilot"> Affirm, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="SILLAGE" name="Turbulence de sillage">
+        <para lang="fr" class="ATC"> [CAA], attention, turbulence de sillage possible. </para>
+        <para lang="fr" class="Pilot"> Reçu, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], caution, wake turbulence possibility. </para>
+        <para lang="en" class="Pilot"> Roger, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="TAUX_MONTEE" name="Taux de montée">
+        <para lang="fr" class="ATC"> [CAA], quel est votre taux de montée ? </para>
+        <para lang="fr" class="Pilot"> Nous montons au taux de 1800 pieds par minute, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], say rate of climb? </para>
+        <para lang="en" class="Pilot"> Climbing rate 1800 feet per minute, [CAA]. </para>
+        </spawnTask>
+        <spawnTask id="IDENT" name="Identification transpondeur">
+        <para lang="fr" class="ATC"> [CAA], transpondeur ident. </para>
+        <para lang="fr" class="Pilot"> Transpondeur ident, [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], squawk ident. </para>
+        <para lang="en" class="Pilot"> Squawk ident, [CAA]. </para>
+        </spawnTask>
+        <!--  orTask  -->
+        <orTask id="CONTACT_TOUR1" name="Point d'attente">
+        <para lang="fr" class="Pilot"> [DEP] [NTWR], [POL], [CAA], au point d'attente [HLD]. </para>
+        <para lang="en" class="Pilot"> [DEP] [NTWR], [POL], [CAA], holding point [HLD]. </para>
+        <subgraph>
+        <call class="warning" refid="MAINTIEN_ARRET"/>
+        </subgraph>
+        <subgraph>
+        <call class="info" refid="DEMANDE_TRAVERSEE_PISTE"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="TRAVERSER_PISTE"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="ACCELERER_TRAVERSEE_PISTE"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="DECOLLAGE_IMMEDIAT"/>
+        </subgraph>
+        </orTask>
+        <orTask repeat="FALSE" id="TYPE_ALIGNEMENT" name="Alignement">
+        <subgraph>
+        <call class="warning" refid="ALIGNEMENT"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="ALIGNEMENT_POS2"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="ALIGNEMENT_APRES_AVION_FINAL"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="REMONTEE_PISTE"/>
+        </subgraph>
+        </orTask>
+        <orTask id="DECOLLAGE" name="Décollage">
+        <subgraph>
+        <call class="warning" refid="DECOL_AUTO"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="ALIGNEMENT_DECO"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="DECOL_ANNULE"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="DECOL_STOPPE"/>
+        </subgraph>
+        <subgraph>
+        <call class="info" refid="DECOL_INTEROMPU"/>
+        </subgraph>
+        </orTask>
+        <orTask id="CONTACT_CTR" name="Contact en route">
+        <para lang="fr" class="Pilot"> [DEP] [NCTR], [CAA], direct [WPT] niveau [NIV]. </para>
+        <para lang="en" class="Pilot"> [DEP] [NCTR], [CAA], direct [WPT] level [NIV]. </para>
+        </orTask>
+        <orTask id="CONTACT_APP" name="Contact approche">
+        <para lang="fr" class="Pilot"> [DEP] [NAPP], [POL], [CAA], départ [STA], montons niveau [NIV]. </para>
+        <para lang="en" class="Pilot"> [DEP] [NAPP], [POL], [CAA], [STA] departure, climbing level [NIV]. </para>
+        <subgraph>
+        <call class="warning" refid="CONFIRMATION_SID"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="DIRECT_WPT"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="MONTEE_DIFFEREE"/>
+        </subgraph>
+        </orTask>
+        <orTask id="CONTACT_TWR" name="Contact tour">
+        <para lang="fr" class="Pilot"> [DEP] [NTWR], [CAA], courte finale piste [RWY]. </para>
+        <para lang="en" class="Pilot"> [DEP] [NTWR], [CAA], final runway [RWY]. </para>
+        </orTask>
+        <orTask id="ROUTE" name="Nouvelle route">
+        <subgraph>
+        <call class="warning" refid="DIRECT"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="ROUTE_CONTROLEUR"/>
+        </subgraph>
+        </orTask>
+        <orTask id="ROUTE_PILOTE" name="Changement route">
+        <para lang="fr" class="Pilot"> [CAA], demandons changement de route via [WPT]. </para>
+        <para lang="en" class="Pilot"> [CAA], requesting route amendement via [WPT]. </para>
+        <para lang="fr" class="ATC"> [CAA], stand-by. </para>
+        <para lang="en" class="ATC"> [CAA], stand-by. </para>
+        <subgraph>
+        <call class="warning" refid="ROUTE_POSITIVE"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="ROUTE_NEGATIVE"/>
+        </subgraph>
+        </orTask>
+        <orTask id="TRANSFERT_CTR" name="Transfert en route">
+        <subgraph>
+        <call class="warning" refid="TRANSFERT_SIMPLE_CTR"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="TRANSFERT_UNICOM"/>
+        </subgraph>
+        </orTask>
+        <orTask id="TRANSFERT_APP2" name="Transfert approche">
+        <subgraph>
+        <call class="warning" refid="TRANSFERT_SIMPLE"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="TRANSFERT_UNICOM"/>
+        </subgraph>
+        </orTask>
+        <orTask id="TRANSFERT_APP" name="Transfert approche">
+        <subgraph>
+        <call class="warning" refid="TRANSFERT_SIMPLE"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="TRANSFERT_UNICOM"/>
+        </subgraph>
+        </orTask>
+        <orTask id="REGULATION" name="Régulation et trafic">
+        <subgraph>
+        <call class="warning" refid="TRAFIC"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="VITESSE"/>
+        </subgraph>
+        </orTask>
+        <orTask id="REGULATIONBIS" name="Régulation et trafic">
+        <subgraph>
+        <call class="warning" refid="TRAFIC"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="VITESSE"/>
+        </subgraph>
+        </orTask>
+        <orTask id="DESCENTE" name="Descente">
+        <para lang="fr" class="Pilot"> [ARR], [POL], [CAA] niveau [NIV], direct [WPT]. </para>
+        <para lang="en" class="Pilot"> [ARR], [POL], [CAA] level [NIV], direct [WPT]. </para>
+        <subgraph>
+        <call class="warning" refid="APPROCHE_STAR"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="APPROCHE_DIRECT"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="DESCENTE_IMMEDIATE"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="DESCENTE_DELAI"/>
+        </subgraph>
+        </orTask>
+        <orTask id="GUIDAGE_RADAR" name="Guidage">
+        <para lang="fr" class="ATC"> [CAA], annulez approche cause F_O_D, maintenez [NIV], prévoyez guidage I_L_S piste [RWY]. </para>
+        <para lang="en" class="ATC"> [CAA], cancel approach due F_O_D, maintain [NIV], expect vectoring I_L_S runway [RWY]. </para>
+        <para lang="fr" class="Pilot"> Approche annulée, maintenons [NIV], prévoyons guidage I_L_S piste [RWY]. [CAA]. </para>
+        <para lang="en" class="Pilot"> Approach cancelled, maintening [NIV], expecting vectoring I_L_S runway, [CAA]. </para>
+        <subgraph>CHANGEMENT_CAP
+        <call class="warning" refid="CHANGEMENT_CAP"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="DESCENTE_IMMEDIATE_GUIDAGE"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="CHANGEMENT_NIVEAU_CAP"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="INTERCEPTION_ILS"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="REDUCTION_VITESSE"/>
+        </subgraph>
+        </orTask>
+        <orTask id="ATTENTE" name="Circuit d'attente">
+        <subgraph>
+        <call class="warning" refid="ATTENTE_PUBLIEE"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="ATTENTE_PARAMETRES"/>
+        </subgraph>
+        </orTask>
+        <orTask id="APPROCHE_VPT" name="Approche VPT">
+        <para lang="fr" class="ATC"> [CAA], autorisé approche I_L_S piste (contre-QFU), suivie d'une V_P_T piste [RWY]. </para>
+        <para lang="fr" class="Pilot"> Autorisé approche I_L_S piste (contre-QFU), suivie d'une V_P_T piste [RWY], [CAA]. </para>
+        <para lang="en" class="ATC"> [CAA], cleared I_L_S approach runway (contre-QFU), followed by V_P_T runway [RWY]. </para>
+        <para lang="en" class="Pilot"> Cleared I_L_S approach runway (contre-QFU), followed by V_P_T runway [RWY], [CAA]. </para>
+        </orTask>
+        <orTask id="APPROCHE_VUE_TRAFIC" name="Approche à vue avec trafic">
+        <para lang="fr" class="ATC"> [CAA], acceptez-vous approche à vue piste [RWY] derrière (A 320) ? </para>
+        <para lang="en" class="ATC"> [CAA], do you accept visual approach runway [RWY] behind (Airbus 3_2_0) ? </para>
+        <subgraph>
+        <call class="info" refid="ACCEPTE_MVL_TRAFIC"/>
+        </subgraph>
+        </orTask>
+        <orTask id="APPROCHE_VUE" name="Approche à vue">
+        <para lang="fr" class="ATC"> [CAA], acceptez-vous approche à vue piste [RWY] ? </para>
+        <para lang="en" class="ATC"> [CAA], do you accept visual approach runway [RWY] ? </para>
+        <subgraph>
+        <call class="info" refid="ACCEPTE_MVL"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="TRAFIC_MVL"/>
+        </subgraph>
+        <subgraph>
+        <call class="info" refid="REFUSE_MVL"/>
+        </subgraph>
+        </orTask>
+        <orTask id="APPROCHE_VUE_PILOT" name="Approche à vue">
+        <para lang="fr" class="Pilot"> [CAA], demandons approche à vue piste [RWY]. </para>
+        <para lang="en" class="Pilot"> [CAA], requesting visual approach runway [RWY]. </para>
+        <subgraph>
+        <call class="warning" refid="ACCEPTE_MVL_PILOT"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="TRAFIC_MVL"/>
+        </subgraph>
+        </orTask>
+        <orTask id="APPROCHE" name="Approche standard">
+        <subgraph>
+        <call class="warning" refid="APPROCHE_AUTORISE"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="APPROCHE_VPT"/>
+        </subgraph>
+        </orTask>
+        <orTask id="ATTERRISSAGE" name="Atterrissage">
+        <subgraph>
+        <call class="warning" refid="OUVERTURE_VPT"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="ATTERRISSAGE_AUTORISE"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="ATTERRISSAGE_VITESSE_CONTROLEE"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="REMISE_GAZ"/>
+        </subgraph>
+        <subgraph>
+        <call class="info" refid="REMISE_GAZ_PILOTE"/>
+        </subgraph>
+        </orTask>
+        <orTask id="DEGAGEMENT" name="Vitesse contrôlée">
+        <para lang="fr" class="Pilot"> [CAA], vitesse contrôlée. </para>
+        <para lang="en" class="Pilot"> [CAA], speed under control. </para>
+        <subgraph>
+        <call class="warning" refid="DEGAGEMENT_STANDARD"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="DEGAGEMENT_PISTE"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="DEGAGEMENT_SORTIE"/>
+        </subgraph>
+        <subgraph>
+        <call class="warning" refid="DEGAGEMENT_REMONTEE"/>
+        </subgraph>
+        </orTask>
+    </tasks>
+    <startProcess>PHRASEO</startProcess>
+</processChain>
