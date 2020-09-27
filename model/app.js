@@ -8,6 +8,7 @@ let score=document.querySelector('#score');
 let output= document.querySelector('#output');
 let action = document.querySelector('#action');
 let scoreTotal=document.querySelector('#scoreTotal');
+let count=document.querySelector("#countdown");
 let recognition ;
 let c1,c2,c3;
 let pilote=[], atc=[], field=[];
@@ -27,16 +28,17 @@ function write(random) {
     atc[0].classList.add("hide");
     score.classList.add("hide");
     field[0].classList.remove("hide");
-
     field[0].innerHTML=random[2][0];
-    field[1]=random[2][1];
     pilote[0].innerHTML= random[0][0];
     atc[0].innerHTML = random[1][0];
     pilote[1]=random[0][1] ;
     atc[1]=random[1][1] ;
+    field[1]=random[2][1];
+    field[2]=random[2][2];
     pilote[2]=random[0][2];
-
-    synthesis(pilote[0].textContent);
+    atc[2]=random[1][2];
+    
+    if(pilote[0]) synthesis(pilote[0].textContent);
 
     //Boutons Speek et Hint activé
     speek.disabled=false ;
@@ -165,10 +167,12 @@ function submit(){
             speek.disabled=true ;
             hintB.disabled=true ;
             caseMove(clickedCase());
+        }else {
+            field[0].innerHTML=field[1];
+            field.classList.remove("hide");
         }
-
     }
-    if(atc[0]===atc[1]) {
+    else if(atc[0]===atc[1]) {
         clickedCase().style="background-color: #152323; color: #d9dfdf";
         pilote[0].innerHTML=pilote[2] ;
         atc[0].innerHTML=atc[2] ;
@@ -180,14 +184,17 @@ function submit(){
         clickedCase().style="background-color: #2f4f4f; color: #d9dfdf";
         pilote[0].innerHTML=pilote[1] ;
         atc[0].innerHTML=atc[1] ;
+        field[0].innerHTML=field[2];
         synthesis(pilote[2]);
         if(!atc[2]) {
+            field[0].classList.add("hide");
             clickedCase().style="background-color: #152323; color: #d9dfdf";
             submitB.disabled=true ;
             speek.disabled=true ;
             hintB.disabled=true ;
             caseMove(clickedCase());
         }
+        
     }
 
     if(!pilote[0].innerHTML){
@@ -202,6 +209,10 @@ function hint(){
     else output.innerHTML=atc[0].textContent ;
     submitB.disabled=false ;
 }
+
+
+
+
 
 
 
