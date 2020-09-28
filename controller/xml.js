@@ -30,13 +30,15 @@ function getRandom(xmlDoc,caseX){
     for(let i=0;i<random.childNodes.length;i++) {
         if (random.getElementsByClassName("ATC")[i] && random.getElementsByClassName("ATC")[i].getAttribute("lang")==="fr") atc[i]=random.getElementsByClassName("ATC")[i].childNodes[0].nodeValue ;
         if (random.getElementsByClassName("Pilot")[i] && random.getElementsByClassName("Pilot")[i].getAttribute("lang")==="fr") pilot[i]=random.getElementsByClassName("Pilot")[i].childNodes[0].nodeValue ; 
-        if (random.getElementsByClassName("instructions")[i] && random.getElementsByClassName("instructions")[i].getAttribute("lang")==="fr") instructions[i]=random.getElementsByClassName("instructions")[i].childNodes[0].nodeValue ; 
+        else if(random.getElementsByClassName("Pilot")[i]===undefined && random.getElementsByClassName("Pilot")[i].getAttribute("lang")==="fr") pilot[i]="";
+        if (random.getElementsByClassName("instructions")[i]) instructions[i]=random.getElementsByClassName("instructions")[i].childNodes[0].nodeValue ; 
+        else instructions[i]="";
     } 
     return [pilot,atc,instructions] ;
 }
 
 function caseMove(caseX){
-    caseX.addEventListener('dblclick', function() {getRandom(xmlDoc, caseX); caseX.style="background-color: white" ;});
+    caseX.addEventListener('dblclick', function() {getRandom(xmlDoc, caseX); caseX.style="background-color: white";});
 }
 
 
