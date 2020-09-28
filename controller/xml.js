@@ -22,7 +22,7 @@ function xmlReader(xml) {
 }
 
 function getRandom(xmlDoc,caseX){
-    let a=Math.floor(Math.random()*78);
+    let a=Math.floor(Math.random()*77);
     let pilot=[], atc=[], instructions=["",""];
     //random=spawnTask aléatoire
     let random=xmlDoc.getElementsByTagName("spawnTask")[a];
@@ -30,9 +30,9 @@ function getRandom(xmlDoc,caseX){
     for(let i=0;i<random.childNodes.length;i++) {
         if (random.getElementsByClassName("ATC")[i] && random.getElementsByClassName("ATC")[i].getAttribute("lang")==="fr") atc[i]=random.getElementsByClassName("ATC")[i].childNodes[0].nodeValue ;
         if (random.getElementsByClassName("Pilot")[i] && random.getElementsByClassName("Pilot")[i].getAttribute("lang")==="fr") pilot[i]=random.getElementsByClassName("Pilot")[i].childNodes[0].nodeValue ; 
-        else if(random.getElementsByClassName("Pilot")[i]===undefined && random.getElementsByClassName("Pilot")[i].getAttribute("lang")==="fr") pilot[i]="";
+        if(pilot[i]==="undefined")pilote[i]="";
         if (random.getElementsByClassName("instructions")[i]) instructions[i]=random.getElementsByClassName("instructions")[i].childNodes[0].nodeValue ; 
-        else instructions[i]="";
+        if (instructions[i]==="undefined")instructions[i]="";
     } 
     return [pilot,atc,instructions] ;
 }
