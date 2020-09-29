@@ -58,7 +58,7 @@ function caseMove(caseX){
     caseX.style="background-color: white" ;
     if(caseX===case1) random1=random ;
     if(caseX===case2) random2=random ;
-    if(caseX===case3) random3=random ; },8000);
+    if(caseX===case3) random3=random ; },10000);
    
 }
 

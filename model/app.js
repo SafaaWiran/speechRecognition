@@ -23,7 +23,7 @@ speek.disabled=true ;
 hintB.disabled=true ;
 submitB.disabled=true ;
 
-function write(random) {
+function write(random) {                                            
     c1=false;c2=false;c3=false ;
     if(pilote[0]) pilote[0].classList.add("hide");
     if(atc[0]) atc[0].classList.add("hide");
@@ -135,7 +135,7 @@ function submit(){
     if(m===1) recognition.stop();
     action.innerHTML = "<small>stopped listening</small>";
     
-    field[0].classList.add("hide");
+    //field[0].classList.add("hide");
     
     if(window.final_transcript){
         score.classList.remove("hide");
@@ -160,6 +160,7 @@ function submit(){
     if(!atc[0].classList.toggle("hide")){
         if(pilote[0])pilote[0].classList.remove("hide");
         if(atc[0]) atc[0].classList.remove("hide");
+        field[0].innerHTML=field[1];
         synthesis(pilote[1]);
         if(!atc[1]) {
             clickedCase().style="background-color: #152323; color: #d9dfdf";
@@ -167,10 +168,9 @@ function submit(){
             speek.disabled=true ;
             hintB.disabled=true ;
             caseMove(clickedCase());
-        }else {
-            field[0].innerHTML=field[1];
-            field.classList.remove("hide");
         }
+        //field.classList.remove("hide");
+        
     }
     else if(atc[0]===atc[1]) {
         clickedCase().style="background-color: #152323; color: #d9dfdf";
@@ -179,6 +179,7 @@ function submit(){
         submitB.disabled=true ;
         speek.disabled=true ;
         hintB.disabled=true ;
+        if(pilote[3]) synthesis(pilote[3]);
         caseMove(clickedCase());
     } else {
         clickedCase().style="background-color: #2f4f4f; color: #d9dfdf";
@@ -197,10 +198,10 @@ function submit(){
         
     }
 
-    if(!pilote[0].innerHTML){
-        pilote[0].classList.add("hide");
-    } else pilote[0].innerHTML="<b>Pilote : </b>"+pilote[0].innerHTML ;
-    atc[0].innerHTML="<b>ATC : </b>"+atc[0].innerHTML ;
+    if(!pilote[0]){
+        document.querySelector('#pilote1').classList.add("hide");
+    } else document.querySelector('#pilote1').innerHTML="<b>Pilote : </b>"+pilote[0].innerHTML ;
+    document.querySelector('#atc').innerHTML="<b>ATC : </b>"+atc[0].innerHTML ;
 }      
 
 function hint(){
