@@ -22,7 +22,7 @@ function xmlReader(xml) {
 }
 
 function getRandom(xmlDoc,caseX){
-    let a=Math.floor(Math.random()*77);
+    let a=Math.floor(Math.random()*70);
     let pilot=[], atc=[], instructions=["",""];
     //random=spawnTask aléatoire
     let random=xmlDoc.getElementsByTagName("spawnTask")[a];
@@ -38,7 +38,12 @@ function getRandom(xmlDoc,caseX){
 }
 
 function caseMove(caseX){
-    caseX.addEventListener('dblclick', function() {getRandom(xmlDoc, caseX); caseX.style="background-color: white";});
+    next=setTimeout(function(){ let random ;
+        random=getRandom(xmlDoc, caseX);
+        caseX.style="background-color: white" ;
+        if(caseX===case1) random1=random ;
+        if(caseX===case2) random2=random ;
+        if(caseX===case3) random3=random ; },8000);
 }
 
 

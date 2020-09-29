@@ -16,6 +16,7 @@ field[0]=document.querySelector('#field');
 pilote[0]=document.querySelector('#pilote1');
 atc[0]=document.querySelector('#atc');  
 let n=0,m=0;o=0;sT=0;t=1;
+let next;
 
 //Disabling buttons
 speek.disabled=true ;
@@ -32,7 +33,7 @@ function write(random) {
     pilote[0].innerHTML= random[0][0];
     atc[0].innerHTML = random[1][0];
     pilote[1]=random[0][1] ;
-    atc[1]=random[1][1] ;
+    atc[1]=random[1][1];
     field[1]=random[2][1];
     field[2]=random[2][2];
     pilote[2]=random[0][2];
@@ -85,7 +86,7 @@ function runSpeechRecognition() {
 
     action.innerHTML = "<small>listening, please speak...</small>";
     recognition.start();
-    window.final_transcript = '';
+    window.final_transcript ='';
     
     //Show recognition result
     recognition.onresult = function(event) {  

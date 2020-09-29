@@ -14,7 +14,6 @@ function jsonReader() {
     request.responseType = 'json';
     request.send();
     request.onload = function () {
-        
         myJson = request.response;
         
         //ajouter du contenu à la page HTML à partir de json
@@ -22,9 +21,9 @@ function jsonReader() {
         random2=getRandom(myJson,case2) ;
         random3=getRandom(myJson,case3) ;    
 
-       case1.addEventListener('click',function(){write(random1);c1=true;});
-       case2.addEventListener('click',function(){write(random2);c2=true;});
-       case3.addEventListener('click',function(){write(random3);c3=true;});
+        case1.addEventListener('click',function(){write(random1);c1=true;});
+        case2.addEventListener('click',function(){write(random2);c2=true;});
+        case3.addEventListener('click',function(){write(random3);c3=true;});
     }
         
 } 
@@ -42,7 +41,7 @@ function getRandom(json,caseX){
     d=Math.floor(Math.random()*d);
     //Affichage de la position du cas généré dans le haut de la page
     caseX.innerHTML=a+"."+b+"."+c+"."+d ;
-    //Extraires les cas aléatoires de json file
+    //Extraires les cas aléatoires du fichier json
     pilot[0]=json[a][b][c][d]["pilote"][0];
     pilot[1]=json[a][b][c][d]["pilote"][1];
     pilot[2]=json[a][b][c][d]["pilote"][2];
@@ -54,7 +53,13 @@ function getRandom(json,caseX){
 }
 
 function caseMove(caseX){
-    caseX.addEventListener('dblclick', function() {getRandom(myJson, caseX); caseX.style="background-color: white" ;});
+    next=setTimeout(function(){ let random ;
+    random=getRandom(myJson, caseX);
+    caseX.style="background-color: white" ;
+    if(caseX===case1) random1=random ;
+    if(caseX===case2) random2=random ;
+    if(caseX===case3) random3=random ; },8000);
+   
 }
 
 jsonReader(); 

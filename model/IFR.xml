@@ -737,28 +737,28 @@
         <para class="instructions">undefined</para>
         <para class="instructions">undefined</para>
         </spawnTask>
-        <spawnTask id="LENTEMENT" name="Parler lentement">
+        <orTask id="LENTEMENT" name="Parler lentement">
         <para lang="fr" class="Pilot">Royal Air Maroc 26, parlez plus lentement. </para>
         <para lang="en" class="Pilot">Royal Air Maroc 26, speak slower. </para>
         <para class="instructions">undefined</para>
         <para class="instructions">undefined</para>
         <para class="instructions">undefined</para>
-        </spawnTask>
-        <spawnTask id="REPETEA" name="Collationner">
+        </orTask>
+        <orTask id="REPETEA" name="Collationner">
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, collationnez. </para>
         <para lang="en" class="ATC">Royal Air Maroc 26, read back. </para>
         <para class="instructions">Collationner</para>
         <para class="instructions">undefined</para>
         <para class="instructions">undefined</para>
-        </spawnTask>
-        <spawnTask id="REPETEP" name="Répéter">
+        </orTask>
+        <orTask id="REPETEP" name="Répéter">
         <para lang="fr" class="Pilot">Royal Air Maroc 26, répétez. </para>
         <para lang="en" class="Pilot">Royal Air Maroc 26, say again. </para>
         <para class="instructions">undefined</para>
         <para class="instructions">undefined</para>
         <para class="instructions">undefined</para>
-        </spawnTask>
+        </orTask>
         <spawnTask id="ALIGNEMENT_DECO" name="Alignement et décollage">
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, alignez-vous piste 26, autorisé décollage, vent 240 degrés 10 nœuds. </para>
@@ -799,27 +799,27 @@
         <para class="instructions">undefined</para>
         <para class="instructions">undefined</para>
         </spawnTask>
-        <spawnTask id="DECOL_INTEROMPU" name="Décollage interrompu">
+        <orTask id="DECOL_INTEROMPU" name="Décollage interrompu">
         <para lang="fr" class="Pilot">Royal Air Maroc 26, interrompons décollage piste 26. </para>
         <para lang="en" class="Pilot">Royal Air Maroc 26, aborting take-off runway 26. </para>
         <!--  réponse de la tour ?  -->
-        </spawnTask>
-        <spawnTask id="DECELERE" name="Décélération roulage">
+        </orTask>
+        <orTask id="DECELERE" name="Décélération roulage">
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, roulez avec précaution. </para>
         <para lang="en" class="ATC">Royal Air Maroc 26, taxi with caution. </para>
         <para class="instructions">Décélération roulage.</para>
         <para class="instructions">undefined</para>
         <para class="instructions">undefined</para>
-        </spawnTask>
-        <spawnTask id="ACCELERE" name="Accélération roulage">
+        </orTask>
+        <orTask id="ACCELERE" name="Accélération roulage">
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, expédiez le roulage. </para>
         <para lang="en" class="ATC">Royal Air Maroc 26, expedite taxi. </para>
         <para class="instructions">Accélération roulage.</para>
         <para class="instructions">undefined</para>
         <para class="instructions">undefined</para>
-        </spawnTask>
+        </orTask>
         <spawnTask id="VISUEL" name="Trafic en vue">
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, avez-vous visuel sur trafic précédent ? </para>
@@ -850,7 +850,7 @@
         <para class="instructions">undefined</para>
         <para class="instructions">undefined</para>
         </spawnTask>
-        <spawnTask id="IDENT" name="Identification transpondeur">
+        <orTask id="IDENT" name="Identification transpondeur">
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, transpondeur ident. </para>
         <para lang="fr" class="Pilot">Transpondeur ident, Royal Air Maroc 26. </para>
@@ -859,7 +859,7 @@
         <para class="instructions">undefined</para>
         <para class="instructions">undefined</para>
         <para class="instructions">undefined</para>
-        </spawnTask>
+        </orTask>
         <orTask id="CONTACT_CTR" name="Contact en route">
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="Pilot">Orly Tour, Royal Air Maroc 26, direct BUBLI niveau 110. </para>
