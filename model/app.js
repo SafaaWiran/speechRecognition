@@ -29,6 +29,11 @@ function write(random) {
     if(atc[0]) atc[0].classList.add("hide");
     score.classList.add("hide");
     field[0].classList.remove("hide");
+    for(let i=0;i<random.length;i++){
+        for(let j=0;j<random[i].length;j++){
+            if(!random[i][j])random[i][j]==="";
+        }
+    }
     field[0].innerHTML=random[2][0];
     pilote[0].innerHTML= random[0][0];
     atc[0].innerHTML = random[1][0];
