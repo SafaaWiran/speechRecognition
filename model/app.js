@@ -174,8 +174,7 @@ function submit(){
             hintB.disabled=true ;
             caseMove(clickedCase());
         }
-        //field.classList.remove("hide");
-        
+        //field.classList.remove("hide");    
     }
     else if(atc[0]===atc[1]) {
         clickedCase().style="background-color: #152323; color: #d9dfdf";
@@ -200,9 +199,7 @@ function submit(){
             hintB.disabled=true ;
             caseMove(clickedCase());
         }
-        
     }
-
     if(!pilote[0]){
         document.querySelector('#pilote1').classList.add("hide");
     } else document.querySelector('#pilote1').innerHTML="<b>Pilote : </b>"+pilote[0].innerHTML ;
@@ -211,7 +208,7 @@ function submit(){
 
 function hint(){
     clickedCase().style="background-color: #7a8f8f;";
-    if(output.innerHTML===atc[0].textContent && atc[1]!="") output.innerHTML=atc[1] ;
+    if(output.innerHTML===atc[0].textContent && atc[1]) output.innerHTML=atc[1] ;
     else output.innerHTML=atc[0].textContent ;
     submitB.disabled=false ;
 }

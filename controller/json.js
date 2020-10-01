@@ -32,7 +32,8 @@ function getRandom(json,caseX){
     let a,b,c,d ;
     let atc=[], pilot=[], instructions=[] ;
     //Génération de paramétres aléatoires
-    a=0;
+    a=json["n"];
+    a=Math.floor(Math.random()*a);
     b=json[a]["n"]; //b = (nbr cas)+1
     b=Math.floor(Math.random()*b); //b appartient à [0;(nbr cas)]
     c=json[a][b]["n"]; //de mm
@@ -40,7 +41,7 @@ function getRandom(json,caseX){
     d=json[a][b][c]["n"];
     d=Math.floor(Math.random()*d);
     //Affichage de la position du cas généré dans le haut de la page
-    caseX.innerHTML=a+"."+b+"."+c+"."+d ;
+    caseX.innerHTML=json[a][b]["icon"]+"   "+a+"."+b+"."+c+"."+d ;
     //Extraires les cas aléatoires du fichier json
     pilot[0]=json[a][b][c][d]["pilote"][0];
     pilot[1]=json[a][b][c][d]["pilote"][1];
@@ -55,7 +56,7 @@ function getRandom(json,caseX){
 function caseMove(caseX){
     next=setTimeout(function(){ let random ;
     random=getRandom(myJson, caseX);
-    caseX.style="background-color: white" ;
+    caseX.removeAttribute("style");
     if(caseX===case1) random1=random ;
     if(caseX===case2) random2=random ;
     if(caseX===case3) random3=random ; },10000);
