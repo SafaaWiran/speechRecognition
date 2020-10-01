@@ -3,7 +3,7 @@
   "0":{ 
     "n":5,           
     "0":{
-      "icon": "<img src='../img/myPlane.png' width='60'>",
+      "icon": "<img src='../img/myPlane.png' width='40'>",
       "n":3,          
       "0":{   
         "n":5,                                 
@@ -90,7 +90,7 @@
       }
     },
     "1":{ 
-      "icon":"<i class='fas fa-plane-departure fa-2x'></i>" ,
+      "icon":"<i class='fas fa-plane-departure fa-lg'></i>" ,
       "n":1,    
       "0":{ 
         "n":3,     
@@ -115,7 +115,7 @@
         }
       },
     "2":{ 
-      "icon": "<i class='fas fa-plane fa-2x'></i>",
+      "icon": "<i class='fas fa-plane fa-lg'></i>",
       "n":1,      
       "0":{  
         "n":2,   
@@ -191,7 +191,7 @@
         }
       }, 
     "3":{
-      "icon": "<i class='fas fa-plane-arrival fa-2x'></i>",  
+      "icon": "<i class='fas fa-plane-arrival fa-lg'></i>",  
       "n":1,      
       "0":{ 
         "n":2,     
@@ -243,7 +243,7 @@
         }
       }, 
     "4": {
-      "icon": "<img src='../img/myPlane.png' width='60'>",
+      "icon": "<img src='../img/myPlane.png' width='40'>",
       "n": 5,
       "0": {
         "n":3 ,
@@ -308,7 +308,7 @@
   "1":{ 
     "n":5,           
     "0":{
-      "icon": "<img src='../img/myPlane.png' width='60'>",
+      "icon": "<img src='../img/myPlane.png' width='40'>",
       "n":3,          
       "0":{   
         "n":4,                                 
@@ -396,7 +396,7 @@
       }
     },
     "1":{ 
-      "icon":"<i class='fas fa-plane-departure fa-2x'></i>" ,
+      "icon":"<i class='fas fa-plane-departure fa-lg'></i>" ,
       "n":1,    
       "0":{ 
         "n":3,     
@@ -421,7 +421,7 @@
         }
       },
     "2":{ 
-      "icon": "<i class='fas fa-plane fa-2x'></i>",
+      "icon": "<i class='fas fa-plane fa-lg'></i>",
       "n":6,      
       "0":{  
         "n":2,   
@@ -497,7 +497,7 @@
         }
       }, 
     "3":{
-      "icon": "<i class='fas fa-plane-arrival fa-2x'></i>",  
+      "icon": "<i class='fas fa-plane-arrival fa-lg'></i>",  
       "n":2,      
       "0":{ 
         "n":2,     
@@ -549,7 +549,7 @@
         }
       }, 
     "4": {
-      "icon": "<img src='../img/myPlane.png' width='60'>",
+      "icon": "<img src='../img/myPlane.png' width='40'>",
       "n": 5,
       "0": {
         "n": 3,
