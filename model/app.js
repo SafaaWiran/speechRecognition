@@ -12,9 +12,9 @@ let count=document.querySelector("#countdown");
 let recognition ;
 let c1,c2,c3;
 let pilote=[], atc=[], field=[];
-field[0]=document.querySelector('#field');
-pilote[0]=document.querySelector('#pilote1');
-atc[0]=document.querySelector('#atc');  
+field=document.querySelector('#field');
+pilote=document.querySelector('#pilote1');
+atc=document.querySelector('#atc');  
 let n=0,m=0;o=0;sT=0;t=1;
 let next;
 
@@ -25,18 +25,21 @@ submitB.disabled=true ;
 
 function write(random) {                                            
     c1=false;c2=false;c3=false ;
-    if(pilote[0]) pilote[0].classList.add("hide");
-    if(atc[0]) atc[0].classList.add("hide");
+    if(pilote[0]) pilote.classList.add("hide");
+    if(atc[0]) atc.classList.add("hide");
     score.classList.add("hide");
-    field[0].classList.remove("hide");
+    field.classList.remove("hide");
     for(let i=0;i<random.length;i++){
         for(let j=0;j<random[i].length;j++){
             if(!random[i][j])random[i][j]==="";
         }
     }
-    field[0].innerHTML=random[2][0];
-    pilote[0].innerHTML= random[0][0];
-    atc[0].innerHTML = random[1][0];
+    field[0]=random[2][0];
+    field.innerHTML=field[0];
+    pilote[0] = random[0][0];
+    pilote.innerHTML= pilote[0];
+    atc[0] = random[1][0];
+    atc.innerHTML = atc[0];
     pilote[1]=random[0][1] ;
     atc[1]=random[1][1];
     field[1]=random[2][1];
@@ -44,7 +47,7 @@ function write(random) {
     pilote[2]=random[0][2];
     atc[2]=random[1][2];
     
-    if(pilote[0]) synthesis(pilote[0].textContent);
+    if(pilote[0]) synthesis(pilote.textContent);
 
     //Boutons Speek et Hint activés
     speek.disabled=false ;
@@ -162,10 +165,10 @@ function submit(){
         }
     }
     
-    if(!atc[0].classList.toggle("hide")){
-        if(pilote[0])pilote[0].classList.remove("hide");
-        if(atc[0]) atc[0].classList.remove("hide");
-        field[0].innerHTML=field[1];
+    if(!atc.classList.toggle("hide")){
+        if(pilote[0])pilote.classList.remove("hide");
+        if(atc[0]) atc.classList.remove("hide");
+        field.innerHTML=field[1];
         synthesis(pilote[1]);
         if(!atc[1]) {
             clickedCase().style="background-color: #152323; color: #d9dfdf";
@@ -176,10 +179,10 @@ function submit(){
         }
         //field.classList.remove("hide");    
     }
-    else if(atc[0]===atc[1]) {
+    else if(atc.innerHTML===atc[1]) {
         clickedCase().style="background-color: #152323; color: #d9dfdf";
-        pilote[0].innerHTML=pilote[2] ;
-        atc[0].innerHTML=atc[2] ;
+        pilote.innerHTML=pilote[2] ;
+        atc.innerHTML=atc[2] ;
         submitB.disabled=true ;
         speek.disabled=true ;
         hintB.disabled=true ;
@@ -187,12 +190,12 @@ function submit(){
         caseMove(clickedCase());
     } else {
         clickedCase().style="background-color: #2f4f4f; color: #d9dfdf";
-        pilote[0].innerHTML=pilote[1] ;
-        atc[0].innerHTML=atc[1] ;
-        field[0].innerHTML=field[2];
+        pilote.innerHTML=pilote[1] ;
+        atc.innerHTML=atc[1] ;
+        field.innerHTML=field[2];
         synthesis(pilote[2]);
         if(!atc[2]) {
-            field[0].classList.add("hide");
+            field.classList.add("hide");
             clickedCase().style="background-color: #152323; color: #d9dfdf";
             submitB.disabled=true ;
             speek.disabled=true ;
@@ -201,9 +204,9 @@ function submit(){
         }
     }
     if(!pilote[0]){
-        document.querySelector('#pilote1').classList.add("hide");
-    } else document.querySelector('#pilote1').innerHTML="<b>Pilote : </b>"+pilote[0].innerHTML ;
-    document.querySelector('#atc').innerHTML="<b>ATC : </b>"+atc[0].innerHTML ;
+        pilote.classList.add("hide");
+    } else pilote.innerHTML="<b>Pilote : </b>"+pilote.innerHTML ;
+    atc.innerHTML="<b>ATC : </b>"+atc.innerHTML ;
 }      
 
 function hint(){
