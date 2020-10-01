@@ -3,7 +3,7 @@
   "0":{ 
     "n":5,           
     "0":{
-      "icon": "<img src='../img/output-onlinepngtools.png' width='80'>",
+      "icon": "<img src='../img/myPlane.png' width='60'>",
       "n":3,          
       "0":{   
         "n":5,                                 
@@ -243,7 +243,7 @@
         }
       }, 
     "4": {
-      "icon": "<img src='../img/output-onlinepngtools.png' width='80'>",
+      "icon": "<img src='../img/myPlane.png' width='60'>",
       "n": 5,
       "0": {
         "n":3 ,
@@ -308,7 +308,7 @@
   "1":{ 
     "n":5,           
     "0":{
-      "icon": "<img src='../img/output-onlinepngtools.png' width='80'>",
+      "icon": "<img src='../img/myPlane.png' width='60'>",
       "n":3,          
       "0":{   
         "n":4,                                 
@@ -549,7 +549,7 @@
         }
       }, 
     "4": {
-      "icon": "<img src='../img/output-onlinepngtools.png' width='80'>",
+      "icon": "<img src='../img/myPlane.png' width='60'>",
       "n": 5,
       "0": {
         "n": 3,
