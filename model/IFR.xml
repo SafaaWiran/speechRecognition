@@ -689,7 +689,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="DEGAGEMENT_STANDARD" name="Dégagement standard">
-        <icon><img src='../img/myPlane.png' width='40'/>
+        <icon><img src='../img/myPlane.png' width='40'/></icon>
         <para lang="fr" class="Pilot">Royal Air Maroc 26, vitesse contrôlée. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, rappelez piste dégagée. </para>
         <para lang="fr" class="Pilot">Reçu, Royal Air Maroc 26. </para>
