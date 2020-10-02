@@ -805,7 +805,7 @@
         <para class="instructions">Accuser réception.</para>
         <para class="instructions">undefined</para>
         <para class="instructions">undefined</para>
-        </spawnTask>
+        </orTask>
         <orTask id="LENTEMENT" name="Parler lentement">
         <para lang="fr" class="Pilot">Royal Air Maroc 26, parlez plus lentement. </para>
         <para lang="en" class="Pilot">Royal Air Maroc 26, speak slower. </para>
