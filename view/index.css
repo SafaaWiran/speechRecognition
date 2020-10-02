@@ -13,6 +13,7 @@ h1 {
 
 .container {
     height: 420px;
+    margin-top: 20px;
 }
 
 .row {
@@ -33,4 +34,8 @@ h1 {
     padding: 20px;
     text-align: center;
   }  
+
+  #start {
+      margin: 20px;
+  }
 

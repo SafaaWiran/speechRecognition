@@ -323,7 +323,7 @@
           "pilote":["Colmar Housen Delivery, hello, Air Europe 03.","Air Europe 03, Cessna 152, general aviation apron, requesting taxi clearance flight to Strasbourg Polygone with information Lima.",
             "Squawk 7000, taxiing holding point runway 26 via Alpha and will report ready, Air Europe 03."],
           "atc":["Air Europe 03, hello, go ahead.","Air Europe 03, squawk 7000, taxi holding point runway 26 via Alpha and report ready."],
-          "instructions":["Transpondeur 7000. Roulage point d'attente à la piste 26 via Alpha."]
+          "instructions":["...","Transpondeur 7000. Roulage point d'attente à la piste 26 via Alpha."]
 
         },
         "2":{        
@@ -331,13 +331,13 @@
           "pilote":["Colmar Housen Delivery, hello, Air Europe 03."," Air Europe 03, Cessna 152, general aviation apron, requesting taxi clearance for patterns with information Lima.",
             "Squawk 7000, taxiing holding point runway 26 via Alpha and will report ready, Air Europe 03."],
           "atc":["Air Europe 03, hello, go ahead."," Air Europe 03, squawk 7000, taxi holding point runway 26 via Alpha and report ready."],
-          "instructions":["Transpondeur 7000. Roulage point d'attente piste 26 via Alpha."]
+          "instructions":["...","Transpondeur 7000. Roulage point d'attente piste 26 via Alpha."]
         },
         "3":{        
           "titre":"",
           "pilote":["Colmar Housen Delivery, hello, Air Europe 03.","Affirm, Air Europe 03.","Squawk 7000, taxiing holding point runway 26 intersection Alpha and will report ready, Air Europe 03."],     
           "atc":["Air Europe 03, hello, go ahead.","Air Europe 03, squawk 7000, taxi holding point runway 26 intersection Alpha and report ready.","Air Europe 03, squawk 7000, taxi holding point runway 26 intersection Alpha and report ready."],
-          "instructions":["Royal Air Maroc doit si possible partir de la piste 26 depuis intersection Alpha, Tora (1800) mètres.","Transpondeur 7000. Roulage point d'attente piste 26 intersection Alpha. Rappel prêt."]
+          "instructions":["...","Royal Air Maroc doit si possible partir de la piste 26 depuis intersection Alpha, Tora (1800) mètres.","Transpondeur 7000. Roulage point d'attente piste 26 intersection Alpha. Rappel prêt."]
         }
       } ,
       "1":{ 
