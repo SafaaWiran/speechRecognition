@@ -25,8 +25,8 @@ submitB.disabled=true ;
 
 function write(random) {                                            
     c1=false;c2=false;c3=false ;
+    alert(langage);
     clearTimeout(next);
-    clickedCase.style="background-color:white";
     if(pilote[0]) pilote.classList.add("hide");
     if(atc[0]) atc.classList.add("hide");
     score.classList.add("hide");
