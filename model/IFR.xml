@@ -2,7 +2,7 @@
 <processChain version="1" id="Phraseo" name="Phraséologie">
     <tasks>
         <spawnTask id="PARAMETRES" name="Demande paramètres">
-            <icon><img src='../img/myPlane.png' width='40'/></icon>
+            <icon><img src='../img/myPlane.png' width='40'/>icon</icon>
             <para lang="fr" class="Pilot">Orly Prévol, bonjour, AEL001, demandons paramètres pour le départ, Royal Air Maroc 26. </para>
             <para lang="fr" class="ATC">Royal Air Maroc 26, piste 26, vent (240) degrés (10) noeuds, visibilité (5) kilomètres, température (20), QNH 1013, niveau de transition (60), il est 15:37. </para>
             <para lang="fr" class="Pilot">Piste 26, QNH 1013, Royal Air Maroc 26. </para>
