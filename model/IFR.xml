@@ -2,7 +2,7 @@
 <processChain version="1" id="Phraseo" name="Phraséologie">
     <tasks>
         <spawnTask id="PARAMETRES" name="Demande paramètres">
-            <icon><img src='../img/myPlane.png' width='40'/>icon</icon>
+            <icon><img src='../img/myPlane.png' width='40'/></icon>
             <para lang="fr" class="Pilot">Orly Prévol, bonjour, AEL001, demandons paramètres pour le départ, Royal Air Maroc 26. </para>
             <para lang="fr" class="ATC">Royal Air Maroc 26, piste 26, vent (240) degrés (10) noeuds, visibilité (5) kilomètres, température (20), QNH 1013, niveau de transition (60), il est 15:37. </para>
             <para lang="fr" class="Pilot">Piste 26, QNH 1013, Royal Air Maroc 26. </para>
@@ -224,8 +224,8 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="TRANSFERT_SIMPLE_CTR" name="Transfert contrôleur">
-        <icon><i class='fas fa-plane-departure fa-lg'></i></icon><par
-        a lang="fr" class="Pilot">undefined</para>
+        <icon><i class='fas fa-plane-departure fa-lg'></i></icon>
+        <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, contactez Tour, 118 décimale 7. </para>
         <para lang="fr" class="Pilot">Tour, 118 décimale 7, merci pour le contrôle, Royal Air Maroc 26. </para>
         <para lang="en" class="ATC">Royal Air Maroc 26, contact Tower, 118 decimal 7. </para>
@@ -235,8 +235,8 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="TRANSFERT_SOL" name="Transfert contrôleur">
-        <icon><i class='fas fa-plane-departure fa-lg'></i></icon><par
-        a lang="fr" class="Pilot">undefined</para>
+        <icon><i class='fas fa-plane-departure fa-lg'></i></icon>
+        <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, contactez Strasbourg Sol. </para>
         <para lang="fr" class="Pilot">Strasbourg Sol, merci pour le contrôle, Royal Air Maroc 26. </para>
         <para lang="en" class="ATC">Royal Air Maroc 26, contact Strasbourg Sol. </para>
@@ -246,8 +246,8 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="TRANSFERT_TOUR" name="Transfert tour">
-        <icon><i class='fas fa-plane-arrival fa-lg'></i></icon><par
-        a lang="fr" class="Pilot">undefined</para>
+        <icon><i class='fas fa-plane-arrival fa-lg'></i></icon>
+        <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, contactez Strasbourg Tour, 1_1_8 decimal 7. </para>
         <para lang="fr" class="Pilot">Strasbourg Tour, 1_1_8 decimal 7, merci pour le contrôle, Royal Air Maroc 26. </para>
         <para lang="en" class="ATC">Royal Air Maroc 26, contact Strasbourg Tour, 1_1_8 decimal 7.. </para>
@@ -897,8 +897,8 @@
         <para class="instructions">undefined</para>
         </orTask>
         <spawnTask id="VISUEL" name="Trafic en vue">
-        <icon></icon><par
-        a lang="fr" class="Pilot">undefined</para>
+        <icon></icon>
+        <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, avez-vous visuel sur trafic précédent ? </para>
         <para lang="fr" class="Pilot">Affirm, Royal Air Maroc 26. </para>
         <para lang="en" class="ATC">Royal Air Maroc 26, have you visual contact on preceeding traffic? </para>
@@ -908,8 +908,8 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="SILLAGE" name="Turbulence de sillage">
-        <icon></icon><par
-        a lang="fr" class="Pilot">undefined</para>
+        <icon></icon>
+        <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, attention, turbulence de sillage possible. </para>
         <para lang="fr" class="Pilot">Reçu, Royal Air Maroc 26. </para>
         <para lang="en" class="ATC">Royal Air Maroc 26, caution, wake turbulence possibility. </para>
