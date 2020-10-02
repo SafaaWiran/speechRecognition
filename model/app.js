@@ -25,6 +25,8 @@ submitB.disabled=true ;
 
 function write(random) {                                            
     c1=false;c2=false;c3=false ;
+    clearTimeout(next);
+    clickedCase.style="background-color:white";
     if(pilote[0]) pilote.classList.add("hide");
     if(atc[0]) atc.classList.add("hide");
     score.classList.add("hide");
@@ -148,7 +150,7 @@ function submit(){
     
     if(window.final_transcript){
         score.classList.remove("hide");
-        s=check(window.final_transcript,atc[0].textContent);
+        s=check(window.final_transcript,atc.textContent);
         sT+=parseFloat(s);
         scoreTotal.innerHTML=(sT/t).toFixed(2) ;
         t++;

@@ -1,4 +1,5 @@
 let xmlDoc ;
+let langage ;
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -22,7 +23,10 @@ function xmlReader(xml) {
 }
 
 function getRandom(xmlDoc,caseX){
-    let a=Math.floor(Math.random()*68);
+    let a=Math.floor(Math.random()*66);
+    langage=Math.floor(Math.random()*2);
+    if(langage<1)langage="en-US" ; 
+    else langage="fr-FR" ;
     let pilot=[], atc=[], instructions=[];
     //random=spawnTask aléatoire
     let random=xmlDoc.getElementsByTagName("spawnTask")[a];
@@ -31,8 +35,8 @@ function getRandom(xmlDoc,caseX){
     if(random.getElementsByTagName("icon")[0].childNodes[0].nodeValue==="plane") caseX.innerHTML="<i class='fas fa-plane fa-lg'></i>";
     if(random.getElementsByTagName("icon")[0].childNodes[0].nodeValue==="planeArrival") caseX.innerHTML="<i class='fas fa-plane-arrival fa-lg'></i>";
     for(let i=0;i<random.childNodes.length;i++) {
-        if (random.getElementsByClassName("ATC")[i] && random.getElementsByClassName("ATC")[i].getAttribute("lang")==="fr") atc[i]=random.getElementsByClassName("ATC")[i].childNodes[0].nodeValue ;
-        if (random.getElementsByClassName("Pilot")[i] && random.getElementsByClassName("Pilot")[i].getAttribute("lang")==="fr") pilot[i]=random.getElementsByClassName("Pilot")[i].childNodes[0].nodeValue ; 
+        if (random.getElementsByClassName("ATC")[i] && random.getElementsByClassName("ATC")[i].getAttribute("lang")===langage) atc[i]=random.getElementsByClassName("ATC")[i].childNodes[0].nodeValue ;
+        if (random.getElementsByClassName("Pilot")[i] && random.getElementsByClassName("Pilot")[i].getAttribute("lang")===langage) pilot[i]=random.getElementsByClassName("Pilot")[i].childNodes[0].nodeValue ; 
         if(pilot[i]==="undefined")pilote[i]="";
         if (random.getElementsByClassName("instructions")[i]) instructions[i]=random.getElementsByClassName("instructions")[i].childNodes[0].nodeValue ; 
         if (instructions[i]==="undefined")instructions[i]="";
