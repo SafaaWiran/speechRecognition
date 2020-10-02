@@ -6,7 +6,7 @@
       "icon": "<img src='../img/myPlane.png' width='40'>",
       "n":3,          
       "0":{   
-        "n":5,                                 
+        "n":4,                                 
         "0":{       
           "titre":"",
           "pilote":["Académie tour, bonjour, Royal Air Maroc 206.","Royal Air Maroc 03, Demandons paramètres pour le départ.","Piste 26, QNH 1013, Royal Air Maroc 10."],
@@ -134,7 +134,7 @@
         },
         "1":{  
           "n":1,     
-          "1":{     
+          "0":{     
             "titre":"",
             "pilote":["Colmar Housen Tour, Royal Air Maroc 03, approchons de Novembre.","Auto-information, 122 décimal 8, merci pour le contrôle, Royal Air Maroc."],
             "atc":["Royal Air Maroc 03, service du contrôle terminé, auto-information, 122 décimal 8."],
@@ -422,7 +422,7 @@
       },
     "2":{ 
       "icon": "<i class='fas fa-plane fa-lg'></i>",
-      "n":6,      
+      "n":1,      
       "0":{  
         "n":2,   
           "0":{    
@@ -498,7 +498,7 @@
       }, 
     "3":{
       "icon": "<i class='fas fa-plane-arrival fa-lg'></i>",  
-      "n":2,      
+      "n":1,      
       "0":{ 
         "n":2,     
         "0":{    

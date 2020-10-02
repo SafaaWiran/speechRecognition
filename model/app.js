@@ -64,6 +64,7 @@ function clickedCase(){
 //Voice synthesis set up
 function synthesis(speech){
     let utterance = new SpeechSynthesisUtterance(speech);
+    utterance.lang=langage;
     if(n===0){
         speechSynthesis.speak(utterance);  
         n=1;
@@ -211,8 +212,8 @@ function submit(){
 
 function hint(){
     clickedCase().style="background-color: #7a8f8f;";
-    if(output.innerHTML===atc[0].textContent && atc[1]) output.innerHTML=atc[1] ;
-    else output.innerHTML=atc[0].textContent ;
+    if(output.innerHTML===atc.textContent && atc[1]) output.innerHTML=atc[1] ;
+    else output.innerHTML=atc.textContent ;
     submitB.disabled=false ;
 }
 
