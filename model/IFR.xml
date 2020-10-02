@@ -896,18 +896,7 @@
         <para class="instructions">undefined</para>
         <para class="instructions">undefined</para>
         </orTask>
-        <spawnTask id="VISUEL" name="Trafic en vue">
-        <icon><text></text></icon>
-        <para lang="fr" class="Pilot">undefined</para>
-        <para lang="fr" class="ATC">Royal Air Maroc 26, avez-vous visuel sur trafic précédent ? </para>
-        <para lang="fr" class="Pilot">Affirm, Royal Air Maroc 26. </para>
-        <para lang="en" class="ATC">Royal Air Maroc 26, have you visual contact on preceeding traffic? </para>
-        <para lang="en" class="Pilot">Affirm, Royal Air Maroc 26. </para>
-        <para class="instructions">Trafic en vue ?</para>
-        <para class="instructions">undefined</para>
-        <para class="instructions">undefined</para>
-        </spawnTask>
-        <spawnTask id="SILLAGE" name="Turbulence de sillage">
+        <orTask id="SILLAGE" name="Turbulence de sillage">
         <icon><text></text></icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, attention, turbulence de sillage possible. </para>
@@ -917,7 +906,7 @@
         <para class="instructions">Turbulence de sillage possible.</para>
         <para class="instructions">undefined</para>
         <para class="instructions">undefined</para>
-        </spawnTask>
+        </orTask>
         <orTask id="TAUX_MONTEE" name="Taux de montée">
         <icon><text></text></icon>
         <para lang="fr" class="Pilot">undefined</para>

@@ -26,7 +26,10 @@ function getRandom(xmlDoc,caseX){
     let pilot=[], atc=[], instructions=[];
     //random=spawnTask aléatoire
     let random=xmlDoc.getElementsByTagName("spawnTask")[a];
-    caseX.innerHTML=random.getElementsByTagName("icon")[0].childNodes[0].nodeValue;
+    if(random.getElementsByTagName("icon")[0].childNodes[0].nodeValue==="myPlane") caseX.innerHTML="<img src='../img/myPlane.png' width='40'></img>";
+    if(random.getElementsByTagName("icon")[0].childNodes[0].nodeValue==="planeDeparture") caseX.innerHTML="<i class='fas fa-plane-departure fa-lg'></i>";
+    if(random.getElementsByTagName("icon")[0].childNodes[0].nodeValue==="plane") caseX.innerHTML="<i class='fas fa-plane fa-lg'></i>";
+    if(random.getElementsByTagName("icon")[0].childNodes[0].nodeValue==="planeArrival") caseX.innerHTML="<i class='fas fa-plane-arrival fa-lg'></i>";
     for(let i=0;i<random.childNodes.length;i++) {
         if (random.getElementsByClassName("ATC")[i] && random.getElementsByClassName("ATC")[i].getAttribute("lang")==="fr") atc[i]=random.getElementsByClassName("ATC")[i].childNodes[0].nodeValue ;
         if (random.getElementsByClassName("Pilot")[i] && random.getElementsByClassName("Pilot")[i].getAttribute("lang")==="fr") pilot[i]=random.getElementsByClassName("Pilot")[i].childNodes[0].nodeValue ; 
