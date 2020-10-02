@@ -2,7 +2,7 @@
 <processChain version="1" id="Phraseo" name="Phraséologie">
     <tasks>
         <spawnTask id="PARAMETRES" name="Demande paramètres">
-            <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+            <icon>myPlane</icon>
             <para lang="fr" class="Pilot">Orly Prévol, bonjour, AEL001, demandons paramètres pour le départ, Royal Air Maroc 26. </para>
             <para lang="fr" class="ATC">Royal Air Maroc 26, piste 26, vent (240) degrés (10) noeuds, visibilité (5) kilomètres, température (20), QNH 1013, niveau de transition (60), il est 15:37. </para>
             <para lang="fr" class="Pilot">Piste 26, QNH 1013, Royal Air Maroc 26. </para>
@@ -14,7 +14,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="EST_IL_RNAV" name="Capacité RNAV ?">
-            <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+            <icon>myPlane</icon>
             <para lang="fr" class="Pilot">Orly Prévol, bonjour, AEL001 en D2, demandons mise en route pour Strasbourg, information Lima. </para>
             <para lang="fr" class="ATC">AEL001, bonjour, confirmez si capable départ R_NAV (BASIP 5Z). </para>
             <para lang="fr" class="Pilot">Départ (BASIP 5Z) impossible cause équipement, Royal Air Maroc 26. </para>
@@ -28,7 +28,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="NON_RNAV" name="MER RNAV capacité conv.">
-            <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+            <icon>myPlane</icon>
             <para lang="fr" class="Pilot">Orly Prévol, bonjour, AEL001 en D2, demandons mise en route pour Strasbourg, information Lima. </para>
             <para lang="fr" class="ATC">AEL001, bonjour, mise en route approuvée, départ (BASIP 5Z), montée initiale 60, transpondeur 1013. </para>
             <para lang="fr" class="Pilot">Impossible R_NAV zone terminale{La zone terminale correspond au Terminal Manoeuvring Area (TMA)}, Royal Air Maroc 26. </para>
@@ -42,7 +42,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="MER_OMNI" name="MER omnidirectionnel">
-            <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+            <icon>myPlane</icon>
             <para lang="fr" class="Pilot">Orly Prévol, bonjour, AEL001 en D2, demandons mise en route pour Strasbourg, information Lima. </para>
             <para lang="fr" class="ATC">AEL001, bonjour, départ omnidirectionnel, piste 26, à (800) pieds tournez à (droite) cap 360 en montée vers (3000) pieds QNH, transpondeur 1013. </para>
             <para lang="fr" class="Pilot">Départ omnidirectionnel, piste 26, à (800) pieds tournez à (droite) cap 360 en montée vers (3000) pieds QNH, transpondeur 1013, Royal Air Maroc 26. </para>
@@ -56,7 +56,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="MER_APPROUVEE" name="MER approuvée">
-            <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+            <icon>myPlane</icon>
             <para lang="fr" class="Pilot">Orly Prévol, bonjour, AEL001 en D2, demandons mise en route pour Strasbourg, information Lima. </para>
             <para lang="fr" class="ATC">AEL001, bonjour, mise en route approuvée, CTOT (1250), départ Bubli 3 Papa, montée initiale 60, transpondeur 1013.</para>
             <para lang="fr" class="Pilot">Mise en route approuvée, CTOT (1250), départ Bubli 3 Papa, montée initiale 60, transpondeur 1013, Royal Air Maroc 26. </para>
@@ -70,7 +70,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="MER_DIFFEREE" name="MER différée">
-            <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+            <icon>myPlane</icon>
             <para lang="fr" class="Pilot">Orly Prévol, bonjour, AEL001 en D2, demandons mise en route pour Strasbourg, information Lima. </para>
             <para lang="fr" class="ATC">Royal Air Maroc 26, prévoyez mise en route (1810) cause trafic à l'arrivée. </para>
             <para lang="en" class="Pilot">Orly Delivery, hello, AEL001 gate D2, requesting startup to Strasbourg, Lima information. </para>
@@ -80,7 +80,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="REPOUSSAGE_STANDARD" name="Repoussage standard">
-            <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+            <icon>myPlane</icon>
             <para lang="fr" class="Pilot">Orly Sol, Royal Air Maroc 26, demandons repoussage.</para>
             <para lang="fr" class="ATC">Royal Air Maroc 26, repoussage approuvé. </para>
             <para lang="en" class="Pilot">Orly Ground, Royal Air Maroc 26, requesting push-back. </para>
@@ -90,7 +90,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="REPOUSSAGE_CONDITIONNEL" name="Repoussage conditionnel">
-            <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+            <icon>myPlane</icon>
             <para lang="fr" class="Pilot">Orly Sol, Royal Air Maroc 26, demandons repoussage. </para>
             <para lang="fr" class="ATC">Royal Air Maroc 26, en fonction du Boeing 737 passant derrière vous, repoussage approuvé. </para>
             <para lang="fr" class="Pilot">Nous repoussons en fonction du Boeing 737 en vue, Royal Air Maroc 26. </para>
@@ -102,7 +102,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="ROULAGE_AUTORISE" name="Roulage standard">
-            <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+            <icon>myPlane</icon>
             <para lang="fr" class="Pilot">Royal Air Maroc 26, demandons roulage. </para>
             <para lang="fr" class="ATC">Royal Air Maroc 26, roulez point d'attente piste 26 via W3 W4  Whiskey 41. </para>
             <para lang="fr" class="Pilot">Roulons point d'attente piste 26 via W3 W4 Whiskey 41, Royal Air Maroc 26. </para>
@@ -114,7 +114,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="TRANSFERT_TOUR1" name="Transfert tour">
-            <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+            <icon>myPlane</icon>
             <para lang="fr" class="Pilot">undefined</para>
             <para lang="fr" class="ATC">Contactez Orly Tour. </para>
             <para lang="fr" class="Pilot">Orly Tour, merci pour le contrôle, Royal Air Maroc 26. </para>
@@ -125,7 +125,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="ROULAGE_TRAFIC" name="Roulage avec trafic">
-            <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+            <icon>myPlane</icon>
             <para lang="fr" class="Pilot">Royal Air Maroc 26, demandons roulage. </para>
             <para lang="fr" class="ATC">Royal Air Maroc 26, laissez passer l'Airbus A320 Air-France venant de votre droite, roulez point d'attente piste 26. </para>
             <para lang="fr" class="Pilot">Laissons passer l'Airbus A320 Air-France venant de notre droite, roulons point d'attente piste 26, Royal Air Maroc 26. </para>
@@ -137,7 +137,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="REMONTEE_PISTE" name="Remontée de piste">
-            <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+            <icon>planeDeparture</icon>
             <para lang="fr" class="Pilot">undefined</para>
             <para lang="fr" class="ATC">Royal Air Maroc 26, remontez piste 26, alignez-vous et attendez. </para>
             <para lang="fr" class="Pilot">Nous remontons piste 26, nous alignons et attendons, Royal Air Maroc 26. </para>
@@ -148,7 +148,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="ALIGNEMENT_APRES_AVION_FINAL" name="Alignement après final">
-            <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+            <icon>planeDeparture</icon>
             <para lang="fr" class="Pilot">undefined</para>
             <para lang="fr" class="ATC">Royal Air Maroc 26, ATR en finale, rappelez en vue. </para>
             <para lang="fr" class="Pilot">A_T_R en vue, Royal Air Maroc 26. </para>
@@ -163,7 +163,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="ALIGNEMENT" name="Alignement simple">
-            <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+            <icon>planeDeparture</icon>
             <para lang="fr" class="Pilot">undefined</para>
             <para lang="fr" class="ATC">Royal Air Maroc 26, alignez-vous et attendez piste 26. </para>
             <para lang="fr" class="Pilot">Nous alignons et attendons piste 26, Royal Air Maroc 26. </para>
@@ -174,7 +174,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="ALIGNEMENT_POS2" name="Alignement position 2">
-            <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+            <icon>planeDeparture</icon>
             <para lang="fr" class="Pilot">undefined</para>
             <para lang="fr" class="ATC">Royal Air Maroc 26, alignez-vous piste 26, intersection Whiskey_7, numéro deux derrière un Boeing 737. </para>
             <para lang="fr" class="Pilot">Nous alignons piste 26, intersection Whiskey_7, Royal Air Maroc 26, numéro deux derrière un Boeing 737. </para>
@@ -185,7 +185,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="MAINTIEN_ARRET" name="Maintien point d'attente">
-            <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+            <icon>planeDeparture</icon>
             <para lang="fr" class="Pilot">Orly Tour, bonjour, Royal Air Maroc 26, au point d'attente Whiskey 41. </para>
             <para lang="fr" class="ATC">Royal Air Maroc 26, maintenez avant piste 26 taxiway Whiskey 41. </para>
             <para lang="fr" class="Pilot">Maintenons avant piste 26 taxiway Whiskey 41, Royal Air Maroc 26. </para>
@@ -197,7 +197,7 @@
             <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="DECOLLAGE_IMMEDIAT" name="Décollage immédiat">
-        <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+        <icon>planeDeparture</icon>
         <para lang="fr" class="Pilot">Orly Tour, bonjour, Royal Air Maroc 26, au point d'attente Whiskey 41. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, êtes-vous prêt pour un départ immédiat ? </para>
         <para lang="fr" class="Pilot">Affirm, Royal Air Maroc 26. </para>
@@ -213,7 +213,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="TRANSFERT_SIMPLE" name="Transfert contrôleur">
-        <icon><text><i class='fas fa-plane fa-lg'></i></text></icon>
+        <icon>plane</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, contactez Orly Approche. </para>
         <para lang="fr" class="Pilot">Orly Approche, merci pour le contrôle, Royal Air Maroc 26. </para>
@@ -224,7 +224,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="TRANSFERT_SIMPLE_CTR" name="Transfert contrôleur">
-        <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+        <icon>planeDeparture</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, contactez Tour, 118 décimale 7. </para>
         <para lang="fr" class="Pilot">Tour, 118 décimale 7, merci pour le contrôle, Royal Air Maroc 26. </para>
@@ -235,7 +235,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="TRANSFERT_SOL" name="Transfert contrôleur">
-        <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+        <icon>planeDeparture</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, contactez Strasbourg Sol. </para>
         <para lang="fr" class="Pilot">Strasbourg Sol, merci pour le contrôle, Royal Air Maroc 26. </para>
@@ -246,7 +246,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="TRANSFERT_TOUR" name="Transfert tour">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, contactez Strasbourg Tour, 1_1_8 decimal 7. </para>
         <para lang="fr" class="Pilot">Strasbourg Tour, 1_1_8 decimal 7, merci pour le contrôle, Royal Air Maroc 26. </para>
@@ -257,7 +257,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="TRANSFERT_UNICOM" name="Fin service">
-        <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+        <icon>planeDeparture</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, service du contrôle terminé, auto-information, 122 décimal 8. </para>
         <para lang="fr" class="Pilot">Auto-information, 122 décimal 8, merci pour le contrôle, Royal Air Maroc 26. </para>
@@ -268,7 +268,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="CONFIRMATION_SID" name="Confirmation SID">
-        <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+        <icon>planeDeparture</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, montez via SID niveau 60. </para>
         <para lang="en" class="ATC">Royal Air Maroc 26, climb via SID level 60. </para>
@@ -277,7 +277,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="DIRECT_WPT" name="Direct waypoint">
-        <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+        <icon>planeDeparture</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, procédez direct BUBLI, montez via SID niveau 60. </para>
         <para lang="fr" class="Pilot">Direct BUBLI, montons via SID niveau 60, Royal Air Maroc 26. </para>
@@ -288,7 +288,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="MONTEE_DIFFEREE" name="Montée stoppée">
-        <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+        <icon>planeDeparture</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, stoppez la montée niveau 60. </para>
         <para lang="fr" class="Pilot">Stoppons la montée niveau 60, Royal Air Maroc 26. </para>
@@ -299,7 +299,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="NIVEAU" name="Changement de niveau">
-        <icon><text><i class='fas fa-plane fa-lg'></i></text></icon>
+        <icon>plane</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, montez niveau 60. </para>
         <para lang="fr" class="Pilot">Montons niveau 60, Royal Air Maroc 26. </para>
@@ -310,7 +310,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <orTask id="DIRECT" name="Direct">
-        <icon><text><i class='fas fa-plane fa-lg'></i></text></icon>
+        <icon>plane</icon>
         <para lang="fr" class="Pilot">Orly, Air Europe 01, direct BUBLI niveau 110.</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, direct BUBLI. </para>
         <para lang="fr" class="Pilot">Direct BUBLI, Royal Air Maroc 26. </para>
@@ -322,7 +322,7 @@
         <para class="instructions">undefined</para>
         </orTask>
         <orTask id="ROUTE_CONTROLEUR" name="Nouvelle route">
-        <icon><text><i class='fas fa-plane fa-lg'></i></text></icon>
+        <icon>plane</icon>
         <para lang="fr" class="Pilot">Orly, Air Europe 01, direct BUBLI niveau 110.</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, changement de route, BUBLI. </para>
         <para lang="fr" class="Pilot">Changement de route, BUBLI, Royal Air Maroc 26. </para>
@@ -334,7 +334,7 @@
         <para class="instructions">undefined</para>
         </orTask>
         <spawnTask id="ROUTE_POSITIVE" name="Route acceptée">
-        <icon><text><i class='fas fa-plane fa-lg'></i></text></icon>
+        <icon>plane</icon>
         <para lang="fr" class="Pilot">Royal Air Maroc 26, demandons changement de route via BUBLI. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, stand-by. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, direct BUBLI approuvé. </para>
@@ -348,7 +348,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="ROUTE_NEGATIVE" name="Route refusée">
-        <icon><text><i class='fas fa-plane fa-lg'></i></text></icon>
+        <icon>plane</icon>
         <para lang="fr" class="Pilot">Royal Air Maroc 26, demandons changement de route via BUBLI. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, stand-by. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, changement de route impossible cause régulation de trafic. </para>
@@ -362,7 +362,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="TRAFIC" name="Trafic">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, trafic à 11 heures, 4 nautiques, gauche vers droite, Airbus heavy, 1000 pieds plus haut. </para>
         <para lang="fr" class="Pilot">Reçu, Royal Air Maroc 26 (<i>et dès acquisition visuelle</i>).</para>
@@ -375,7 +375,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="DESCENTE_IMMEDIATE" name="Descente immédiate">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">Strasbourg, bonjour, Royal Air Maroc 26 niveau 60, direct BUBLI. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, descendez niveau 60. </para>
         <para lang="fr" class="Pilot">Descendons niveau 60, Royal Air Maroc 26. </para>
@@ -387,7 +387,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="DESCENTE_IMMEDIATE_GUIDAGE" name="Descente immédiate">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, annulez approche cause FOD, maintenez 60, prévoyez guidage ILS piste 26. </para>
         <para lang="fr" class="Pilot">Approche annulée, maintenons 60, prévoyons guidage ILS piste 26. Royal Air Maroc 26. </para>
@@ -402,7 +402,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="DESCENTE_DELAI" name="Descente avec délai">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">Strasbourg, bonjour, Royal Air Maroc 26 niveau 60, direct BUBLI. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, quand vous êtes prêt, descendez niveau 60. </para>
         <para lang="fr" class="Pilot">Quand prêt, descendons niveau 60, Royal Air Maroc 26. </para>
@@ -418,7 +418,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="APPROCHE_STAR" name="Approche STAR">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">Strasbourg, bonjour, Royal Air Maroc 26 niveau 60, direct BUBLI. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, descendez via Bubli 3 Papa niveau 60. </para>
         <para lang="fr" class="Pilot">Descendons via Bubli 3 Papa niveau 60, Royal Air Maroc 26. </para>
@@ -430,7 +430,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="APPROCHE_DIRECT" name="Direct dans STAR">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">Strasbourg, bonjour, Royal Air Maroc 26 niveau 60, direct BUBLI. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, procédez direct BUBLI, descendez via Bubli 3 Papa niveau 60. </para>
         <para lang="fr" class="Pilot">Direct BUBLI descendons via Bubli 3 Papa niveau 60, Royal Air Maroc 26. </para>
@@ -442,7 +442,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="VITESSE" name="Vitesse">
-        <icon><text><i class='fas fa-plane fa-lg'></i></text></icon>
+        <icon>plane</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, quelle est votre vitesse ? </para>
         <para lang="fr" class="Pilot">280 nœuds, Royal Air Maroc 26. </para>
@@ -457,7 +457,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="REDUCTION_VITESSE" name="Réduction vitesse">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, annulez approche cause FOD, maintenez 60, prévoyez guidage ILS piste 26. </para>
         <para lang="fr" class="Pilot">Approche annulée, maintenons 60, prévoyons guidage ILS piste 26. Royal Air Maroc 26. </para>
@@ -472,7 +472,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="CHANGEMENT_CAP" name="Nouveau cap">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, annulez approche cause FOD, maintenez 60, prévoyez guidage ILS piste 26. </para>
         <para lang="fr" class="Pilot">Approche annulée, maintenons 60, prévoyons guidage ILS piste 26. Royal Air Maroc 26. </para>
@@ -487,7 +487,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="CHANGEMENT_NIVEAU_CAP" name="Changements cap et niveau">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, annulez approche cause FOD, maintenez 60, prévoyez guidage ILS piste 26. </para>
         <para lang="fr" class="Pilot">Approche annulée, maintenons 60, prévoyons guidage ILS piste 26. Royal Air Maroc 26. </para>
@@ -502,7 +502,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="INTERCEPTION_ILS" name="Cap d'interception ILS">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, annulez approche cause FOD, maintenez 60, prévoyez guidage ILS piste 26. </para>
         <para lang="fr" class="Pilot">Approche annulée, maintenons 60, prévoyons guidage ILS piste 26. Royal Air Maroc 26. </para>
@@ -517,7 +517,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="ATTENTE_PUBLIEE" name="Attente publiée">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, autorisé jusqu’à Bubli 3 Papa, attendez comme publié niveau 60, pour régulation. </para>
         <para lang="fr" class="Pilot">Attendons à Bubli 3 Papa, niveau 60, Royal Air Maroc 26. (puis...) </para>
@@ -532,7 +532,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="ATTENTE_PARAMETRES" name="Attente non publiée">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, attendez à Bubli 3 Papa, niveau 60, rapprochement 360 degrés, virages à (droite), éloignement 1 minute, vitesse 280 nœuds. </para>
         <para lang="fr" class="Pilot">Attendons à Bubli 3 Papa, niveau 60, rapprochement 360 degrés, virages à (droite), éloignement 1 minute, vitesse 280 nœuds, Royal Air Maroc 26. </para>
@@ -543,7 +543,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="TRAFIC_MVL" name="Accepte avec info trafic">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, acceptez-vous approche à vue piste 26 ? </para>
         <para lang="fr" class="Pilot">Affirm, Royal Air Maroc 26. </para>
@@ -562,7 +562,7 @@
         <para class="instructions">autorisé approche à vue piste 26, assurer la séparation avec (Fokker 70) devant vous.</para>
         </spawnTask>
         <spawnTask id="ACCEPTE_MVL_PILOT" name="Accepte MVL">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">Royal Air Maroc 26, demandons approche à vue piste 26. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, autorisé approche à vue piste 26. </para>
         <para lang="fr" class="Pilot">Autorisé approche à vue piste 26, Royal Air Maroc 26. </para>
@@ -574,7 +574,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="ACCEPTE_MVL_TRAFIC" name="Accepte MVL">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, acceptez-vous approche à vue piste 26 derrière (A 320) ? </para>
         <para lang="fr" class="Pilot">Affirm, Royal Air Maroc 26. </para>
@@ -589,7 +589,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="ACCEPTE_MVL" name="Accepte MVL">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, acceptez-vous approche à vue piste 26 ? </para>
         <para lang="fr" class="Pilot">Affirm, Royal Air Maroc 26. </para>
@@ -604,7 +604,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="REFUSE_MVL" name="Refuse MVL">
-        <icon><text><i class='fas fa-plane-arrival fa-lg'></i></text></icon>
+        <icon>planeArrival</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, acceptez-vous approche à vue piste 26 ? </para>
         <para lang="fr" class="Pilot">Négatif, Royal Air Maroc 26. </para>
@@ -619,7 +619,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="OUVERTURE_VPT" name="Ouverture VPT">
-        <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+        <icon>myPlane</icon>
         <para lang="fr" class="Pilot">Orly Tour, Royal Air Maroc 26, courte finale piste 26. </para>
         <para lang="en" class="Pilot">Orly Tour, Royal Air Maroc 26, final runway 26. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, rappelez à l'ouverture (droite). </para>
@@ -631,7 +631,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="ATTERRISSAGE_AUTORISE" name="Autorisé">
-        <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+        <icon>myPlane</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, piste 26, autorisé atterrissage, vent 240 degrés 10 nœuds. </para>
         <para lang="fr" class="Pilot">Piste 26, autorisé atterrissage, Royal Air Maroc 26. </para>
@@ -642,7 +642,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="ATTERRISSAGE_VITESSE_CONTROLEE" name="Autorisé, dégagement rapide">
-        <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+        <icon>myPlane</icon>
         <para lang="fr" class="Pilot">Orly Tour, Royal Air Maroc 26, courte finale piste 26. </para>
         <para lang="en" class="Pilot">Orly Tour, Royal Air Maroc 26, final runway 26. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, piste 26, autorisé atterrissage, vent 240 degrés 10 nœuds, dégagement rapide si possible. </para>
@@ -654,7 +654,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="REMISE_GAZ" name="Remise des gaz">
-        <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+        <icon>myPlane</icon>
         <para lang="fr" class="Pilot">Orly Tour, Royal Air Maroc 26, courte finale piste 26. </para>
         <para lang="en" class="Pilot">Orly Tour, Royal Air Maroc 26, final runway 26. </para>
         <para lang="fr" class="Pilot">undefined</para>
@@ -667,7 +667,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="REMISE_GAZ_PILOTE" name="Remise des gaz">
-        <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+        <icon>myPlane</icon>
         <para lang="fr" class="Pilot">Royal Air Maroc 26, remettons les gaz. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, rappelez à 60 pieds. </para>
         <para lang="en" class="Pilot">Royal Air Maroc 26, going around. </para>
@@ -677,7 +677,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="DEGAGEMENT_PISTE" name="Dégagement rapide">
-        <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+        <icon>myPlane</icon>
         <para lang="fr" class="Pilot">Royal Air Maroc 26, vitesse contrôlée. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, dégagez rapidement la piste. </para>
         <para lang="fr" class="Pilot">Degageons rapidement la piste, Royal Air Maroc 26. </para>
@@ -689,7 +689,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="DEGAGEMENT_STANDARD" name="Dégagement standard">
-        <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+        <icon>myPlane</icon>
         <para lang="fr" class="Pilot">Royal Air Maroc 26, vitesse contrôlée. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, rappelez piste dégagée. </para>
         <para lang="fr" class="Pilot">Reçu, Royal Air Maroc 26. </para>
@@ -701,7 +701,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="DEGAGEMENT_SORTIE" name="Dégagement particulier">
-        <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+        <icon>myPlane</icon>
         <para lang="fr" class="Pilot">Royal Air Maroc 26, vitesse contrôlée. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, dégagez première à (gauche). </para>
         <para lang="fr" class="Pilot">Degageons première à (gauche), Royal Air Maroc 26. </para>
@@ -713,7 +713,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="DEGAGEMENT_REMONTEE" name="Remontée et dégagement">
-        <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+        <icon>myPlane</icon>
         <para lang="fr" class="Pilot">Royal Air Maroc 26, vitesse contrôlée. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, faites un 180, remontez la piste puis dégagez première à (droite). </para>
         <para lang="fr" class="Pilot">Remontons la piste puis première à (droite), Royal Air Maroc 26. </para>
@@ -725,7 +725,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="PARKING" name="Parking">
-        <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+        <icon>myPlane</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, roulez poste D2 via W3 W4, rappelez pour quitter la fréquence. </para>
         <para lang="fr" class="Pilot">Roulons poste D2 via W3 W4, Royal Air Maroc 26. </para>
@@ -736,7 +736,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="QUITTER" name="Quitter">
-        <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+        <icon>myPlane</icon>
         <para lang="fr" class="Pilot">Orly Ground, Royal Air Maroc 26, au parking, pour quitter. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, vous pouvez quitter la fréquence, au revoir. </para>
         <para lang="en" class="Pilot">Orly Ground, Royal Air Maroc 26, au parking, pour quitter. </para>
@@ -746,7 +746,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="TRAFIC_SOL" name="Priorité trafic">
-        <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+        <icon>myPlane</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, maintenez position avant la prochaine intersection pour laisser passer un airbus 321 droite vers la gauche. </para>
         <para lang="fr" class="Pilot">Maintenons position avant la prochaine intersection pour laisser passer un airbus 321 droite vers la gauche, Royal Air Maroc 26. </para>
@@ -757,7 +757,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="TRAVERSER_PISTE" name="Traversée de piste">
-        <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+        <icon>planeDeparture</icon>
         <para lang="fr" class="Pilot">Orly Tour, bonjour, Royal Air Maroc 26, au point d'attente Whiskey 41. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, traversez piste (04 gauche). </para>
         <para lang="fr" class="Pilot">Traversons piste (04 gauche), Royal Air Maroc 26. </para>
@@ -769,7 +769,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="DEMANDE_TRAVERSEE_PISTE" name="Demande de traversée">
-        <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+        <icon>planeDeparture</icon>
         <para lang="fr" class="Pilot">Orly Tour, bonjour, Royal Air Maroc 26, au point d'attente Whiskey 41. </para>
         <para lang="fr" class="Pilot">Royal Air Maroc 26, demandons à traverser piste (04 gauche). </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, traversez piste (04 gauche). </para>
@@ -783,7 +783,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="ACCELERER_TRAVERSEE_PISTE" name="Accélérer la traversée">
-        <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+        <icon>planeDeparture</icon>
         <para lang="fr" class="Pilot">Orly Tour, bonjour, Royal Air Maroc 26, au point d'attente Whiskey 41. </para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, traversez rapidement piste (04 gauche). </para>
         <para lang="fr" class="Pilot">Traversons rapidement piste (04 gauche), Royal Air Maroc 26. </para>
@@ -829,7 +829,7 @@
         <para class="instructions">undefined</para>
         </orTask>
         <spawnTask id="ALIGNEMENT_DECO" name="Alignement et décollage">
-        <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+        <icon>planeDeparture</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, alignez-vous piste 26, autorisé décollage, vent 240 degrés 10 nœuds. </para>
         <para lang="fr" class="Pilot">Nous alignons piste 26, Autorisé décollage, Royal Air Maroc 26. </para>
@@ -840,7 +840,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="DECOL_AUTO" name="Décollage déjà aligné">
-        <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+        <icon>planeDeparture</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, piste 26, autorisé décollage, vent 0_50 degrés 10 nœuds. </para>
         <para lang="fr" class="Pilot">Piste 26, autorisé décollage, Royal Air Maroc 26. </para>
@@ -851,7 +851,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="DECOL_STOPPE" name="Décollage stoppé">
-        <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+        <icon>planeDeparture</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, stoppez immédiatement, un véhicule sur la piste.. </para>
         <para lang="en" class="ATC">Royal Air Maroc 26, stop immediately, vehicle on runway. </para>
@@ -862,7 +862,7 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <spawnTask id="DECOL_ANNULE" name="Décollage annulé">
-        <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+        <icon>planeDeparture</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, maintenez position, annulez le décollage, je répète, annulez le décollage, (A_T_R en remise de gaz). </para>
         <para lang="en" class="ATC">Royal Air Maroc 26, hold position, cancel take-off, I say again cancel take-off, (A_T_R going around). </para>
@@ -873,13 +873,13 @@
         <para class="instructions">undefined</para>
         </spawnTask>
         <orTask id="DECOL_INTEROMPU" name="Décollage interrompu">
-        <icon><text><i class='fas fa-plane-departure fa-lg'></i></text></icon>
+        <icon>planeDeparture</icon>
         <para lang="fr" class="Pilot">Royal Air Maroc 26, interrompons décollage piste 26. </para>
         <para lang="en" class="Pilot">Royal Air Maroc 26, aborting take-off runway 26. </para>
         <!--  réponse de la tour ?  -->
         </orTask>
         <orTask id="DECELERE" name="Décélération roulage">
-        <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+        <icon>myPlane</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, roulez avec précaution. </para>
         <para lang="en" class="ATC">Royal Air Maroc 26, taxi with caution. </para>
@@ -888,7 +888,7 @@
         <para class="instructions">undefined</para>
         </orTask>
         <orTask id="ACCELERE" name="Accélération roulage">
-        <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+        <icon>myPlane</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="ATC">Royal Air Maroc 26, expédiez le roulage. </para>
         <para lang="en" class="ATC">Royal Air Maroc 26, expedite taxi. </para>
@@ -940,7 +940,7 @@
         <para class="instructions">undefined</para>
         </orTask>
         <orTask id="CONTACT_CTR" name="Contact en route">
-        <icon><text><i class='fas fa-plane fa-lg'></i></text></icon>
+        <icon>plane</icon>
         <para lang="fr" class="Pilot">undefined</para>
         <para lang="fr" class="Pilot">Orly Tour, Royal Air Maroc 26, direct BUBLI niveau 110. </para>
         <para lang="en" class="Pilot">Orly Tour, Royal Air Maroc 26, direct BUBLI level 110. </para>
@@ -1013,7 +1013,7 @@
         </subgraph>
         </orTask>
         <orTask id="CONTACT_TWR" name="Contact tour">
-        <icon><text><img src='../img/myPlane.png' width='40'/></text></icon>
+        <icon>myPlane</icon>
         <para lang="fr" class="Pilot">Orly Tour, Royal Air Maroc 26, courte finale piste 26. </para>
         <para lang="en" class="Pilot">Orly Tour, Royal Air Maroc 26, final runway 26. </para>
         </orTask>
