@@ -22,7 +22,7 @@ function xmlReader(xml) {
 }
 
 function getRandom(xmlDoc,caseX){
-    let a=Math.floor(Math.random()*70);
+    let a=Math.floor(Math.random()*68);
     let pilot=[], atc=[], instructions=[];
     //random=spawnTask aléatoire
     let random=xmlDoc.getElementsByTagName("spawnTask")[a];
