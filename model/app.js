@@ -25,15 +25,16 @@ submitB.disabled=true ;
 
 function write(random) {                                            
     c1=false;c2=false;c3=false ;
-    alert(langage);
     clearTimeout(next);
-    if(pilote[0]) pilote.classList.add("hide");
-    if(atc[0]) atc.classList.add("hide");
+    pilote.classList.add("hide");
+    atc.classList.add("hide");
     score.classList.add("hide");
     field.classList.remove("hide");
+
+    //Remplacer tous cas indéfini par le vide
     for(let i=0;i<random.length;i++){
         for(let j=0;j<random[i].length;j++){
-            if(!random[i][j])random[i][j]==="";
+            if(!random[i][j]) random[i][j]="";
         }
     }
     field[0]=random[2][0];
@@ -49,7 +50,7 @@ function write(random) {
     pilote[2]=random[0][2];
     atc[2]=random[1][2];
     
-    if(pilote[0]) synthesis(pilote.textContent);
+    if(pilote[0]) synthesis(pilote[0]);
 
     //Boutons Speek et Hint activés
     speek.disabled=false ;
@@ -125,11 +126,12 @@ function check(str,expect){
     expect=expect.toUpperCase().split(" ");
     let p,q ;
     let i;
-    for(i=0;i<str.length;i++){
+    for(i=0;i<Math.min(str.length,expect.length);i++){
         if(str[i]===expect[i]) {
             n++;
         }
         else {
+            //divide every word to an array of its caracters
             p=str[i].split(""); 
             q=expect[i].split(""); 
             if(p[0]===q[0]) n+=1/2 ;
@@ -138,11 +140,9 @@ function check(str,expect){
     return ((n*100/expect.length).toFixed(2)) ;
 }
 
-//cette fonction va être appelée en cliquant sur le bouton check et va appeler la fct "check" si un speech est detécté 
+//cette fonction va être appelée en cliquant sur le bouton check et va appeler la fct "check" si un speech est détecté 
 function submit(){
     let s;
-    scoreTotal.classList.remove("hide");
-    
     if(m===1) recognition.stop();
     action.innerHTML = "<small>stopped listening</small>";
     
@@ -169,12 +169,12 @@ function submit(){
     }
     
     if(!atc.classList.toggle("hide")){
-        if(pilote[0])pilote.classList.remove("hide");
-        if(atc[0]) atc.classList.remove("hide");
+        if(pilote[0])pilote.innerHTML=pilote[0];
+        if(atc[0]) atc.innerHTML=atc[0];
         field.innerHTML=field[1];
         synthesis(pilote[1]);
         if(!atc[1]) {
-            clickedCase().style="background-color: #152323; color: #d9dfdf";
+            clickedCase().style="background-color: #152323;";
             submitB.disabled=true ;
             speek.disabled=true ;
             hintB.disabled=true ;
@@ -183,7 +183,7 @@ function submit(){
         //field.classList.remove("hide");    
     }
     else if(atc.innerHTML===atc[1]) {
-        clickedCase().style="background-color: #152323; color: #d9dfdf";
+        clickedCase().style="background-color: #152323;";
         pilote.innerHTML=pilote[2] ;
         atc.innerHTML=atc[2] ;
         submitB.disabled=true ;
@@ -192,30 +192,35 @@ function submit(){
         if(pilote[3]) synthesis(pilote[3]);
         caseMove(clickedCase());
     } else {
-        clickedCase().style="background-color: #2f4f4f; color: #d9dfdf";
+        clickedCase().style="background-color: #2f4f4f;";
         pilote.innerHTML=pilote[1] ;
         atc.innerHTML=atc[1] ;
         field.innerHTML=field[2];
         synthesis(pilote[2]);
         if(!atc[2]) {
             field.classList.add("hide");
-            clickedCase().style="background-color: #152323; color: #d9dfdf";
+            clickedCase().style="background-color: #152323;";
             submitB.disabled=true ;
             speek.disabled=true ;
             hintB.disabled=true ;
             caseMove(clickedCase());
         }
     }
-    if(!pilote[0]){
-        pilote.classList.add("hide");
-    } else pilote.innerHTML="<b>Pilote : </b>"+pilote.innerHTML ;
-    atc.innerHTML="<b>ATC : </b>"+atc.innerHTML ;
+    if(pilote.textContent){
+        pilote.classList.remove("hide");
+        pilote.innerHTML="<b>Pilote : </b>"+pilote.innerHTML ;
+    } 
+    if(atc.textContent){
+        atc.classList.remove("hide");
+        atc.innerHTML="<b>ATC : </b>"+atc.innerHTML ;
+    }
+    
 }      
 
 function hint(){
     clickedCase().style="background-color: #7a8f8f;";
-    if(output.innerHTML===atc.textContent && atc[1]) output.innerHTML=atc[1] ;
-    else output.innerHTML=atc.textContent ;
+    if(output.innerHTML===atc[0] && atc[1]) output.innerHTML=atc[1] ;
+    else output.innerHTML=atc[0];
     submitB.disabled=false ;
 }
 
