@@ -1,6 +1,6 @@
 //Extraire les variables de ma page simulation.html
 let myJson ;
-let langage ;
+let lang ;
 //Declaration
 let random1, random2, random3 ;
 
@@ -34,16 +34,15 @@ function getRandom(json,caseX){
     //Génération de paramétres aléatoires
     a=json["n"];
     a=Math.floor(Math.random()*a);
-    if(a===1) langage='en-US'; 
-    else langage='fr-FR';
+    if(a===1) lang='en-US'; 
+    else lang='fr-FR';
     b=json[a]["n"]; //b = (nbr cas)+1
     b=Math.floor(Math.random()*b); //b appartient à [0;(nbr cas)]
     c=json[a][b]["n"]; //de mm
     c=Math.floor(Math.random()*c);
     d=json[a][b][c]["n"];
     d=Math.floor(Math.random()*d);
-    //Affichage de la position du cas généré dans le haut de la page
-    caseX.innerHTML=json[a][b]["icon"]+" "+a+"."+b+"."+c+"."+d ;
+    //Affichage de la position du cas généré : caseX.innerHTML=json[a][b]["icon"]+" "+a+"."+b+"."+c+"."+d ;
     //Extraires les cas aléatoires du fichier json
     pilot[0]=json[a][b][c][d]["pilote"][0];
     pilot[1]=json[a][b][c][d]["pilote"][1];
@@ -52,11 +51,12 @@ function getRandom(json,caseX){
     atc[1]=json[a][b][c][d]["atc"][1];
     instructions[0]=json[a][b][c][d]["instructions"][0];
     instructions[1]=json[a][b][c][d]["instructions"][1];
-    return [pilot,atc,instructions] ;
+    return [pilot,atc,instructions,lang] ;
 }
 
 function caseMove(caseX){
-    next=setTimeout(function(){ let random ;
+    next=setTimeout(function(){ 
+    let random ;
     random=getRandom(myJson, caseX);
     caseX.removeAttribute("style");
     if(caseX===case1) random1=random ;
