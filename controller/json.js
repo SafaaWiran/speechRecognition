@@ -42,7 +42,8 @@ function getRandom(json,caseX){
     c=Math.floor(Math.random()*c);
     d=json[a][b][c]["n"];
     d=Math.floor(Math.random()*d);
-    //Affichage de la position du cas généré : caseX.innerHTML=json[a][b]["icon"]+" "+a+"."+b+"."+c+"."+d ;
+    //Affichage de la position du cas généré : 
+    caseX.innerHTML=json[a][b]["icon"];
     //Extraires les cas aléatoires du fichier json
     pilot[0]=json[a][b][c][d]["pilote"][0];
     pilot[1]=json[a][b][c][d]["pilote"][1];
